@@ -816,6 +816,9 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click
 
 
 
+
+
+
 <!-- DENEM visual system normalization -->
 <style id="denem-visual-system">
 :root {
@@ -824,6 +827,28 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click
   --denem-paper: #ffffff;
   --denem-shadow: 5px 5px 0 #111827;
   --denem-shadow-sm: 3px 3px 0 #111827;
+  --blue: var(--denem-accent);
+  --violet: var(--denem-accent);
+  --cyan: var(--denem-accent);
+  --green: var(--denem-accent);
+  --amber: var(--denem-accent);
+  --orange: var(--denem-accent);
+  --red: var(--denem-accent);
+  --red-dark: var(--denem-accent);
+  --teal: var(--denem-accent);
+  --brass: var(--denem-accent);
+  --purple: var(--denem-accent);
+  --pink: var(--denem-accent);
+  --red-soft: #fff;
+  --teal-soft: #fff;
+  --brass-soft: #fff;
+  --mint: #fff;
+  --lav: #fff;
+  --sky: #fff;
+  --rose: #fff;
+  --cream: #fff;
+  --soft: #fff;
+  --gray: #fff;
 }
 html { background: var(--denem-paper) !important; }
 body {
@@ -905,6 +930,37 @@ svg {
 pre,
 code {
   max-width: 100% !important;
+}
+span,
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.flow span,
+.mini-flow span,
+.checklist li,
+.check-list li,
+.timeline li,
+.timeline div,
+.cards article,
+.card-grid article,
+.summary-card,
+.act,
+.badge,
+.eyebrow,
+.stat,
+.note,
+.final-box {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
 }
 pre,
 .prompt-card pre {
@@ -1083,6 +1139,10 @@ blockquote {
   background: var(--denem-accent) !important;
   background-image: none !important;
 }
+.section-counter,
+#counter {
+  display: none !important;
+}
 [class*="bg-gradient"] {
   background: #fff !important;
   background-image: none !important;
@@ -1161,6 +1221,19 @@ tbody tr:nth-child(even) td,
 .hero-stats,
 .stats {
   background: #fff !important;
+}
+.flow,
+.mini-flow {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+.flow span,
+.mini-flow span {
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 0 !important;
+  line-height: 1.35 !important;
 }
 @media (max-width: 700px) {
   .nav a,
