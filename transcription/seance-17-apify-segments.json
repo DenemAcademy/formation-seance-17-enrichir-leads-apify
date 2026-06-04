@@ -1,0 +1,3318 @@
+{
+  "language": "fr",
+  "duration": 2374.72,
+  "segments": [
+    {
+      "id": 1,
+      "start": 0.43,
+      "end": 2.67,
+      "text": "Bonjour à tous et à toutes, j'espère que vous allez bien."
+    },
+    {
+      "id": 2,
+      "start": 2.67,
+      "end": 4.95,
+      "text": "On se retrouve aujourd'hui pour la séance numéro 17."
+    },
+    {
+      "id": 3,
+      "start": 4.95,
+      "end": 8.47,
+      "text": "On va aller chercher l'enrichissement avec un API file cette fois-ci."
+    },
+    {
+      "id": 4,
+      "start": 8.47,
+      "end": 11.03,
+      "text": "La séance précédente, c'était avec Datago."
+    },
+    {
+      "id": 5,
+      "start": 11.03,
+      "end": 14.31,
+      "text": "Maintenant, ce qu'on va faire, c'est récupérer les emails,"
+    },
+    {
+      "id": 6,
+      "start": 14.31,
+      "end": 16.87,
+      "text": "les téléphones, les réseaux de NoLitz."
+    },
+    {
+      "id": 7,
+      "start": 17.75,
+      "end": 21.55,
+      "text": "Il nous faudra cet outil, un API file qui est une bibliothèque de scripteurs"
+    },
+    {
+      "id": 8,
+      "start": 21.55,
+      "end": 27.07,
+      "text": "où des personnes, on va dire, des personnes comme vous et moi"
+    },
+    {
+      "id": 9,
+      "start": 27.07,
+      "end": 30.19,
+      "text": "peuvent créer des systèmes et ensuite les proposer à la communauté."
+    },
+    {
+      "id": 10,
+      "start": 30.79,
+      "end": 34.57,
+      "text": "Donc, nous, ce qu'on va faire, c'est cette partie-là."
+    },
+    {
+      "id": 11,
+      "start": 34.57,
+      "end": 39.41,
+      "text": "Donc, l'entrée qu'on va donner à Codecode, c'est lits.datago en redshade."
+    },
+    {
+      "id": 12,
+      "start": 39.41,
+      "end": 41.21,
+      "text": "Donc, le fichier XLSX."
+    },
+    {
+      "id": 13,
+      "start": 41.21,
+      "end": 46.53,
+      "text": "Ensuite, on va lui demander de passer par API file de couleur de page"
+    },
+    {
+      "id": 14,
+      "start": 46.53,
+      "end": 49.69,
+      "text": "et de nous traiter toutes les questions avec les sites web disponibles."
+    },
+    {
+      "id": 15,
+      "start": 49.69,
+      "end": 52.41,
+      "text": "Et après, on va faire un parti sorti au derrière."
+    },
+    {
+      "id": 16,
+      "start": 52.41,
+      "end": 54.73,
+      "text": "Il va améliorer, du coup, notre fichier"
+    },
+    {
+      "id": 17,
+      "start": 54.73,
+      "end": 58.23,
+      "text": "pour ajouter les résultats qu'il a trouvés quand ça API file."
+    },
+    {
+      "id": 18,
+      "start": 58.23,
+      "end": 60.63,
+      "text": "Donc, on aura besoin d'un acteur."
+    },
+    {
+      "id": 19,
+      "start": 60.71,
+      "end": 63.91,
+      "text": "Donc, c'est comme ça que ça s'appelle un scripteur sur API file."
+    },
+    {
+      "id": 20,
+      "start": 63.91,
+      "end": 66.59,
+      "text": "Et nous, on va utiliser l'acteur color."
+    },
+    {
+      "id": 21,
+      "start": 66.59,
+      "end": 70.11,
+      "text": "Donc, avec les sites, ils sont déjà trouvés au niveau de l'autonomie."
+    },
+    {
+      "id": 22,
+      "start": 70.11,
+      "end": 72.71,
+      "text": "Donc, si je vais sur mon business,"
+    },
+    {
+      "id": 23,
+      "start": 72.71,
+      "end": 76.23,
+      "text": "lits.tac, code.2.0.100, on va ça, on ira ranger après."
+    },
+    {
+      "id": 24,
+      "start": 78.7,
+      "end": 83.68,
+      "text": "On va aller dans cette partie-là, lits.datago en redshade."
+    },
+    {
+      "id": 25,
+      "start": 83.68,
+      "end": 87.68,
+      "text": "Nous, on l'avait ouvert sur Google Sheet."
+    },
+    {
+      "id": 26,
+      "start": 87.68,
+      "end": 92.49,
+      "text": "Donc, j'ouvre le sheet en question."
+    },
+    {
+      "id": 27,
+      "start": 92.53,
+      "end": 94.41,
+      "text": "Lits.restaurant."
+    },
+    {
+      "id": 28,
+      "start": 94.41,
+      "end": 97.61,
+      "text": "Et du coup, on peut voir qu'il y a des lignes."
+    },
+    {
+      "id": 29,
+      "start": 97.61,
+      "end": 102.81,
+      "text": "Donc, non, l'au plait all en redshade avec une partie website."
+    },
+    {
+      "id": 30,
+      "start": 102.81,
+      "end": 103.65,
+      "text": "Donc, on en a beaucoup."
+    },
+    {
+      "id": 31,
+      "start": 103.65,
+      "end": 105.85,
+      "text": "Je crois qu'on avait atteint un taux de 86%."
+    },
+    {
+      "id": 32,
+      "start": 105.85,
+      "end": 108.92,
+      "text": "Donc, sur ces 86% de sites,"
+    },
+    {
+      "id": 33,
+      "start": 108.92,
+      "end": 112.52,
+      "text": "je crois que ça fait à peu près 9500,"
+    },
+    {
+      "id": 34,
+      "start": 112.52,
+      "end": 114.96,
+      "text": "eh bien, on va scroller quatre pages."
+    },
+    {
+      "id": 35,
+      "start": 114.96,
+      "end": 117.67,
+      "text": "Donc, les quatre pages qu'on va scroller,"
+    },
+    {
+      "id": 36,
+      "start": 117.67,
+      "end": 119.47,
+      "text": "ça va être ça, ça va être la page accueille,"
+    },
+    {
+      "id": 37,
+      "start": 119.47,
+      "end": 123.03,
+      "text": "la page contact, la page mention, la page business."
+    },
+    {
+      "id": 38,
+      "start": 123.11,
+      "end": 127.88,
+      "text": "Et avec, du coup, toutes les informations qu'on a récupérées,"
+    },
+    {
+      "id": 39,
+      "start": 127.88,
+      "end": 132.28,
+      "text": "on va créer un filtre qui va nous permettre de récupérer l'adresse e-mail,"
+    },
+    {
+      "id": 40,
+      "start": 132.28,
+      "end": 135.72,
+      "text": "le numéro de téléphone et, du coup,"
+    },
+    {
+      "id": 41,
+      "start": 135.72,
+      "end": 140.2,
+      "text": "les réseaux sociaux qui sont assignés au site."
+    },
+    {
+      "id": 42,
+      "start": 140.2,
+      "end": 144.3,
+      "text": "Donc, on va lancer, du coup, API file."
+    },
+    {
+      "id": 43,
+      "start": 144.3,
+      "end": 146.42,
+      "text": "Elle m'aura besoin encore une fois d'un point."
+    },
+    {
+      "id": 44,
+      "start": 146.42,
+      "end": 149.02,
+      "text": "Et d'avoir ce qui va être intéressant, c'est de comprendre"
+    },
+    {
+      "id": 45,
+      "start": 149.02,
+      "end": 151.74,
+      "text": "la bibliothèque API file et à quoi ça sert."
+    },
+    {
+      "id": 46,
+      "start": 151.78,
+      "end": 155.71,
+      "text": "Donc, je vous invite à créer un compte directement."
+    },
+    {
+      "id": 47,
+      "start": 155.71,
+      "end": 158.1,
+      "text": "Vous allez arriver sur le dashboard."
+    },
+    {
+      "id": 48,
+      "start": 158.1,
+      "end": 161.38,
+      "text": "Je ne peux plus recréer de compte parce que,"
+    },
+    {
+      "id": 49,
+      "start": 161.38,
+      "end": 164.34,
+      "text": "j'ai utilisé énormément d'adresse e-mail, j'ai mail,"
+    },
+    {
+      "id": 50,
+      "start": 164.34,
+      "end": 165.26,
+      "text": "là, je suis assez bloqué."
+    },
+    {
+      "id": 51,
+      "start": 165.26,
+      "end": 167.74,
+      "text": "Donc, j'ai réussi à en avoir une seule."
+    },
+    {
+      "id": 52,
+      "start": 167.74,
+      "end": 168.82,
+      "text": "Et quand vous allez créer un compte,"
+    },
+    {
+      "id": 53,
+      "start": 168.82,
+      "end": 171.1,
+      "text": "vous avez à avoir cinq dollars offerts."
+    },
+    {
+      "id": 54,
+      "start": 171.1,
+      "end": 172.86,
+      "text": "Donc, ces cinq dollars-là vont être suffisants"
+    },
+    {
+      "id": 55,
+      "start": 172.86,
+      "end": 175.26,
+      "text": "pour aller enrichir nos lits."
+    },
+    {
+      "id": 56,
+      "start": 175.26,
+      "end": 178.95,
+      "text": "Donc, là, vous pouvez voir au niveau du dashboard à gauche,"
+    },
+    {
+      "id": 57,
+      "start": 178.99,
+      "end": 182.12,
+      "text": "API file store, sur API file store,"
+    },
+    {
+      "id": 58,
+      "start": 182.12,
+      "end": 183.92,
+      "text": "vous avez plusieurs acteurs."
+    },
+    {
+      "id": 59,
+      "start": 183.92,
+      "end": 190.85,
+      "text": "Et chaque acteur a, du coup, une action prédéfinie."
+    },
+    {
+      "id": 60,
+      "start": 190.85,
+      "end": 193.01,
+      "text": "Donc, là, on peut aller scraper des lits avec CoutelMass."
+    },
+    {
+      "id": 61,
+      "start": 193.01,
+      "end": 194.73,
+      "text": "Nous, on a déjà fait avec Serpereur."
+    },
+    {
+      "id": 62,
+      "start": 194.73,
+      "end": 197.41,
+      "text": "Vous pouvez aussi utiliser TikTok Scraptor."
+    },
+    {
+      "id": 63,
+      "start": 197.41,
+      "end": 199.13,
+      "text": "Donc, on voit qu'il y a beaucoup d'utilisations."
+    },
+    {
+      "id": 64,
+      "start": 199.13,
+      "end": 202.47,
+      "text": "Il y a 171 000 personnes."
+    },
+    {
+      "id": 65,
+      "start": 202.47,
+      "end": 206.66,
+      "text": "Et ça permet justement de"
+    },
+    {
+      "id": 66,
+      "start": 206.7,
+      "end": 209.46,
+      "text": "voir les datas d'un profil,"
+    },
+    {
+      "id": 67,
+      "start": 209.46,
+      "end": 213.16,
+      "text": "faire des searches, donc le top vidéo,"
+    },
+    {
+      "id": 68,
+      "start": 213.16,
+      "end": 215.92,
+      "text": "récupérer un URL et l'analyser"
+    },
+    {
+      "id": 69,
+      "start": 215.92,
+      "end": 217.44,
+      "text": "pour récupérer une vidéo,"
+    },
+    {
+      "id": 70,
+      "start": 217.44,
+      "end": 219.6,
+      "text": "télécharger des vidéos, enfin,"
+    },
+    {
+      "id": 71,
+      "start": 219.6,
+      "end": 222.66,
+      "text": "tout est accessible avec ce scraptor-là."
+    },
+    {
+      "id": 72,
+      "start": 222.66,
+      "end": 226.06,
+      "text": "Donc, il est très utile pour 1000 résultats."
+    },
+    {
+      "id": 73,
+      "start": 226.06,
+      "end": 228.49,
+      "text": "On a un système de tarification"
+    },
+    {
+      "id": 74,
+      "start": 228.49,
+      "end": 232.25,
+      "text": "de 3,70 dollars pour 1000 résultats."
+    },
+    {
+      "id": 75,
+      "start": 232.25,
+      "end": 233.61,
+      "text": "Si vous avez une version payante,"
+    },
+    {
+      "id": 76,
+      "start": 233.61,
+      "end": 236.09,
+      "text": "vous aurez du zèle prix de 57%."
+    },
+    {
+      "id": 77,
+      "start": 236.13,
+      "end": 239.65,
+      "text": "Donc, nous, on utilise la partie frie, on payera ce prix-là."
+    },
+    {
+      "id": 78,
+      "start": 239.65,
+      "end": 242.53,
+      "text": "Mais il y a d'autres scrapteurs très intéressants"
+    },
+    {
+      "id": 79,
+      "start": 242.53,
+      "end": 243.97,
+      "text": "comme Facebook post scrapteur."
+    },
+    {
+      "id": 80,
+      "start": 243.97,
+      "end": 245.77,
+      "text": "Donc, là, pour récupérer vraiment tous les posts,"
+    },
+    {
+      "id": 81,
+      "start": 245.77,
+      "end": 249.07,
+      "text": "YouTube scrapteur pour récupérer les datas,"
+    },
+    {
+      "id": 82,
+      "start": 249.07,
+      "end": 250.43,
+      "text": "des vidéos."
+    },
+    {
+      "id": 83,
+      "start": 250.43,
+      "end": 252.07,
+      "text": "Vous pouvez aller faire aussi du LinkedIn."
+    },
+    {
+      "id": 84,
+      "start": 252.07,
+      "end": 253.75,
+      "text": "On peut récupérer des hashtags intéressants"
+    },
+    {
+      "id": 85,
+      "start": 253.75,
+      "end": 255.11,
+      "text": "qui pètent en ce moment."
+    },
+    {
+      "id": 86,
+      "start": 255.11,
+      "end": 256.31,
+      "text": "On peut aller sur X aussi,"
+    },
+    {
+      "id": 87,
+      "start": 256.31,
+      "end": 259.33,
+      "text": "faire prouver des informations."
+    },
+    {
+      "id": 88,
+      "start": 259.33,
+      "end": 261.33,
+      "text": "Vous pouvez vraiment, vraiment, vraiment,"
+    },
+    {
+      "id": 89,
+      "start": 261.33,
+      "end": 262.61,
+      "text": "vraiment tout faire."
+    },
+    {
+      "id": 90,
+      "start": 262.61,
+      "end": 265.57,
+      "text": "On peut même aller sur page jaune."
+    },
+    {
+      "id": 91,
+      "start": 265.61,
+      "end": 269.46,
+      "text": "C'est un paradis pour tout ce qui est en vachissement de leads"
+    },
+    {
+      "id": 92,
+      "start": 269.46,
+      "end": 270.58,
+      "text": "ou même scrapting de leads."
+    },
+    {
+      "id": 93,
+      "start": 270.58,
+      "end": 273.22,
+      "text": "Après, il y a des acteurs qui coûtent très cher."
+    },
+    {
+      "id": 94,
+      "start": 273.22,
+      "end": 274.54,
+      "text": "Par exemple, la Airbnb."
+    },
+    {
+      "id": 95,
+      "start": 274.54,
+      "end": 277.91,
+      "text": "Donc, là, tu payes par événement, c'est top."
+    },
+    {
+      "id": 96,
+      "start": 277.91,
+      "end": 281.76,
+      "text": "Mais sinon, il y a des abonnements par mois."
+    },
+    {
+      "id": 97,
+      "start": 281.76,
+      "end": 284.53,
+      "text": "On va essayer de s'en trouver un."
+    },
+    {
+      "id": 98,
+      "start": 284.53,
+      "end": 285.81,
+      "text": "Tac, tac, tac."
+    },
+    {
+      "id": 99,
+      "start": 285.81,
+      "end": 289.47,
+      "text": "Non, lui, on avait quitté par événement."
+    },
+    {
+      "id": 100,
+      "start": 289.47,
+      "end": 294.22,
+      "text": "Pay par event aussi."
+    },
+    {
+      "id": 101,
+      "start": 294.22,
+      "end": 295.14,
+      "text": "Pay par event."
+    },
+    {
+      "id": 102,
+      "start": 295.14,
+      "end": 298.33,
+      "text": "Donc, il y en a qui sont chers,"
+    },
+    {
+      "id": 103,
+      "start": 298.33,
+      "end": 299.93,
+      "text": "bottent un peu moins."
+    },
+    {
+      "id": 104,
+      "start": 299.97,
+      "end": 303.94,
+      "text": "Il y en a qui sont sur la même activité."
+    },
+    {
+      "id": 105,
+      "start": 303.94,
+      "end": 305.02,
+      "text": "Donc, il faut sélectionner le monde."
+    },
+    {
+      "id": 106,
+      "start": 305.02,
+      "end": 307.06,
+      "text": "C'est ce qu'on va avoir, justement."
+    },
+    {
+      "id": 107,
+      "start": 307.06,
+      "end": 309.78,
+      "text": "Ça se juge beaucoup par rapport aux notes."
+    },
+    {
+      "id": 108,
+      "start": 309.78,
+      "end": 312.66,
+      "text": "On peut regarder aussi un scrapteur de jobs."
+    },
+    {
+      "id": 109,
+      "start": 312.66,
+      "end": 316.19,
+      "text": "Donc, là, vous mettez ce que vous souhaitez comme job."
+    },
+    {
+      "id": 110,
+      "start": 316.19,
+      "end": 319.21,
+      "text": "Par exemple, Xperia."
+    },
+    {
+      "id": 111,
+      "start": 319.21,
+      "end": 321.61,
+      "text": "On n'a pas de URL."
+    },
+    {
+      "id": 112,
+      "start": 321.61,
+      "end": 326.64,
+      "text": "Si je lance, on voit que ça se met en activation."
+    },
+    {
+      "id": 113,
+      "start": 326.64,
+      "end": 331.9,
+      "text": "Derrière, on récupère une information qu'on va attendre."
+    },
+    {
+      "id": 114,
+      "start": 331.94,
+      "end": 334.86,
+      "text": "Là, on pourrait cramer très bien une automatisation"
+    },
+    {
+      "id": 115,
+      "start": 334.86,
+      "end": 337.08,
+      "text": "pour récupérer tous les jobs."
+    },
+    {
+      "id": 116,
+      "start": 337.08,
+      "end": 339.49,
+      "text": "Donc, il met sur un Google Sheet."
+    },
+    {
+      "id": 117,
+      "start": 339.49,
+      "end": 342.33,
+      "text": "L'automatisation est sur le VPS."
+    },
+    {
+      "id": 118,
+      "start": 342.33,
+      "end": 344.5,
+      "text": "Et on reçoit une notification"
+    },
+    {
+      "id": 119,
+      "start": 344.5,
+      "end": 346.7,
+      "text": "sur un post qui correspond du coin de notre expertise."
+    },
+    {
+      "id": 120,
+      "start": 346.7,
+      "end": 348.86,
+      "text": "Donc, Xperia, en l'occurrence."
+    },
+    {
+      "id": 121,
+      "start": 348.86,
+      "end": 349.82,
+      "text": "Là, j'ai mal filtré."
+    },
+    {
+      "id": 122,
+      "start": 349.82,
+      "end": 355.27,
+      "text": "Donc, les résultats vont être assez médiocres."
+    },
+    {
+      "id": 123,
+      "start": 355.27,
+      "end": 357.43,
+      "text": "Et je risque de payer assez cher."
+    },
+    {
+      "id": 124,
+      "start": 357.43,
+      "end": 363.52,
+      "text": "En plus de ça, parce qu'on va voir au niveau du prix."
+    },
+    {
+      "id": 125,
+      "start": 363.52,
+      "end": 365.36,
+      "text": "Il faut voir que là, il est en train de tourner."
+    },
+    {
+      "id": 126,
+      "start": 365.36,
+      "end": 367.88,
+      "text": "On voit aussi la tarification."
+    },
+    {
+      "id": 127,
+      "start": 367.88,
+      "end": 370.58,
+      "text": "On peut voir les logs."
+    },
+    {
+      "id": 128,
+      "start": 370.58,
+      "end": 372.06,
+      "text": "Oui, j'utilise les cookies."
+    },
+    {
+      "id": 129,
+      "start": 372.06,
+      "end": 374.22,
+      "text": "Donc, je ne pense pas que ça va scraper."
+    },
+    {
+      "id": 130,
+      "start": 374.22,
+      "end": 394.45,
+      "text": "On va voir un petit peu."
+    },
+    {
+      "id": 131,
+      "start": 394.45,
+      "end": 396.95,
+      "text": "Oui, c'était sûr."
+    },
+    {
+      "id": 132,
+      "start": 396.95,
+      "end": 399.31,
+      "text": "Donc, là, on n'a pas d'information avec ce scrapteur-là."
+    },
+    {
+      "id": 133,
+      "start": 399.31,
+      "end": 401.22,
+      "text": "C'est pas grave."
+    },
+    {
+      "id": 134,
+      "start": 401.22,
+      "end": 404.1,
+      "text": "Il faudra un peu plus comprendre comment il fonctionne."
+    },
+    {
+      "id": 135,
+      "start": 404.1,
+      "end": 407.37,
+      "text": "Ça ne va pas être très utile pour nous en ce moment."
+    },
+    {
+      "id": 136,
+      "start": 407.37,
+      "end": 408.65,
+      "text": "Ce que ce n'est pas ce qu'on souhaite faire."
+    },
+    {
+      "id": 137,
+      "start": 408.65,
+      "end": 412.94,
+      "text": "Mais vous avez compris un petit peu la bibliothèque du coup."
+    },
+    {
+      "id": 138,
+      "start": 412.94,
+      "end": 416.22,
+      "text": "NaviFestore, vous pouvez absolument tout faire."
+    },
+    {
+      "id": 139,
+      "start": 416.26,
+      "end": 419.5,
+      "text": "Et vous pouvez connecter, du coup, chaque API à cool code."
+    },
+    {
+      "id": 140,
+      "start": 419.5,
+      "end": 424.94,
+      "text": "Et combiner un système d'intelligence artificielle en scrapteur"
+    },
+    {
+      "id": 141,
+      "start": 424.94,
+      "end": 428.84,
+      "text": "qui peut être utile selon sur quoi vous travaillez."
+    },
+    {
+      "id": 142,
+      "start": 428.84,
+      "end": 432.16,
+      "text": "Simuler la web pour avoir des informations sur un site web."
+    },
+    {
+      "id": 143,
+      "start": 432.16,
+      "end": 433.08,
+      "text": "Franchement, c'est top."
+    },
+    {
+      "id": 144,
+      "start": 433.08,
+      "end": 436.9,
+      "text": "TripAdvisor, ça pourrait m'intéresser."
+    },
+    {
+      "id": 145,
+      "start": 436.9,
+      "end": 438.74,
+      "text": "Ça, par contre, c'est cher."
+    },
+    {
+      "id": 146,
+      "start": 438.74,
+      "end": 440.22,
+      "text": "Donc, là, on voit un abonnement."
+    },
+    {
+      "id": 147,
+      "start": 440.22,
+      "end": 442.22,
+      "text": "Enfin, pas un abonnement, mais un coup à exécution."
+    },
+    {
+      "id": 148,
+      "start": 442.22,
+      "end": 447.94,
+      "text": "5 $ pour 1000 résultats."
+    },
+    {
+      "id": 149,
+      "start": 447.98,
+      "end": 453.85,
+      "text": "Donc, il faut voir aussi combien vous êtes prêt à mettre."
+    },
+    {
+      "id": 150,
+      "start": 453.85,
+      "end": 456.65,
+      "text": "Et vous avez un système d'abonnement qui vous donne des crédits."
+    },
+    {
+      "id": 151,
+      "start": 456.65,
+      "end": 458.65,
+      "text": "C'est comme ça que ça fonctionne, du coup."
+    },
+    {
+      "id": 152,
+      "start": 460.04,
+      "end": 460.8,
+      "text": "API faillé."
+    },
+    {
+      "id": 153,
+      "start": 460.8,
+      "end": 465.3,
+      "text": "Vous augmentez votre taux de rame plus d'exécution direct."
+    },
+    {
+      "id": 154,
+      "start": 465.3,
+      "end": 467.46,
+      "text": "Maintenant, on a parti starter."
+    },
+    {
+      "id": 155,
+      "start": 467.46,
+      "end": 474.2,
+      "text": "Donc, là, on a place de 8, passent à 32, à 128,"
+    },
+    {
+      "id": 156,
+      "start": 474.2,
+      "end": 475.24,
+      "text": "des 29 € par mois."
+    },
+    {
+      "id": 157,
+      "start": 475.24,
+      "end": 480.52,
+      "text": "Donc, vous avez 29 € d'utilisation."
+    },
+    {
+      "id": 158,
+      "start": 480.52,
+      "end": 483.34,
+      "text": "Maintenant, on va voir le scrapteur qui nous intéresse."
+    },
+    {
+      "id": 159,
+      "start": 483.34,
+      "end": 487.06,
+      "text": "Donc, le scrapteur, c'est website contact extractor."
+    },
+    {
+      "id": 160,
+      "start": 487.06,
+      "end": 489.22,
+      "text": "Pour ça, vous allez aller dans API Files Store,"
+    },
+    {
+      "id": 161,
+      "start": 489.22,
+      "end": 493.82,
+      "text": "Tidmar de recherche, website contact extractor recherché."
+    },
+    {
+      "id": 162,
+      "start": 493.82,
+      "end": 495.74,
+      "text": "Là, vous voyez qu'il y a plusieurs scrapteurs."
+    },
+    {
+      "id": 163,
+      "start": 495.74,
+      "end": 497.66,
+      "text": "Le but, c'est de sélectionner le bout."
+    },
+    {
+      "id": 164,
+      "start": 497.66,
+      "end": 500.46,
+      "text": "Je les ai un petit peu toussécais avec l'expérience."
+    },
+    {
+      "id": 165,
+      "start": 500.46,
+      "end": 501.66,
+      "text": "Et le meilleur, ça, c'est celui-là."
+    },
+    {
+      "id": 166,
+      "start": 501.66,
+      "end": 503.94,
+      "text": "Donc, il y a 249 personnes qui utilisent."
+    },
+    {
+      "id": 167,
+      "start": 503.94,
+      "end": 505.14,
+      "text": "Il y a un seul avis."
+    },
+    {
+      "id": 168,
+      "start": 505.14,
+      "end": 507.06,
+      "text": "Et c'est better devscript."
+    },
+    {
+      "id": 169,
+      "start": 507.06,
+      "end": 510.31,
+      "text": "Donc, pour l'utiliser, vous cliquez dessus."
+    },
+    {
+      "id": 170,
+      "start": 510.31,
+      "end": 514.03,
+      "text": "Mais là, on peut voir qu'on a plusieurs informations à plir"
+    },
+    {
+      "id": 171,
+      "start": 514.07,
+      "end": 515.35,
+      "text": "sur votre fer de manière manuelle."
+    },
+    {
+      "id": 172,
+      "start": 515.35,
+      "end": 517.39,
+      "text": "On peut voir l'irone juste ici."
+    },
+    {
+      "id": 173,
+      "start": 517.39,
+      "end": 520.39,
+      "text": "On peut voir les bulles, les intégrations."
+    },
+    {
+      "id": 174,
+      "start": 520.39,
+      "end": 523.26,
+      "text": "Voilà, on peut voir pas mal d'informations."
+    },
+    {
+      "id": 175,
+      "start": 523.26,
+      "end": 525.61,
+      "text": "Donc, je vous invite à bien tout lire."
+    },
+    {
+      "id": 176,
+      "start": 525.61,
+      "end": 527.97,
+      "text": "Là, vous pouvez voir exactement ce que vous faites,"
+    },
+    {
+      "id": 177,
+      "start": 527.97,
+      "end": 530.04,
+      "text": "ce que vous pouvez faire plutôt."
+    },
+    {
+      "id": 178,
+      "start": 530.04,
+      "end": 533.0,
+      "text": "Nous, en l'occurrence, on va vraiment pas se prendre la tête."
+    },
+    {
+      "id": 179,
+      "start": 533.0,
+      "end": 534.6,
+      "text": "On va montrer comment on va travailler,"
+    },
+    {
+      "id": 180,
+      "start": 534.6,
+      "end": 537.08,
+      "text": "parce qu'on n'a pas forcément de compétences"
+    },
+    {
+      "id": 181,
+      "start": 537.08,
+      "end": 541.46,
+      "text": "en anglais ou même sur des scrapteurs."
+    },
+    {
+      "id": 182,
+      "start": 541.46,
+      "end": 544.58,
+      "text": "Donc, on a la partie starturals."
+    },
+    {
+      "id": 183,
+      "start": 544.58,
+      "end": 548.14,
+      "text": "Donc, si vous sélectionnez un URL"
+    },
+    {
+      "id": 184,
+      "start": 548.14,
+      "end": 551.82,
+      "text": "que vous avez réussi à scraper grâce à Serpereur ou autre,"
+    },
+    {
+      "id": 185,
+      "start": 551.82,
+      "end": 558.19,
+      "text": "par exemple le prompt.café.rich,"
+    },
+    {
+      "id": 186,
+      "start": 558.19,
+      "end": 561.47,
+      "text": "classe un lien sécurisé, on va faire attention."
+    },
+    {
+      "id": 187,
+      "start": 561.47,
+      "end": 565.66,
+      "text": "On va aller plutôt taper sur un autre lien."
+    },
+    {
+      "id": 188,
+      "start": 565.66,
+      "end": 566.86,
+      "text": "Voilà, celui-là."
+    },
+    {
+      "id": 189,
+      "start": 566.86,
+      "end": 572.91,
+      "text": "On va, du coup, lui demander à notre scrapteur,"
+    },
+    {
+      "id": 190,
+      "start": 572.91,
+      "end": 574.31,
+      "text": "d'aller regarder toutes les pages."
+    },
+    {
+      "id": 191,
+      "start": 574.31,
+      "end": 578.6,
+      "text": "On peut aller scroller le maximum des pages par site."
+    },
+    {
+      "id": 192,
+      "start": 578.6,
+      "end": 581.8,
+      "text": "Et si je clique sur Run,"
+    },
+    {
+      "id": 193,
+      "start": 581.84,
+      "end": 586.73,
+      "text": "du coup, mon acteur se met en route."
+    },
+    {
+      "id": 194,
+      "start": 586.73,
+      "end": 588.17,
+      "text": "Comme on a vu tout à l'heure,"
+    },
+    {
+      "id": 195,
+      "start": 588.17,
+      "end": 591.28,
+      "text": "on a la partie, juste ici."
+    },
+    {
+      "id": 196,
+      "start": 591.28,
+      "end": 594.31,
+      "text": "On voit le prix de consommation."
+    },
+    {
+      "id": 197,
+      "start": 594.31,
+      "end": 596.06,
+      "text": "On voit la partie log."
+    },
+    {
+      "id": 198,
+      "start": 596.06,
+      "end": 597.7,
+      "text": "Il a bien trouvé un numéro de téléphone"
+    },
+    {
+      "id": 199,
+      "start": 597.7,
+      "end": 600.39,
+      "text": "et on a trouvé même deux."
+    },
+    {
+      "id": 200,
+      "start": 600.39,
+      "end": 603.34,
+      "text": "Donc, il a trouvé les réseaux sociales."
+    },
+    {
+      "id": 201,
+      "start": 603.34,
+      "end": 609.43,
+      "text": "Il a trouvé Timour presse aussi."
+    },
+    {
+      "id": 202,
+      "start": 609.43,
+      "end": 612.67,
+      "text": "Donc, il ne va pas nous intéresser forcément."
+    },
+    {
+      "id": 203,
+      "start": 612.67,
+      "end": 615.72,
+      "text": "Puis, ce n'est pas d'aller les acquierre."
+    },
+    {
+      "id": 204,
+      "start": 615.72,
+      "end": 618.41,
+      "text": "Mais voilà."
+    },
+    {
+      "id": 205,
+      "start": 618.41,
+      "end": 623.31,
+      "text": "Du coup, il allait chercher la partie équipe."
+    },
+    {
+      "id": 206,
+      "start": 623.35,
+      "end": 626.47,
+      "text": "La partie actualité, politique de confidentialité,"
+    },
+    {
+      "id": 207,
+      "start": 626.47,
+      "end": 628.27,
+      "text": "contact, mention des gains."
+    },
+    {
+      "id": 208,
+      "start": 628.27,
+      "end": 631.21,
+      "text": "Et grâce à son scrapping de pages,"
+    },
+    {
+      "id": 209,
+      "start": 631.21,
+      "end": 633.01,
+      "text": "donc, il a récupéré du code."
+    },
+    {
+      "id": 210,
+      "start": 633.01,
+      "end": 637.86,
+      "text": "Et après, il a converti ce code en filtre."
+    },
+    {
+      "id": 211,
+      "start": 637.86,
+      "end": 642.28,
+      "text": "Donc, les filtres, c'est, par exemple,"
+    },
+    {
+      "id": 212,
+      "start": 642.28,
+      "end": 644.48,
+      "text": "à Robase pour retrouver l'adresse e-mail"
+    },
+    {
+      "id": 213,
+      "start": 644.48,
+      "end": 648.76,
+      "text": "ou numéro de téléphone avec une suite de 10 chiffres"
+    },
+    {
+      "id": 214,
+      "start": 648.76,
+      "end": 650.32,
+      "text": "pour que ça matche."
+    },
+    {
+      "id": 215,
+      "start": 650.32,
+      "end": 651.56,
+      "text": "Et du coup, nous, ce qu'on va faire,"
+    },
+    {
+      "id": 216,
+      "start": 651.56,
+      "end": 653.04,
+      "text": "c'est exactement la même chose,"
+    },
+    {
+      "id": 217,
+      "start": 653.04,
+      "end": 655.16,
+      "text": "mais sur une reproduction par batch de 50."
+    },
+    {
+      "id": 218,
+      "start": 655.2,
+      "end": 657.08,
+      "text": "On va envoyer 56 par 56."
+    },
+    {
+      "id": 219,
+      "start": 657.08,
+      "end": 659.32,
+      "text": "Et on va envoyer une intelligence artificielle,"
+    },
+    {
+      "id": 220,
+      "start": 659.32,
+      "end": 660.8,
+      "text": "notre code code,"
+    },
+    {
+      "id": 221,
+      "start": 660.8,
+      "end": 662.84,
+      "text": "pour regroupler ces informations."
+    },
+    {
+      "id": 222,
+      "start": 662.84,
+      "end": 664.36,
+      "text": "Et après, nous les restructurer"
+    },
+    {
+      "id": 223,
+      "start": 664.36,
+      "end": 668.85,
+      "text": "et les envoyer sur notre fichier Excel Nix"
+    },
+    {
+      "id": 224,
+      "start": 668.85,
+      "end": 671.4,
+      "text": "pour récupérer les contacts."
+    },
+    {
+      "id": 225,
+      "start": 671.4,
+      "end": 675.22,
+      "text": "Ce qu'on va faire, c'est, d'une part,"
+    },
+    {
+      "id": 226,
+      "start": 675.22,
+      "end": 678.14,
+      "text": "ouvrir une session cloud code."
+    },
+    {
+      "id": 227,
+      "start": 678.14,
+      "end": 680.42,
+      "text": "Donc, pour ouvrir une session cloud code,"
+    },
+    {
+      "id": 228,
+      "start": 680.42,
+      "end": 683.14,
+      "text": "on va aller sur l'Ethicratue massive,"
+    },
+    {
+      "id": 229,
+      "start": 683.14,
+      "end": 686.54,
+      "text": "dans le dossier 6."
+    },
+    {
+      "id": 230,
+      "start": 686.58,
+      "end": 691.7,
+      "text": "On va taper la commande cloud non chose au skip."
+    },
+    {
+      "id": 231,
+      "start": 691.7,
+      "end": 694.08,
+      "text": "On va pas se prendre la tête"
+    },
+    {
+      "id": 232,
+      "start": 694.08,
+      "end": 696.54,
+      "text": "pour lui donner un maximum d'informations"
+    },
+    {
+      "id": 233,
+      "start": 696.54,
+      "end": 697.5,
+      "text": "pour qu'il comprenne bien"
+    },
+    {
+      "id": 234,
+      "start": 697.5,
+      "end": 699.3,
+      "text": "comment utiliser le scripteur en question."
+    },
+    {
+      "id": 235,
+      "start": 699.3,
+      "end": 708.9,
+      "text": "On va aller dans la formation, on copie, on colle."
+    },
+    {
+      "id": 236,
+      "start": 708.9,
+      "end": 710.58,
+      "text": "Ensuite, on va récupérer le prompt"
+    },
+    {
+      "id": 237,
+      "start": 710.58,
+      "end": 713.22,
+      "text": "juste ici de la séance 17, on colle."
+    },
+    {
+      "id": 238,
+      "start": 713.22,
+      "end": 714.46,
+      "text": "Et là, ce qui va être très important,"
+    },
+    {
+      "id": 239,
+      "start": 714.46,
+      "end": 715.58,
+      "text": "c'est lui donner une clé à pays."
+    },
+    {
+      "id": 240,
+      "start": 715.58,
+      "end": 716.78,
+      "text": "Si on lui donne pas de clé à pays,"
+    },
+    {
+      "id": 241,
+      "start": 716.78,
+      "end": 719.38,
+      "text": "en aucun cas, il peut travailler avec ce scripteur-là."
+    },
+    {
+      "id": 242,
+      "start": 719.38,
+      "end": 720.94,
+      "text": "Pour récupérer la clé à pays,"
+    },
+    {
+      "id": 243,
+      "start": 720.94,
+      "end": 723.22,
+      "text": "on va y, juste ici, en haut à droite,"
+    },
+    {
+      "id": 244,
+      "start": 723.22,
+      "end": 725.46,
+      "text": "on va dans API 8.0,"
+    },
+    {
+      "id": 245,
+      "start": 725.46,
+      "end": 728.76,
+      "text": "et on va récupérer la troisième."
+    },
+    {
+      "id": 246,
+      "start": 728.76,
+      "end": 732.46,
+      "text": "Run Actor and getDataSystem,"
+    },
+    {
+      "id": 247,
+      "start": 732.46,
+      "end": 734.36,
+      "text": "data set items,"
+    },
+    {
+      "id": 248,
+      "start": 734.36,
+      "end": 737.34,
+      "text": "on récupère la clé à pays."
+    },
+    {
+      "id": 249,
+      "start": 737.34,
+      "end": 740.96,
+      "text": "On la colle et on tape sur entrée."
+    },
+    {
+      "id": 250,
+      "start": 740.96,
+      "end": 761.91,
+      "text": "Et ensuite, on laisse travailler."
+    },
+    {
+      "id": 251,
+      "start": 761.91,
+      "end": 765.77,
+      "text": "On va voir après que la partie run,"
+    },
+    {
+      "id": 252,
+      "start": 765.77,
+      "end": 766.93,
+      "text": "si ça fonctionne bien,"
+    },
+    {
+      "id": 253,
+      "start": 766.93,
+      "end": 769.69,
+      "text": "on va laisser justement prendre l'information,"
+    },
+    {
+      "id": 254,
+      "start": 769.69,
+      "end": 772.09,
+      "text": "la comprendre, la structurer"
+    },
+    {
+      "id": 255,
+      "start": 772.13,
+      "end": 793.15,
+      "text": "et ensuite réaliser la tâche demandée."
+    },
+    {
+      "id": 256,
+      "start": 793.15,
+      "end": 794.63,
+      "text": "Quand une fois, si je le donne en dur,"
+    },
+    {
+      "id": 257,
+      "start": 794.63,
+      "end": 795.63,
+      "text": "le token, c'est parce qu'après,"
+    },
+    {
+      "id": 258,
+      "start": 795.63,
+      "end": 797.03,
+      "text": "on l'utilise plus loin le jet."
+    },
+    {
+      "id": 259,
+      "start": 797.03,
+      "end": 798.91,
+      "text": "Chaque acteur a sa propre API,"
+    },
+    {
+      "id": 260,
+      "start": 798.91,
+      "end": 800.43,
+      "text": "plus ou moins son URL."
+    },
+    {
+      "id": 261,
+      "start": 800.43,
+      "end": 802.03,
+      "text": "Ensuite,"
+    },
+    {
+      "id": 262,
+      "start": 802.03,
+      "end": 806.66,
+      "text": "vous pouvez très bien le mettre dans un fichier de VNV."
+    },
+    {
+      "id": 263,
+      "start": 806.66,
+      "end": 807.46,
+      "text": "Donc là, c'est parti,"
+    },
+    {
+      "id": 264,
+      "start": 807.46,
+      "end": 809.22,
+      "text": "il commence à attaquer."
+    },
+    {
+      "id": 265,
+      "start": 809.22,
+      "end": 811.73,
+      "text": "Du coup, tout le système,"
+    },
+    {
+      "id": 266,
+      "start": 811.73,
+      "end": 813.61,
+      "text": "il va créer en piton,"
+    },
+    {
+      "id": 267,
+      "start": 813.61,
+      "end": 815.01,
+      "text": "il va créer des requêtes par 50."
+    },
+    {
+      "id": 268,
+      "start": 815.01,
+      "end": 839.78,
+      "text": "On va voir ça ensemble."
+    },
+    {
+      "id": 269,
+      "start": 839.78,
+      "end": 842.54,
+      "text": "Et là, il a fait un test, il me semble, je crois."
+    },
+    {
+      "id": 270,
+      "start": 842.54,
+      "end": 848.74,
+      "text": "Non, c'est pas lui."
+    },
+    {
+      "id": 271,
+      "start": 848.74,
+      "end": 850.14,
+      "text": "Là, il fait un audit de la base."
+    },
+    {
+      "id": 272,
+      "start": 850.14,
+      "end": 851.94,
+      "text": "Ensuite, il va construire le batch."
+    },
+    {
+      "id": 273,
+      "start": 851.94,
+      "end": 854.22,
+      "text": "Ensuite, il va faire le test API."
+    },
+    {
+      "id": 274,
+      "start": 854.22,
+      "end": 855.98,
+      "text": "Ensuite, il va faire un run batch,"
+    },
+    {
+      "id": 275,
+      "start": 855.98,
+      "end": 857.62,
+      "text": "normalisé, score émergé."
+    },
+    {
+      "id": 276,
+      "start": 857.62,
+      "end": 859.62,
+      "text": "Et après, il va nous faire la génération"
+    },
+    {
+      "id": 277,
+      "start": 859.62,
+      "end": 865.45,
+      "text": "sur l'étape 8."
+    },
+    {
+      "id": 278,
+      "start": 865.45,
+      "end": 866.29,
+      "text": "Donc vraiment, le P-File,"
+    },
+    {
+      "id": 279,
+      "start": 866.29,
+      "end": 867.45,
+      "text": "il semble être super puissant."
+    },
+    {
+      "id": 280,
+      "start": 867.45,
+      "end": 868.89,
+      "text": "Je vous invite à vraiment le tester"
+    },
+    {
+      "id": 281,
+      "start": 868.89,
+      "end": 872.81,
+      "text": "et à faire des petites automatisations"
+    },
+    {
+      "id": 282,
+      "start": 872.81,
+      "end": 878.5,
+      "text": "d'engagement avec plusieurs acteurs."
+    },
+    {
+      "id": 283,
+      "start": 878.5,
+      "end": 879.5,
+      "text": "On vous prenez la main dessus"
+    },
+    {
+      "id": 284,
+      "start": 879.5,
+      "end": 881.58,
+      "text": "parce que vous allez en avoir besoin"
+    },
+    {
+      "id": 285,
+      "start": 881.58,
+      "end": 884.15,
+      "text": "sur certains cas clients,"
+    },
+    {
+      "id": 286,
+      "start": 884.15,
+      "end": 885.51,
+      "text": "que ce soit au niveau de l'engagement,"
+    },
+    {
+      "id": 287,
+      "start": 885.51,
+      "end": 890.78,
+      "text": "que ce soit même au niveau de création de postes"
+    },
+    {
+      "id": 288,
+      "start": 890.78,
+      "end": 894.23,
+      "text": "pour aller checker la concurrence."
+    },
+    {
+      "id": 289,
+      "start": 894.23,
+      "end": 895.27,
+      "text": "Il y a plein de choses à faire."
+    },
+    {
+      "id": 290,
+      "start": 895.27,
+      "end": 896.83,
+      "text": "Il y a plein, plein, plein, plein de choses."
+    },
+    {
+      "id": 291,
+      "start": 896.83,
+      "end": 898.75,
+      "text": "Je sais pas, il y en a combien en tout ?"
+    },
+    {
+      "id": 292,
+      "start": 898.75,
+      "end": 901.15,
+      "text": "Il y en a 27 000, aujourd'hui."
+    },
+    {
+      "id": 293,
+      "start": 901.15,
+      "end": 903.14,
+      "text": "Je vais faire pas mal de tests."
+    },
+    {
+      "id": 294,
+      "start": 903.14,
+      "end": 907.39,
+      "text": "On peut récupérer aussi des ordres d'emploi, une guide."
+    },
+    {
+      "id": 295,
+      "start": 907.39,
+      "end": 909.03,
+      "text": "Ça peut être intéressant pour vous."
+    },
+    {
+      "id": 296,
+      "start": 909.03,
+      "end": 912.75,
+      "text": "Par exemple, si vous mettez..."
+    },
+    {
+      "id": 297,
+      "start": 912.75,
+      "end": 913.75,
+      "text": "Attends, on va refaire le test"
+    },
+    {
+      "id": 298,
+      "start": 913.75,
+      "end": 916.07,
+      "text": "parce que je crois qu'il est..."
+    },
+    {
+      "id": 299,
+      "start": 916.07,
+      "end": 918.95,
+      "text": "Je sais pas comment s'appelle le nom"
+    },
+    {
+      "id": 300,
+      "start": 919.03,
+      "end": 920.11,
+      "text": "sur une guide."
+    },
+    {
+      "id": 301,
+      "start": 920.11,
+      "end": 929.43,
+      "text": "Une guide à automatisation."
+    },
+    {
+      "id": 302,
+      "start": 929.43,
+      "end": 936.29,
+      "text": "Il y a je sais pas comment il s'appelle le remote."
+    },
+    {
+      "id": 303,
+      "start": 936.29,
+      "end": 938.58,
+      "text": "Je sais pas comment il s'appelle."
+    },
+    {
+      "id": 304,
+      "start": 938.58,
+      "end": 960.57,
+      "text": "Je demande à la checker pt."
+    },
+    {
+      "id": 305,
+      "start": 960.57,
+      "end": 968.64,
+      "text": "Je crois qu'il y en a plus qu'un high automation spécialiste."
+    },
+    {
+      "id": 306,
+      "start": 968.64,
+      "end": 971.05,
+      "text": "Ok, je pense que c'est plus lui."
+    },
+    {
+      "id": 307,
+      "start": 971.05,
+      "end": 1000.56,
+      "text": "On va voir sur..."
+    },
+    {
+      "id": 308,
+      "start": 1000.56,
+      "end": 1003.22,
+      "text": "C'est comme ça qu'il s'appelle."
+    },
+    {
+      "id": 309,
+      "start": 1003.22,
+      "end": 1004.82,
+      "text": "On va mettre consultant ya."
+    },
+    {
+      "id": 310,
+      "start": 1010.83,
+      "end": 1013.46,
+      "text": "Pas trop comment s'appelle, honnêtement."
+    },
+    {
+      "id": 311,
+      "start": 1013.46,
+      "end": 1015.78,
+      "text": "On peut utiliser..."
+    },
+    {
+      "id": 312,
+      "start": 1015.78,
+      "end": 1028.06,
+      "text": "Comment s'appelle ?"
+    },
+    {
+      "id": 313,
+      "start": 1028.06,
+      "end": 1034.03,
+      "text": "On va mettre consultant ya."
+    },
+    {
+      "id": 314,
+      "start": 1034.11,
+      "end": 1037.78,
+      "text": "Vous pouvez créer une automatisation d'Hair à toute simple."
+    },
+    {
+      "id": 315,
+      "start": 1037.78,
+      "end": 1044.32,
+      "text": "On va mettre 50."
+    },
+    {
+      "id": 316,
+      "start": 1044.32,
+      "end": 1057.02,
+      "text": "Oh !"
+    },
+    {
+      "id": 317,
+      "start": 1057.02,
+      "end": 1058.22,
+      "text": "Wow, il en est lui."
+    },
+    {
+      "id": 318,
+      "start": 1058.22,
+      "end": 1060.94,
+      "text": "Du clé, il est en train de faire des tests à pifile."
+    },
+    {
+      "id": 319,
+      "start": 1060.94,
+      "end": 1067.07,
+      "text": "On va voir après le résultat."
+    },
+    {
+      "id": 320,
+      "start": 1067.07,
+      "end": 1068.63,
+      "text": "Mais en gros, vous pouvez très bien sélectionner."
+    },
+    {
+      "id": 321,
+      "start": 1068.63,
+      "end": 1071.95,
+      "text": "Fin de faire une automatisation avec ce scrapteur-là."
+    },
+    {
+      "id": 322,
+      "start": 1071.95,
+      "end": 1077.66,
+      "text": "Et ensuite, une fois que vous avez des informations"
+    },
+    {
+      "id": 323,
+      "start": 1077.66,
+      "end": 1080.47,
+      "text": "directement fournées dans un Google Sheet,"
+    },
+    {
+      "id": 324,
+      "start": 1080.47,
+      "end": 1081.91,
+      "text": "eh bien, vous utilisez AppCipe."
+    },
+    {
+      "id": 325,
+      "start": 1081.91,
+      "end": 1085.11,
+      "text": "Et toute la journée, vous ouvrez une session codex"
+    },
+    {
+      "id": 326,
+      "start": 1085.15,
+      "end": 1088.31,
+      "text": "qui va faire une modification."
+    },
+    {
+      "id": 327,
+      "start": 1088.31,
+      "end": 1094.54,
+      "text": "À la limite, je sais ce que je vais faire."
+    },
+    {
+      "id": 328,
+      "start": 1094.54,
+      "end": 1098.3,
+      "text": "Parce que les résultats, ils ne sont pas très bons."
+    },
+    {
+      "id": 329,
+      "start": 1098.3,
+      "end": 1100.66,
+      "text": "C'est un claquant, on ne reste pas mal."
+    },
+    {
+      "id": 330,
+      "start": 1100.66,
+      "end": 1104.38,
+      "text": "Et en gros, le USB va permettre d'envoyer la lettre de motivation"
+    },
+    {
+      "id": 331,
+      "start": 1104.38,
+      "end": 1109.4,
+      "text": "plus le CVL, comme ça là, en offre d'emploi."
+    },
+    {
+      "id": 332,
+      "start": 1109.4,
+      "end": 1112.64,
+      "text": "Je pense que je vais juste mettre ya, c'est plus simple."
+    },
+    {
+      "id": 333,
+      "start": 1112.64,
+      "end": 1116.31,
+      "text": "Je vais arrêter l'acteur."
+    },
+    {
+      "id": 334,
+      "start": 1116.31,
+      "end": 1120.81,
+      "text": "Bon, on a arrêté l'acteur."
+    },
+    {
+      "id": 335,
+      "start": 1120.81,
+      "end": 1122.99,
+      "text": "On a payé combien ?"
+    },
+    {
+      "id": 336,
+      "start": 1122.99,
+      "end": 1125.21,
+      "text": "On a payé 80, enfin."
+    },
+    {
+      "id": 337,
+      "start": 1125.25,
+      "end": 1128.6,
+      "text": "On a 10 centimes, pratiquement."
+    },
+    {
+      "id": 338,
+      "start": 1128.6,
+      "end": 1129.96,
+      "text": "Donc vous avez compris."
+    },
+    {
+      "id": 339,
+      "start": 1129.96,
+      "end": 1133.16,
+      "text": "Par exemple, tous les jours à 9h,"
+    },
+    {
+      "id": 340,
+      "start": 1133.16,
+      "end": 1136.8,
+      "text": "l'automatisation se lance, il utilise la API."
+    },
+    {
+      "id": 341,
+      "start": 1136.8,
+      "end": 1139.48,
+      "text": "Ensuite, elle retourne les résultats dans Google Sheet."
+    },
+    {
+      "id": 342,
+      "start": 1139.48,
+      "end": 1144.32,
+      "text": "Une fois le Google Sheet modifié,"
+    },
+    {
+      "id": 343,
+      "start": 1144.32,
+      "end": 1147.18,
+      "text": "donc mis à jour plutôt,"
+    },
+    {
+      "id": 344,
+      "start": 1147.18,
+      "end": 1151.18,
+      "text": "on ouvre notre session en MCP"
+    },
+    {
+      "id": 345,
+      "start": 1151.18,
+      "end": 1155.38,
+      "text": "et ça se croule l'offre d'emploi de manière automatique."
+    },
+    {
+      "id": 346,
+      "start": 1155.46,
+      "end": 1164.29,
+      "text": "Ça répond avec la modification de la lettre de motivation"
+    },
+    {
+      "id": 347,
+      "start": 1164.29,
+      "end": 1166.95,
+      "text": "plus le CV joie."
+    },
+    {
+      "id": 348,
+      "start": 1166.95,
+      "end": 1168.55,
+      "text": "Là, on est en full automatique"
+    },
+    {
+      "id": 349,
+      "start": 1168.55,
+      "end": 1173.36,
+      "text": "et on peut trouver des petits contrats en finance directement."
+    },
+    {
+      "id": 350,
+      "start": 1173.36,
+      "end": 1176.28,
+      "text": "Ça, ce système est assez simple à buller."
+    },
+    {
+      "id": 351,
+      "start": 1176.28,
+      "end": 1177.96,
+      "text": "Il y a vraiment beaucoup de choses à faire."
+    },
+    {
+      "id": 352,
+      "start": 1177.96,
+      "end": 1179.52,
+      "text": "Parfois, je vais aller dans Run Actor."
+    },
+    {
+      "id": 353,
+      "start": 1179.52,
+      "end": 1181.16,
+      "text": "Je vais aller voir où on en est."
+    },
+    {
+      "id": 354,
+      "start": 1181.16,
+      "end": 1182.91,
+      "text": "On a 12 runs."
+    },
+    {
+      "id": 355,
+      "start": 1182.91,
+      "end": 1184.19,
+      "text": "Donc là, comme je vous ai dit,"
+    },
+    {
+      "id": 356,
+      "start": 1184.23,
+      "end": 1185.67,
+      "text": "batch par 50."
+    },
+    {
+      "id": 357,
+      "start": 1185.67,
+      "end": 1193.11,
+      "text": "Donc là, c'est en train de tourner."
+    },
+    {
+      "id": 358,
+      "start": 1193.11,
+      "end": 1194.83,
+      "text": "C'est en train de me faire automatiquement."
+    },
+    {
+      "id": 359,
+      "start": 1194.83,
+      "end": 1201.27,
+      "text": "On a encore énormément de sites internet à scroller."
+    },
+    {
+      "id": 360,
+      "start": 1201.27,
+      "end": 1205.56,
+      "text": "Donc ça prend pas mal de temps."
+    },
+    {
+      "id": 361,
+      "start": 1205.56,
+      "end": 1208.81,
+      "text": "Je mets bruyons, on va tourner le résultat."
+    },
+    {
+      "id": 362,
+      "start": 1208.81,
+      "end": 1218.27,
+      "text": "Là, on a des informations récupérées."
+    },
+    {
+      "id": 363,
+      "start": 1218.27,
+      "end": 1220.71,
+      "text": "Le numéro de téléphone en 06."
+    },
+    {
+      "id": 364,
+      "start": 1220.71,
+      "end": 1222.35,
+      "text": "On a trouvé l'Instagram."
+    },
+    {
+      "id": 365,
+      "start": 1222.35,
+      "end": 1225.22,
+      "text": "Par contre, on n'a pas trouvé l'adresse e-mail."
+    },
+    {
+      "id": 366,
+      "start": 1225.22,
+      "end": 1226.82,
+      "text": "Là, on a trouvé deux adresses e-mail."
+    },
+    {
+      "id": 367,
+      "start": 1226.82,
+      "end": 1228.46,
+      "text": "User Domain, ça n'a pas nous intéressé."
+    },
+    {
+      "id": 368,
+      "start": 1228.46,
+      "end": 1233.13,
+      "text": "Par contre, celui-là, oui."
+    },
+    {
+      "id": 369,
+      "start": 1233.21,
+      "end": 1236.65,
+      "text": "Là, on a deux adresses Bobi, Canon, OK."
+    },
+    {
+      "id": 370,
+      "start": 1236.65,
+      "end": 1240.25,
+      "text": "Ça peut être intégrissante."
+    },
+    {
+      "id": 371,
+      "start": 1240.25,
+      "end": 1242.41,
+      "text": "Là, on a trouvé trois adresses e-mail."
+    },
+    {
+      "id": 372,
+      "start": 1242.41,
+      "end": 1245.25,
+      "text": "Enfin, trois numéros de téléphone."
+    },
+    {
+      "id": 373,
+      "start": 1245.25,
+      "end": 1248.13,
+      "text": "Papapal, l'adresse e-mail."
+    },
+    {
+      "id": 374,
+      "start": 1248.13,
+      "end": 1250.29,
+      "text": "Plus d'abation, la table, le marché, OK."
+    },
+    {
+      "id": 375,
+      "start": 1250.29,
+      "end": 1252.29,
+      "text": "Donc là, on a perdu des infos."
+    },
+    {
+      "id": 376,
+      "start": 1252.29,
+      "end": 1253.21,
+      "text": "E-mail aussi."
+    },
+    {
+      "id": 377,
+      "start": 1253.21,
+      "end": 1256.17,
+      "text": "On récupère pas des adresses e-mail à chaque fois."
+    },
+    {
+      "id": 378,
+      "start": 1256.17,
+      "end": 1259.68,
+      "text": "On récupère toujours peut-être 60, 70%."
+    },
+    {
+      "id": 379,
+      "start": 1259.68,
+      "end": 1262.96,
+      "text": "Ce n'est pas ça fait combien, ça dépend."
+    },
+    {
+      "id": 380,
+      "start": 1262.96,
+      "end": 1266.29,
+      "text": "Ça tourne assez vite."
+    },
+    {
+      "id": 381,
+      "start": 1266.29,
+      "end": 1268.58,
+      "text": "Là, on voit."
+    },
+    {
+      "id": 382,
+      "start": 1268.58,
+      "end": 1269.42,
+      "text": "Hop."
+    },
+    {
+      "id": 383,
+      "start": 1269.46,
+      "end": 1271.74,
+      "text": "Non, je sais pas, je vais pas le mettre, David."
+    },
+    {
+      "id": 384,
+      "start": 1271.74,
+      "end": 1274.64,
+      "text": "Ce maïs."
+    },
+    {
+      "id": 385,
+      "start": 1274.64,
+      "end": 1282.13,
+      "text": "Pour 1000 pages, on se craptait, on a un peu près un dollar."
+    },
+    {
+      "id": 386,
+      "start": 1282.13,
+      "end": 1285.82,
+      "text": "Là, si je rechange la page, on va voir combien d'appel est déjà."
+    },
+    {
+      "id": 387,
+      "start": 1285.82,
+      "end": 1292.64,
+      "text": "De ma 16 centime, ça va se mettre à prendre un pas jour plus tard."
+    },
+    {
+      "id": 388,
+      "start": 1292.64,
+      "end": 1295.48,
+      "text": "On laisse travailler encore une fois, un peu de lutte."
+    },
+    {
+      "id": 389,
+      "start": 1295.48,
+      "end": 1299.38,
+      "text": "Ce qu'il fasse, je scroll sur tout."
+    },
+    {
+      "id": 390,
+      "start": 1311.06,
+      "end": 1312.82,
+      "text": "Là, on voit des logs, on peut très bien les voir."
+    },
+    {
+      "id": 391,
+      "start": 1312.82,
+      "end": 1316.62,
+      "text": "Ici aussi, Rennes."
+    },
+    {
+      "id": 392,
+      "start": 1316.62,
+      "end": 1317.82,
+      "text": "Là, on voit tout."
+    },
+    {
+      "id": 393,
+      "start": 1317.82,
+      "end": 1324.12,
+      "text": "Je quitte dessus."
+    },
+    {
+      "id": 394,
+      "start": 1324.16,
+      "end": 1329.46,
+      "text": "Vous pouvez aller voir là, logs, toutes les lignes de code"
+    },
+    {
+      "id": 395,
+      "start": 1329.46,
+      "end": 1331.66,
+      "text": "qui sont en train de se générer automatiquement"
+    },
+    {
+      "id": 396,
+      "start": 1331.66,
+      "end": 1335.7,
+      "text": "avec le process en cours."
+    },
+    {
+      "id": 397,
+      "start": 1335.7,
+      "end": 1338.14,
+      "text": "Donc, c'est ce que vous avez aussi le cours de code, du coup."
+    },
+    {
+      "id": 398,
+      "start": 1338.14,
+      "end": 1343.29,
+      "text": "C'est comme ça qu'après, il récupère des informations."
+    },
+    {
+      "id": 399,
+      "start": 1343.29,
+      "end": 1344.73,
+      "text": "Là, on a une tâche en cours."
+    },
+    {
+      "id": 400,
+      "start": 1344.73,
+      "end": 1347.82,
+      "text": "On va voir si c'est celle-là."
+    },
+    {
+      "id": 401,
+      "start": 1347.82,
+      "end": 1359.98,
+      "text": "Donc, Rennes, Time, 56 secondes, ça a du beuille."
+    },
+    {
+      "id": 402,
+      "start": 1359.98,
+      "end": 1362.15,
+      "text": "Ouais, je pense qu'il a beuille, là."
+    },
+    {
+      "id": 403,
+      "start": 1362.15,
+      "end": 1364.23,
+      "text": "Pas de beuille, j'attends d'un wake-up paniffé pour vérifier."
+    },
+    {
+      "id": 404,
+      "start": 1364.23,
+      "end": 1366.23,
+      "text": "Non, ok, d'un journal book, tu fais, ah oui, bien."
+    },
+    {
+      "id": 405,
+      "start": 1366.23,
+      "end": 1374.04,
+      "text": "C'est moi qui l'a lancé, du coup ça, je vais le faire bugger."
+    },
+    {
+      "id": 406,
+      "start": 1374.16,
+      "end": 1378.04,
+      "text": "Là, il est contraint de reprendre, on m'a outpout de 44."
+    },
+    {
+      "id": 407,
+      "start": 1378.04,
+      "end": 1396.15,
+      "text": "Pardon, je pense que l'on paye en nombre de centimes."
+    },
+    {
+      "id": 408,
+      "start": 1396.15,
+      "end": 1410.97,
+      "text": "Donc, ça se met pas le jour, je ne sais pas pourquoi."
+    },
+    {
+      "id": 409,
+      "start": 1410.97,
+      "end": 1414.87,
+      "text": "Quand on laisse travailler, là, on peut voir qu'il nous a dit que le owner"
+    },
+    {
+      "id": 410,
+      "start": 1414.87,
+      "end": 1420.55,
+      "text": "était relancé en arrière-plan."
+    },
+    {
+      "id": 411,
+      "start": 1420.55,
+      "end": 1422.87,
+      "text": "Là, on voit tous les batchs qu'il est en train de créer."
+    },
+    {
+      "id": 412,
+      "start": 1422.87,
+      "end": 1430.72,
+      "text": "Donc, batches 101, batches 67, etc."
+    },
+    {
+      "id": 413,
+      "start": 1430.72,
+      "end": 1433.12,
+      "text": "Là, le batch 07, il est fait, Fails, Fails."
+    },
+    {
+      "id": 414,
+      "start": 1433.12,
+      "end": 1435.82,
+      "text": "Donc, on a pas mal de Fails."
+    },
+    {
+      "id": 415,
+      "start": 1435.82,
+      "end": 1438.82,
+      "text": "Je pense que c'est parce qu'à derrière,"
+    },
+    {
+      "id": 416,
+      "start": 1438.9,
+      "end": 1441.26,
+      "text": "on voit qu'au niveau de notre GD, Néo Max,"
+    },
+    {
+      "id": 417,
+      "start": 1441.26,
+      "end": 1445.42,
+      "text": "on entre même pratiquement sur poste et on a 6 GB."
+    },
+    {
+      "id": 418,
+      "start": 1445.42,
+      "end": 1447.66,
+      "text": "Vous faites attention, parce que si on dépasse,"
+    },
+    {
+      "id": 419,
+      "start": 1447.66,
+      "end": 1453.14,
+      "text": "ça veut dire qu'on saute de l'abonnement en start-up."
+    },
+    {
+      "id": 420,
+      "start": 1453.14,
+      "end": 1473.35,
+      "text": "Il faut payer justement par mois."
+    },
+    {
+      "id": 421,
+      "start": 1473.35,
+      "end": 1475.23,
+      "text": "Alors là, ce qu'on a déjà toutes ses pages,"
+    },
+    {
+      "id": 422,
+      "start": 1475.23,
+      "end": 1503.94,
+      "text": "tous ses sites plutôt, on va demander dans les hauts."
+    },
+    {
+      "id": 423,
+      "start": 1503.94,
+      "end": 1508.72,
+      "text": "Ouais, 2,57, on a déjà payé, il faut refaire attention."
+    },
+    {
+      "id": 424,
+      "start": 1508.72,
+      "end": 1511.83,
+      "text": "Je pense qu'on va envoyer, qu'on va me run."
+    },
+    {
+      "id": 425,
+      "start": 1511.83,
+      "end": 1514.51,
+      "text": "Mais le but, c'est de pas dépasser les 5 dollars."
+    },
+    {
+      "id": 426,
+      "start": 1546.3,
+      "end": 1548.18,
+      "text": "Et à nous donner le résultat,"
+    },
+    {
+      "id": 427,
+      "start": 1548.18,
+      "end": 1574.3,
+      "text": "de ce qu'il a récupéré pour le moment."
+    },
+    {
+      "id": 428,
+      "start": 1574.3,
+      "end": 1642.03,
+      "text": "Il est travaillé, on attend le premier résultat,"
+    },
+    {
+      "id": 429,
+      "start": 1642.03,
+      "end": 1646.66,
+      "text": "qu'il est en train de nous régénérer le XLSX."
+    },
+    {
+      "id": 430,
+      "start": 1646.66,
+      "end": 1648.5,
+      "text": "Après cette phase-là, on va chercher à enrichir,"
+    },
+    {
+      "id": 431,
+      "start": 1648.5,
+      "end": 1651.38,
+      "text": "enfin, pas enrichir, on a structuré de nous donner"
+    },
+    {
+      "id": 432,
+      "start": 1651.38,
+      "end": 1652.7,
+      "text": "pour la partie pour inspection,"
+    },
+    {
+      "id": 433,
+      "start": 1652.7,
+      "end": 1655.29,
+      "text": "parce que ça va être un peu d'une emporte, quoi."
+    },
+    {
+      "id": 434,
+      "start": 1655.29,
+      "end": 1656.81,
+      "text": "Le but, c'est qu'on ait,"
+    },
+    {
+      "id": 435,
+      "start": 1656.81,
+      "end": 1658.01,
+      "text": "je ne sais pas, j'aimerais bien appeler ça comme ça,"
+    },
+    {
+      "id": 436,
+      "start": 1658.01,
+      "end": 1659.97,
+      "text": "mais un fichier sain,"
+    },
+    {
+      "id": 437,
+      "start": 1659.97,
+      "end": 1726.06,
+      "text": "pour que la prospection se fasse correctement."
+    },
+    {
+      "id": 438,
+      "start": 1726.06,
+      "end": 1727.7,
+      "text": "On attend qu'il nous réponde."
+    },
+    {
+      "id": 439,
+      "start": 1753.3,
+      "end": 1754.86,
+      "text": "Je pense qu'il en entre encore en renait,"
+    },
+    {
+      "id": 440,
+      "start": 1754.9,
+      "end": 1759.51,
+      "text": "parce que là, on voit qu'il y a un starting as a crawlers,"
+    },
+    {
+      "id": 441,
+      "start": 1759.51,
+      "end": 1762.7,
+      "text": "qu'on va attendre un petit peu encore,"
+    },
+    {
+      "id": 442,
+      "start": 1762.7,
+      "end": 1766.14,
+      "text": "pour l'anatrôte de l'heure 18."
+    },
+    {
+      "id": 443,
+      "start": 1766.14,
+      "end": 1767.54,
+      "text": "On laisse travailler,"
+    },
+    {
+      "id": 444,
+      "start": 1767.54,
+      "end": 1776.81,
+      "text": "je vais me faire un petit peu le résultat."
+    },
+    {
+      "id": 445,
+      "start": 1776.81,
+      "end": 1780.75,
+      "text": "Vous pouvez voir les logs, comme je le disais d'ailleurs."
+    },
+    {
+      "id": 446,
+      "start": 1780.75,
+      "end": 1783.34,
+      "text": "Non, on récupère beaucoup d'emails,"
+    },
+    {
+      "id": 447,
+      "start": 1783.34,
+      "end": 1786.61,
+      "text": "on récupère aussi des adresses,"
+    },
+    {
+      "id": 448,
+      "start": 1786.61,
+      "end": 1796.56,
+      "text": "qu'on a récupérées."
+    },
+    {
+      "id": 449,
+      "start": 1796.56,
+      "end": 1798.4,
+      "text": "Je ne sais pas avoir la différence de les matchs,"
+    },
+    {
+      "id": 450,
+      "start": 1798.4,
+      "end": 1817.62,
+      "text": "je crois que ça y a même."
+    },
+    {
+      "id": 451,
+      "start": 1817.62,
+      "end": 1822.34,
+      "text": "Ok, 78% par scroller."
+    },
+    {
+      "id": 452,
+      "start": 1822.34,
+      "end": 1827.7,
+      "text": "Ok, top."
+    },
+    {
+      "id": 453,
+      "start": 1827.78,
+      "end": 1831.67,
+      "text": "On va laisser travailler encore un petit peu jusqu'à nos 5 dollars."
+    },
+    {
+      "id": 454,
+      "start": 1831.67,
+      "end": 1832.35,
+      "text": "C'est puissé,"
+    },
+    {
+      "id": 455,
+      "start": 1832.35,
+      "end": 1836.79,
+      "text": "et après, on passera sur la prochaine séance à la partie en vachissement."
+    },
+    {
+      "id": 456,
+      "start": 1836.79,
+      "end": 1846.55,
+      "text": "Ce n'est pas avant qu'on devait se capter nous-mêmes des leads,"
+    },
+    {
+      "id": 457,
+      "start": 1846.55,
+      "end": 1849.5,
+      "text": "tant que ça prenait d'aller combler les données sans s'y avoir."
+    },
+    {
+      "id": 458,
+      "start": 1849.5,
+      "end": 1852.57,
+      "text": "C'était dingue,"
+    },
+    {
+      "id": 459,
+      "start": 1852.57,
+      "end": 1853.81,
+      "text": "de créer du code,"
+    },
+    {
+      "id": 460,
+      "start": 1853.81,
+      "end": 1858.74,
+      "text": "du putain, il faut faire un matching."
+    },
+    {
+      "id": 461,
+      "start": 1858.74,
+      "end": 1859.94,
+      "text": "C'est vraiment plus simple,"
+    },
+    {
+      "id": 462,
+      "start": 1859.94,
+      "end": 1861.34,
+      "text": "on gagne énormément de temps,"
+    },
+    {
+      "id": 463,
+      "start": 1861.34,
+      "end": 1863.13,
+      "text": "créer une base de données,"
+    },
+    {
+      "id": 464,
+      "start": 1863.13,
+      "end": 1865.45,
+      "text": "de traquoncrète en à peine deux heures."
+    },
+    {
+      "id": 465,
+      "start": 1865.49,
+      "end": 1939.85,
+      "text": "On compte en train de scroller les pages."
+    },
+    {
+      "id": 466,
+      "start": 1939.85,
+      "end": 1941.41,
+      "text": "Ok, top, faire prévu."
+    },
+    {
+      "id": 467,
+      "start": 1941.41,
+      "end": 1948.76,
+      "text": "On se parle de façon légère sur notre partie."
+    },
+    {
+      "id": 468,
+      "start": 1948.76,
+      "end": 1951.44,
+      "text": "Oui, on peut vraiment faire ça facilement,"
+    },
+    {
+      "id": 469,
+      "start": 1951.44,
+      "end": 1954.67,
+      "text": "vous n'avez pas besoin d'avoir forcément de compétences."
+    },
+    {
+      "id": 470,
+      "start": 1954.67,
+      "end": 1957.33,
+      "text": "Vous récupérez juste la paix,"
+    },
+    {
+      "id": 471,
+      "start": 1957.33,
+      "end": 1958.25,
+      "text": "il y a chaque fois, c'est par ailleurs,"
+    },
+    {
+      "id": 472,
+      "start": 1958.25,
+      "end": 1959.81,
+      "text": "pour chaque scrapteur."
+    },
+    {
+      "id": 473,
+      "start": 1959.81,
+      "end": 1960.89,
+      "text": "La troisième,"
+    },
+    {
+      "id": 474,
+      "start": 1960.89,
+      "end": 1962.41,
+      "text": "le chronacteur,"
+    },
+    {
+      "id": 475,
+      "start": 1962.41,
+      "end": 1964.62,
+      "text": "juste ici,"
+    },
+    {
+      "id": 476,
+      "start": 1964.62,
+      "end": 1965.26,
+      "text": "vous copiez,"
+    },
+    {
+      "id": 477,
+      "start": 1965.26,
+      "end": 1967.06,
+      "text": "vous donnez un code code,"
+    },
+    {
+      "id": 478,
+      "start": 1967.06,
+      "end": 1968.46,
+      "text": "et ensuite, vous le laissez travailler,"
+    },
+    {
+      "id": 479,
+      "start": 1968.46,
+      "end": 1969.58,
+      "text": "vous le laissez comprendre,"
+    },
+    {
+      "id": 480,
+      "start": 1969.62,
+      "end": 1971.82,
+      "text": "on duque parler d'informations,"
+    },
+    {
+      "id": 481,
+      "start": 1971.82,
+      "end": 1974.37,
+      "text": "pour le faire correctement,"
+    },
+    {
+      "id": 482,
+      "start": 1974.37,
+      "end": 1977.75,
+      "text": "pour utiliser correctement cet acteur,"
+    },
+    {
+      "id": 483,
+      "start": 1977.75,
+      "end": 1979.86,
+      "text": "et après, c'est done."
+    },
+    {
+      "id": 484,
+      "start": 1979.86,
+      "end": 1981.54,
+      "text": "C'est done, vous pouvez strictement"
+    },
+    {
+      "id": 485,
+      "start": 1981.54,
+      "end": 1984.14,
+      "text": "tout utiliser avec l'autre code,"
+    },
+    {
+      "id": 486,
+      "start": 1984.14,
+      "end": 2003.44,
+      "text": "c'est extrêmement puissant."
+    },
+    {
+      "id": 487,
+      "start": 2003.44,
+      "end": 2029.1,
+      "text": "Par contre, l'ordi, il commence à chauffer un petit peu."
+    },
+    {
+      "id": 488,
+      "start": 2029.1,
+      "end": 2034.74,
+      "text": "Il commence à chauffer un petit peu."
+    },
+    {
+      "id": 489,
+      "start": 2034.74,
+      "end": 2036.54,
+      "text": "Ok, donc ta réponse tactique,"
+    },
+    {
+      "id": 490,
+      "start": 2036.54,
+      "end": 2042.91,
+      "text": "si l'on est là,"
+    },
+    {
+      "id": 491,
+      "start": 2042.91,
+      "end": 2048.91,
+      "text": "je pense que je ne vais pas tarder à le couper,"
+    },
+    {
+      "id": 492,
+      "start": 2048.91,
+      "end": 2051.2,
+      "text": "je vais le couper maintenant."
+    },
+    {
+      "id": 493,
+      "start": 2051.2,
+      "end": 2054.44,
+      "text": "En gros, vous pouvez vraiment le laisser tourner en automatique."
+    },
+    {
+      "id": 494,
+      "start": 2082.93,
+      "end": 2086.62,
+      "text": "Je vais le couper, je ne vais pas couper."
+    },
+    {
+      "id": 495,
+      "start": 2086.62,
+      "end": 2089.18,
+      "text": "Là, je vais couper, je vais le tourner,"
+    },
+    {
+      "id": 496,
+      "start": 2089.18,
+      "end": 2106.99,
+      "text": "finir ces deux derniers runs,"
+    },
+    {
+      "id": 497,
+      "start": 2106.99,
+      "end": 2109.38,
+      "text": "et ensuite,"
+    },
+    {
+      "id": 498,
+      "start": 2109.38,
+      "end": 2122.06,
+      "text": "ça sera la partie génération."
+    },
+    {
+      "id": 499,
+      "start": 2122.06,
+      "end": 2123.9,
+      "text": "On a dépensé 4 dollars,"
+    },
+    {
+      "id": 500,
+      "start": 2123.9,
+      "end": 2145.74,
+      "text": "accroulé 2600, non pas 2600,"
+    },
+    {
+      "id": 501,
+      "start": 2145.74,
+      "end": 2149.02,
+      "text": "il n'a pas touché à 8500."
+    },
+    {
+      "id": 502,
+      "start": 2149.02,
+      "end": 2151.03,
+      "text": "Stoid,"
+    },
+    {
+      "id": 503,
+      "start": 2151.03,
+      "end": 2152.86,
+      "text": "on n'a pas fait énormément,"
+    },
+    {
+      "id": 504,
+      "start": 2152.86,
+      "end": 2154.82,
+      "text": "on va récupérer que 642,"
+    },
+    {
+      "id": 505,
+      "start": 2154.82,
+      "end": 2156.3,
+      "text": "mais si vous laissez tourner un peu plus,"
+    },
+    {
+      "id": 506,
+      "start": 2156.3,
+      "end": 2158.37,
+      "text": "on va récupérer bien plus."
+    },
+    {
+      "id": 507,
+      "start": 2158.37,
+      "end": 2159.69,
+      "text": "On se basera par la suite."
+    },
+    {
+      "id": 508,
+      "start": 2159.69,
+      "end": 2162.29,
+      "text": "Du coup, sur ces îles-là."
+    },
+    {
+      "id": 509,
+      "start": 2162.29,
+      "end": 2225.01,
+      "text": "Là, je pense qu'il a dominé le XLSX."
+    },
+    {
+      "id": 510,
+      "start": 2225.01,
+      "end": 2228.06,
+      "text": "On va la réouvrir"
+    },
+    {
+      "id": 511,
+      "start": 2228.06,
+      "end": 2230.74,
+      "text": "dans un nouveau nouvel fric de calcul."
+    },
+    {
+      "id": 512,
+      "start": 2230.74,
+      "end": 2252.17,
+      "text": "Je vais me mentionner,"
+    },
+    {
+      "id": 513,
+      "start": 2252.17,
+      "end": 2253.49,
+      "text": "il faut déjà attendre un petit peu,"
+    },
+    {
+      "id": 514,
+      "start": 2253.49,
+      "end": 2278.42,
+      "text": "on se parle."
+    },
+    {
+      "id": 515,
+      "start": 2278.42,
+      "end": 2279.26,
+      "text": "Donc là,"
+    },
+    {
+      "id": 516,
+      "start": 2279.26,
+      "end": 2280.52,
+      "text": "on a toutes les informations,"
+    },
+    {
+      "id": 517,
+      "start": 2280.52,
+      "end": 2283.64,
+      "text": "selon"
+    },
+    {
+      "id": 518,
+      "start": 2283.64,
+      "end": 2284.92,
+      "text": "le crawl, la couverture,"
+    },
+    {
+      "id": 519,
+      "start": 2284.92,
+      "end": 2290.97,
+      "text": "on m'a fait que 8,3%"
+    },
+    {
+      "id": 520,
+      "start": 2290.97,
+      "end": 2292.49,
+      "text": "et mais il se trouvait 638,"
+    },
+    {
+      "id": 521,
+      "start": 2292.49,
+      "end": 2293.21,
+      "text": "téléphone trouvée,"
+    },
+    {
+      "id": 522,
+      "start": 2293.21,
+      "end": 2295.74,
+      "text": "Instagram trouvée,"
+    },
+    {
+      "id": 523,
+      "start": 2295.74,
+      "end": 2299.72,
+      "text": "donc sur 984 lids,"
+    },
+    {
+      "id": 524,
+      "start": 2299.76,
+      "end": 2301.76,
+      "text": "on a trouvé 638,"
+    },
+    {
+      "id": 525,
+      "start": 2301.76,
+      "end": 2304.34,
+      "text": "email."
+    },
+    {
+      "id": 526,
+      "start": 2304.34,
+      "end": 2306.06,
+      "text": "Donc là, on a tous les lids à pisfail"
+    },
+    {
+      "id": 527,
+      "start": 2306.06,
+      "end": 2308.59,
+      "text": "qu'on avait au départ."
+    },
+    {
+      "id": 528,
+      "start": 2308.59,
+      "end": 2314.14,
+      "text": "Et maintenant, si on va dans la partie,"
+    },
+    {
+      "id": 529,
+      "start": 2314.14,
+      "end": 2315.38,
+      "text": "je ne sais plus où ça se trouve,"
+    },
+    {
+      "id": 530,
+      "start": 2315.38,
+      "end": 2316.18,
+      "text": "enfin, je ne sais pas,"
+    },
+    {
+      "id": 531,
+      "start": 2316.18,
+      "end": 2318.1,
+      "text": "oui, l'ami."
+    },
+    {
+      "id": 532,
+      "start": 2318.1,
+      "end": 2326.22,
+      "text": "Peut-être qu'il n'a pas l'art,"
+    },
+    {
+      "id": 533,
+      "start": 2326.22,
+      "end": 2328.59,
+      "text": "mais le radius."
+    },
+    {
+      "id": 534,
+      "start": 2328.59,
+      "end": 2330.11,
+      "text": "Ok, donc il l'a mis ici."
+    },
+    {
+      "id": 535,
+      "start": 2330.11,
+      "end": 2331.92,
+      "text": "La pisfail,"
+    },
+    {
+      "id": 536,
+      "start": 2331.92,
+      "end": 2334.7,
+      "text": "va les rire en faux contact."
+    },
+    {
+      "id": 537,
+      "start": 2334.7,
+      "end": 2340.98,
+      "text": "C'est beaucoup de contacts qui est normal."
+    },
+    {
+      "id": 538,
+      "start": 2340.98,
+      "end": 2344.08,
+      "text": "Ok, donc là, on a bien tous les emails."
+    },
+    {
+      "id": 539,
+      "start": 2344.12,
+      "end": 2346.81,
+      "text": "Voilà, on a une bonne base de données."
+    },
+    {
+      "id": 540,
+      "start": 2346.81,
+      "end": 2349.76,
+      "text": "On peut contacter directement les jouants."
+    },
+    {
+      "id": 541,
+      "start": 2349.76,
+      "end": 2351.72,
+      "text": "Donc voilà, à quoi sert ApiFail,"
+    },
+    {
+      "id": 542,
+      "start": 2351.72,
+      "end": 2355.32,
+      "text": "comment rechercher avec un scripteur payant."
+    },
+    {
+      "id": 543,
+      "start": 2355.32,
+      "end": 2356.2,
+      "text": "J'espère que la séance,"
+    },
+    {
+      "id": 544,
+      "start": 2356.2,
+      "end": 2359.62,
+      "text": "elle vous a plu et on passe du coup"
+    },
+    {
+      "id": 545,
+      "start": 2359.62,
+      "end": 2360.74,
+      "text": "à la prochaine séance."
+    },
+    {
+      "id": 546,
+      "start": 2360.74,
+      "end": 2363.08,
+      "text": "On va tout simplement"
+    },
+    {
+      "id": 547,
+      "start": 2363.08,
+      "end": 2364.2,
+      "text": "organiser nos lids,"
+    },
+    {
+      "id": 548,
+      "start": 2364.2,
+      "end": 2365.32,
+      "text": "on va les nettoyer,"
+    },
+    {
+      "id": 549,
+      "start": 2365.32,
+      "end": 2367.4,
+      "text": "on va les ranger pour"
+    },
+    {
+      "id": 550,
+      "start": 2367.4,
+      "end": 2370.88,
+      "text": "passer à l'étape la plus complexe,"
+    },
+    {
+      "id": 551,
+      "start": 2370.88,
+      "end": 2373.68,
+      "text": "donc de pourspection automatisée."
+    },
+    {
+      "id": 552,
+      "start": 2373.68,
+      "end": 2374.72,
+      "text": "À tout de suite."
+    }
+  ]
+}

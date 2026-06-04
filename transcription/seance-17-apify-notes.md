@@ -1,0 +1,1119 @@
+# Seance 17 - Transcription et notes
+
+
+
+- Langue detectee: fr
+
+- Duree audio approx.: 39:34
+
+- Segments: 552
+
+
+
+## Transcription horodatée
+
+
+
+**00:00 - 00:02**  Bonjour à tous et à toutes, j'espère que vous allez bien.
+
+**00:02 - 00:04**  On se retrouve aujourd'hui pour la séance numéro 17.
+
+**00:04 - 00:08**  On va aller chercher l'enrichissement avec un API file cette fois-ci.
+
+**00:08 - 00:11**  La séance précédente, c'était avec Datago.
+
+**00:11 - 00:14**  Maintenant, ce qu'on va faire, c'est récupérer les emails,
+
+**00:14 - 00:16**  les téléphones, les réseaux de NoLitz.
+
+**00:17 - 00:21**  Il nous faudra cet outil, un API file qui est une bibliothèque de scripteurs
+
+**00:21 - 00:27**  où des personnes, on va dire, des personnes comme vous et moi
+
+**00:27 - 00:30**  peuvent créer des systèmes et ensuite les proposer à la communauté.
+
+**00:30 - 00:34**  Donc, nous, ce qu'on va faire, c'est cette partie-là.
+
+**00:34 - 00:39**  Donc, l'entrée qu'on va donner à Codecode, c'est lits.datago en redshade.
+
+**00:39 - 00:41**  Donc, le fichier XLSX.
+
+**00:41 - 00:46**  Ensuite, on va lui demander de passer par API file de couleur de page
+
+**00:46 - 00:49**  et de nous traiter toutes les questions avec les sites web disponibles.
+
+**00:49 - 00:52**  Et après, on va faire un parti sorti au derrière.
+
+**00:52 - 00:54**  Il va améliorer, du coup, notre fichier
+
+**00:54 - 00:58**  pour ajouter les résultats qu'il a trouvés quand ça API file.
+
+**00:58 - 01:00**  Donc, on aura besoin d'un acteur.
+
+**01:00 - 01:03**  Donc, c'est comme ça que ça s'appelle un scripteur sur API file.
+
+**01:03 - 01:06**  Et nous, on va utiliser l'acteur color.
+
+**01:06 - 01:10**  Donc, avec les sites, ils sont déjà trouvés au niveau de l'autonomie.
+
+**01:10 - 01:12**  Donc, si je vais sur mon business,
+
+**01:12 - 01:16**  lits.tac, code.2.0.100, on va ça, on ira ranger après.
+
+**01:18 - 01:23**  On va aller dans cette partie-là, lits.datago en redshade.
+
+**01:23 - 01:27**  Nous, on l'avait ouvert sur Google Sheet.
+
+**01:27 - 01:32**  Donc, j'ouvre le sheet en question.
+
+**01:32 - 01:34**  Lits.restaurant.
+
+**01:34 - 01:37**  Et du coup, on peut voir qu'il y a des lignes.
+
+**01:37 - 01:42**  Donc, non, l'au plait all en redshade avec une partie website.
+
+**01:42 - 01:43**  Donc, on en a beaucoup.
+
+**01:43 - 01:45**  Je crois qu'on avait atteint un taux de 86%.
+
+**01:45 - 01:48**  Donc, sur ces 86% de sites,
+
+**01:48 - 01:52**  je crois que ça fait à peu près 9500,
+
+**01:52 - 01:54**  eh bien, on va scroller quatre pages.
+
+**01:54 - 01:57**  Donc, les quatre pages qu'on va scroller,
+
+**01:57 - 01:59**  ça va être ça, ça va être la page accueille,
+
+**01:59 - 02:03**  la page contact, la page mention, la page business.
+
+**02:03 - 02:07**  Et avec, du coup, toutes les informations qu'on a récupérées,
+
+**02:07 - 02:12**  on va créer un filtre qui va nous permettre de récupérer l'adresse e-mail,
+
+**02:12 - 02:15**  le numéro de téléphone et, du coup,
+
+**02:15 - 02:20**  les réseaux sociaux qui sont assignés au site.
+
+**02:20 - 02:24**  Donc, on va lancer, du coup, API file.
+
+**02:24 - 02:26**  Elle m'aura besoin encore une fois d'un point.
+
+**02:26 - 02:29**  Et d'avoir ce qui va être intéressant, c'est de comprendre
+
+**02:29 - 02:31**  la bibliothèque API file et à quoi ça sert.
+
+**02:31 - 02:35**  Donc, je vous invite à créer un compte directement.
+
+**02:35 - 02:38**  Vous allez arriver sur le dashboard.
+
+**02:38 - 02:41**  Je ne peux plus recréer de compte parce que,
+
+**02:41 - 02:44**  j'ai utilisé énormément d'adresse e-mail, j'ai mail,
+
+**02:44 - 02:45**  là, je suis assez bloqué.
+
+**02:45 - 02:47**  Donc, j'ai réussi à en avoir une seule.
+
+**02:47 - 02:48**  Et quand vous allez créer un compte,
+
+**02:48 - 02:51**  vous avez à avoir cinq dollars offerts.
+
+**02:51 - 02:52**  Donc, ces cinq dollars-là vont être suffisants
+
+**02:52 - 02:55**  pour aller enrichir nos lits.
+
+**02:55 - 02:58**  Donc, là, vous pouvez voir au niveau du dashboard à gauche,
+
+**02:58 - 03:02**  API file store, sur API file store,
+
+**03:02 - 03:03**  vous avez plusieurs acteurs.
+
+**03:03 - 03:10**  Et chaque acteur a, du coup, une action prédéfinie.
+
+**03:10 - 03:13**  Donc, là, on peut aller scraper des lits avec CoutelMass.
+
+**03:13 - 03:14**  Nous, on a déjà fait avec Serpereur.
+
+**03:14 - 03:17**  Vous pouvez aussi utiliser TikTok Scraptor.
+
+**03:17 - 03:19**  Donc, on voit qu'il y a beaucoup d'utilisations.
+
+**03:19 - 03:22**  Il y a 171 000 personnes.
+
+**03:22 - 03:26**  Et ça permet justement de
+
+**03:26 - 03:29**  voir les datas d'un profil,
+
+**03:29 - 03:33**  faire des searches, donc le top vidéo,
+
+**03:33 - 03:35**  récupérer un URL et l'analyser
+
+**03:35 - 03:37**  pour récupérer une vidéo,
+
+**03:37 - 03:39**  télécharger des vidéos, enfin,
+
+**03:39 - 03:42**  tout est accessible avec ce scraptor-là.
+
+**03:42 - 03:46**  Donc, il est très utile pour 1000 résultats.
+
+**03:46 - 03:48**  On a un système de tarification
+
+**03:48 - 03:52**  de 3,70 dollars pour 1000 résultats.
+
+**03:52 - 03:53**  Si vous avez une version payante,
+
+**03:53 - 03:56**  vous aurez du zèle prix de 57%.
+
+**03:56 - 03:59**  Donc, nous, on utilise la partie frie, on payera ce prix-là.
+
+**03:59 - 04:02**  Mais il y a d'autres scrapteurs très intéressants
+
+**04:02 - 04:03**  comme Facebook post scrapteur.
+
+**04:03 - 04:05**  Donc, là, pour récupérer vraiment tous les posts,
+
+**04:05 - 04:09**  YouTube scrapteur pour récupérer les datas,
+
+**04:09 - 04:10**  des vidéos.
+
+**04:10 - 04:12**  Vous pouvez aller faire aussi du LinkedIn.
+
+**04:12 - 04:13**  On peut récupérer des hashtags intéressants
+
+**04:13 - 04:15**  qui pètent en ce moment.
+
+**04:15 - 04:16**  On peut aller sur X aussi,
+
+**04:16 - 04:19**  faire prouver des informations.
+
+**04:19 - 04:21**  Vous pouvez vraiment, vraiment, vraiment,
+
+**04:21 - 04:22**  vraiment tout faire.
+
+**04:22 - 04:25**  On peut même aller sur page jaune.
+
+**04:25 - 04:29**  C'est un paradis pour tout ce qui est en vachissement de leads
+
+**04:29 - 04:30**  ou même scrapting de leads.
+
+**04:30 - 04:33**  Après, il y a des acteurs qui coûtent très cher.
+
+**04:33 - 04:34**  Par exemple, la Airbnb.
+
+**04:34 - 04:37**  Donc, là, tu payes par événement, c'est top.
+
+**04:37 - 04:41**  Mais sinon, il y a des abonnements par mois.
+
+**04:41 - 04:44**  On va essayer de s'en trouver un.
+
+**04:44 - 04:45**  Tac, tac, tac.
+
+**04:45 - 04:49**  Non, lui, on avait quitté par événement.
+
+**04:49 - 04:54**  Pay par event aussi.
+
+**04:54 - 04:55**  Pay par event.
+
+**04:55 - 04:58**  Donc, il y en a qui sont chers,
+
+**04:58 - 04:59**  bottent un peu moins.
+
+**04:59 - 05:03**  Il y en a qui sont sur la même activité.
+
+**05:03 - 05:05**  Donc, il faut sélectionner le monde.
+
+**05:05 - 05:07**  C'est ce qu'on va avoir, justement.
+
+**05:07 - 05:09**  Ça se juge beaucoup par rapport aux notes.
+
+**05:09 - 05:12**  On peut regarder aussi un scrapteur de jobs.
+
+**05:12 - 05:16**  Donc, là, vous mettez ce que vous souhaitez comme job.
+
+**05:16 - 05:19**  Par exemple, Xperia.
+
+**05:19 - 05:21**  On n'a pas de URL.
+
+**05:21 - 05:26**  Si je lance, on voit que ça se met en activation.
+
+**05:26 - 05:31**  Derrière, on récupère une information qu'on va attendre.
+
+**05:31 - 05:34**  Là, on pourrait cramer très bien une automatisation
+
+**05:34 - 05:37**  pour récupérer tous les jobs.
+
+**05:37 - 05:39**  Donc, il met sur un Google Sheet.
+
+**05:39 - 05:42**  L'automatisation est sur le VPS.
+
+**05:42 - 05:44**  Et on reçoit une notification
+
+**05:44 - 05:46**  sur un post qui correspond du coin de notre expertise.
+
+**05:46 - 05:48**  Donc, Xperia, en l'occurrence.
+
+**05:48 - 05:49**  Là, j'ai mal filtré.
+
+**05:49 - 05:55**  Donc, les résultats vont être assez médiocres.
+
+**05:55 - 05:57**  Et je risque de payer assez cher.
+
+**05:57 - 06:03**  En plus de ça, parce qu'on va voir au niveau du prix.
+
+**06:03 - 06:05**  Il faut voir que là, il est en train de tourner.
+
+**06:05 - 06:07**  On voit aussi la tarification.
+
+**06:07 - 06:10**  On peut voir les logs.
+
+**06:10 - 06:12**  Oui, j'utilise les cookies.
+
+**06:12 - 06:14**  Donc, je ne pense pas que ça va scraper.
+
+**06:14 - 06:34**  On va voir un petit peu.
+
+**06:34 - 06:36**  Oui, c'était sûr.
+
+**06:36 - 06:39**  Donc, là, on n'a pas d'information avec ce scrapteur-là.
+
+**06:39 - 06:41**  C'est pas grave.
+
+**06:41 - 06:44**  Il faudra un peu plus comprendre comment il fonctionne.
+
+**06:44 - 06:47**  Ça ne va pas être très utile pour nous en ce moment.
+
+**06:47 - 06:48**  Ce que ce n'est pas ce qu'on souhaite faire.
+
+**06:48 - 06:52**  Mais vous avez compris un petit peu la bibliothèque du coup.
+
+**06:52 - 06:56**  NaviFestore, vous pouvez absolument tout faire.
+
+**06:56 - 06:59**  Et vous pouvez connecter, du coup, chaque API à cool code.
+
+**06:59 - 07:04**  Et combiner un système d'intelligence artificielle en scrapteur
+
+**07:04 - 07:08**  qui peut être utile selon sur quoi vous travaillez.
+
+**07:08 - 07:12**  Simuler la web pour avoir des informations sur un site web.
+
+**07:12 - 07:13**  Franchement, c'est top.
+
+**07:13 - 07:16**  TripAdvisor, ça pourrait m'intéresser.
+
+**07:16 - 07:18**  Ça, par contre, c'est cher.
+
+**07:18 - 07:20**  Donc, là, on voit un abonnement.
+
+**07:20 - 07:22**  Enfin, pas un abonnement, mais un coup à exécution.
+
+**07:22 - 07:27**  5 $ pour 1000 résultats.
+
+**07:27 - 07:33**  Donc, il faut voir aussi combien vous êtes prêt à mettre.
+
+**07:33 - 07:36**  Et vous avez un système d'abonnement qui vous donne des crédits.
+
+**07:36 - 07:38**  C'est comme ça que ça fonctionne, du coup.
+
+**07:40 - 07:40**  API faillé.
+
+**07:40 - 07:45**  Vous augmentez votre taux de rame plus d'exécution direct.
+
+**07:45 - 07:47**  Maintenant, on a parti starter.
+
+**07:47 - 07:54**  Donc, là, on a place de 8, passent à 32, à 128,
+
+**07:54 - 07:55**  des 29 € par mois.
+
+**07:55 - 08:00**  Donc, vous avez 29 € d'utilisation.
+
+**08:00 - 08:03**  Maintenant, on va voir le scrapteur qui nous intéresse.
+
+**08:03 - 08:07**  Donc, le scrapteur, c'est website contact extractor.
+
+**08:07 - 08:09**  Pour ça, vous allez aller dans API Files Store,
+
+**08:09 - 08:13**  Tidmar de recherche, website contact extractor recherché.
+
+**08:13 - 08:15**  Là, vous voyez qu'il y a plusieurs scrapteurs.
+
+**08:15 - 08:17**  Le but, c'est de sélectionner le bout.
+
+**08:17 - 08:20**  Je les ai un petit peu toussécais avec l'expérience.
+
+**08:20 - 08:21**  Et le meilleur, ça, c'est celui-là.
+
+**08:21 - 08:23**  Donc, il y a 249 personnes qui utilisent.
+
+**08:23 - 08:25**  Il y a un seul avis.
+
+**08:25 - 08:27**  Et c'est better devscript.
+
+**08:27 - 08:30**  Donc, pour l'utiliser, vous cliquez dessus.
+
+**08:30 - 08:34**  Mais là, on peut voir qu'on a plusieurs informations à plir
+
+**08:34 - 08:35**  sur votre fer de manière manuelle.
+
+**08:35 - 08:37**  On peut voir l'irone juste ici.
+
+**08:37 - 08:40**  On peut voir les bulles, les intégrations.
+
+**08:40 - 08:43**  Voilà, on peut voir pas mal d'informations.
+
+**08:43 - 08:45**  Donc, je vous invite à bien tout lire.
+
+**08:45 - 08:47**  Là, vous pouvez voir exactement ce que vous faites,
+
+**08:47 - 08:50**  ce que vous pouvez faire plutôt.
+
+**08:50 - 08:53**  Nous, en l'occurrence, on va vraiment pas se prendre la tête.
+
+**08:53 - 08:54**  On va montrer comment on va travailler,
+
+**08:54 - 08:57**  parce qu'on n'a pas forcément de compétences
+
+**08:57 - 09:01**  en anglais ou même sur des scrapteurs.
+
+**09:01 - 09:04**  Donc, on a la partie starturals.
+
+**09:04 - 09:08**  Donc, si vous sélectionnez un URL
+
+**09:08 - 09:11**  que vous avez réussi à scraper grâce à Serpereur ou autre,
+
+**09:11 - 09:18**  par exemple le prompt.café.rich,
+
+**09:18 - 09:21**  classe un lien sécurisé, on va faire attention.
+
+**09:21 - 09:25**  On va aller plutôt taper sur un autre lien.
+
+**09:25 - 09:26**  Voilà, celui-là.
+
+**09:26 - 09:32**  On va, du coup, lui demander à notre scrapteur,
+
+**09:32 - 09:34**  d'aller regarder toutes les pages.
+
+**09:34 - 09:38**  On peut aller scroller le maximum des pages par site.
+
+**09:38 - 09:41**  Et si je clique sur Run,
+
+**09:41 - 09:46**  du coup, mon acteur se met en route.
+
+**09:46 - 09:48**  Comme on a vu tout à l'heure,
+
+**09:48 - 09:51**  on a la partie, juste ici.
+
+**09:51 - 09:54**  On voit le prix de consommation.
+
+**09:54 - 09:56**  On voit la partie log.
+
+**09:56 - 09:57**  Il a bien trouvé un numéro de téléphone
+
+**09:57 - 10:00**  et on a trouvé même deux.
+
+**10:00 - 10:03**  Donc, il a trouvé les réseaux sociales.
+
+**10:03 - 10:09**  Il a trouvé Timour presse aussi.
+
+**10:09 - 10:12**  Donc, il ne va pas nous intéresser forcément.
+
+**10:12 - 10:15**  Puis, ce n'est pas d'aller les acquierre.
+
+**10:15 - 10:18**  Mais voilà.
+
+**10:18 - 10:23**  Du coup, il allait chercher la partie équipe.
+
+**10:23 - 10:26**  La partie actualité, politique de confidentialité,
+
+**10:26 - 10:28**  contact, mention des gains.
+
+**10:28 - 10:31**  Et grâce à son scrapping de pages,
+
+**10:31 - 10:33**  donc, il a récupéré du code.
+
+**10:33 - 10:37**  Et après, il a converti ce code en filtre.
+
+**10:37 - 10:42**  Donc, les filtres, c'est, par exemple,
+
+**10:42 - 10:44**  à Robase pour retrouver l'adresse e-mail
+
+**10:44 - 10:48**  ou numéro de téléphone avec une suite de 10 chiffres
+
+**10:48 - 10:50**  pour que ça matche.
+
+**10:50 - 10:51**  Et du coup, nous, ce qu'on va faire,
+
+**10:51 - 10:53**  c'est exactement la même chose,
+
+**10:53 - 10:55**  mais sur une reproduction par batch de 50.
+
+**10:55 - 10:57**  On va envoyer 56 par 56.
+
+**10:57 - 10:59**  Et on va envoyer une intelligence artificielle,
+
+**10:59 - 11:00**  notre code code,
+
+**11:00 - 11:02**  pour regroupler ces informations.
+
+**11:02 - 11:04**  Et après, nous les restructurer
+
+**11:04 - 11:08**  et les envoyer sur notre fichier Excel Nix
+
+**11:08 - 11:11**  pour récupérer les contacts.
+
+**11:11 - 11:15**  Ce qu'on va faire, c'est, d'une part,
+
+**11:15 - 11:18**  ouvrir une session cloud code.
+
+**11:18 - 11:20**  Donc, pour ouvrir une session cloud code,
+
+**11:20 - 11:23**  on va aller sur l'Ethicratue massive,
+
+**11:23 - 11:26**  dans le dossier 6.
+
+**11:26 - 11:31**  On va taper la commande cloud non chose au skip.
+
+**11:31 - 11:34**  On va pas se prendre la tête
+
+**11:34 - 11:36**  pour lui donner un maximum d'informations
+
+**11:36 - 11:37**  pour qu'il comprenne bien
+
+**11:37 - 11:39**  comment utiliser le scripteur en question.
+
+**11:39 - 11:48**  On va aller dans la formation, on copie, on colle.
+
+**11:48 - 11:50**  Ensuite, on va récupérer le prompt
+
+**11:50 - 11:53**  juste ici de la séance 17, on colle.
+
+**11:53 - 11:54**  Et là, ce qui va être très important,
+
+**11:54 - 11:55**  c'est lui donner une clé à pays.
+
+**11:55 - 11:56**  Si on lui donne pas de clé à pays,
+
+**11:56 - 11:59**  en aucun cas, il peut travailler avec ce scripteur-là.
+
+**11:59 - 12:00**  Pour récupérer la clé à pays,
+
+**12:00 - 12:03**  on va y, juste ici, en haut à droite,
+
+**12:03 - 12:05**  on va dans API 8.0,
+
+**12:05 - 12:08**  et on va récupérer la troisième.
+
+**12:08 - 12:12**  Run Actor and getDataSystem,
+
+**12:12 - 12:14**  data set items,
+
+**12:14 - 12:17**  on récupère la clé à pays.
+
+**12:17 - 12:20**  On la colle et on tape sur entrée.
+
+**12:20 - 12:41**  Et ensuite, on laisse travailler.
+
+**12:41 - 12:45**  On va voir après que la partie run,
+
+**12:45 - 12:46**  si ça fonctionne bien,
+
+**12:46 - 12:49**  on va laisser justement prendre l'information,
+
+**12:49 - 12:52**  la comprendre, la structurer
+
+**12:52 - 13:13**  et ensuite réaliser la tâche demandée.
+
+**13:13 - 13:14**  Quand une fois, si je le donne en dur,
+
+**13:14 - 13:15**  le token, c'est parce qu'après,
+
+**13:15 - 13:17**  on l'utilise plus loin le jet.
+
+**13:17 - 13:18**  Chaque acteur a sa propre API,
+
+**13:18 - 13:20**  plus ou moins son URL.
+
+**13:20 - 13:22**  Ensuite,
+
+**13:22 - 13:26**  vous pouvez très bien le mettre dans un fichier de VNV.
+
+**13:26 - 13:27**  Donc là, c'est parti,
+
+**13:27 - 13:29**  il commence à attaquer.
+
+**13:29 - 13:31**  Du coup, tout le système,
+
+**13:31 - 13:33**  il va créer en piton,
+
+**13:33 - 13:35**  il va créer des requêtes par 50.
+
+**13:35 - 13:59**  On va voir ça ensemble.
+
+**13:59 - 14:02**  Et là, il a fait un test, il me semble, je crois.
+
+**14:02 - 14:08**  Non, c'est pas lui.
+
+**14:08 - 14:10**  Là, il fait un audit de la base.
+
+**14:10 - 14:11**  Ensuite, il va construire le batch.
+
+**14:11 - 14:14**  Ensuite, il va faire le test API.
+
+**14:14 - 14:15**  Ensuite, il va faire un run batch,
+
+**14:15 - 14:17**  normalisé, score émergé.
+
+**14:17 - 14:19**  Et après, il va nous faire la génération
+
+**14:19 - 14:25**  sur l'étape 8.
+
+**14:25 - 14:26**  Donc vraiment, le P-File,
+
+**14:26 - 14:27**  il semble être super puissant.
+
+**14:27 - 14:28**  Je vous invite à vraiment le tester
+
+**14:28 - 14:32**  et à faire des petites automatisations
+
+**14:32 - 14:38**  d'engagement avec plusieurs acteurs.
+
+**14:38 - 14:39**  On vous prenez la main dessus
+
+**14:39 - 14:41**  parce que vous allez en avoir besoin
+
+**14:41 - 14:44**  sur certains cas clients,
+
+**14:44 - 14:45**  que ce soit au niveau de l'engagement,
+
+**14:45 - 14:50**  que ce soit même au niveau de création de postes
+
+**14:50 - 14:54**  pour aller checker la concurrence.
+
+**14:54 - 14:55**  Il y a plein de choses à faire.
+
+**14:55 - 14:56**  Il y a plein, plein, plein, plein de choses.
+
+**14:56 - 14:58**  Je sais pas, il y en a combien en tout ?
+
+**14:58 - 15:01**  Il y en a 27 000, aujourd'hui.
+
+**15:01 - 15:03**  Je vais faire pas mal de tests.
+
+**15:03 - 15:07**  On peut récupérer aussi des ordres d'emploi, une guide.
+
+**15:07 - 15:09**  Ça peut être intéressant pour vous.
+
+**15:09 - 15:12**  Par exemple, si vous mettez...
+
+**15:12 - 15:13**  Attends, on va refaire le test
+
+**15:13 - 15:16**  parce que je crois qu'il est...
+
+**15:16 - 15:18**  Je sais pas comment s'appelle le nom
+
+**15:19 - 15:20**  sur une guide.
+
+**15:20 - 15:29**  Une guide à automatisation.
+
+**15:29 - 15:36**  Il y a je sais pas comment il s'appelle le remote.
+
+**15:36 - 15:38**  Je sais pas comment il s'appelle.
+
+**15:38 - 16:00**  Je demande à la checker pt.
+
+**16:00 - 16:08**  Je crois qu'il y en a plus qu'un high automation spécialiste.
+
+**16:08 - 16:11**  Ok, je pense que c'est plus lui.
+
+**16:11 - 16:40**  On va voir sur...
+
+**16:40 - 16:43**  C'est comme ça qu'il s'appelle.
+
+**16:43 - 16:44**  On va mettre consultant ya.
+
+**16:50 - 16:53**  Pas trop comment s'appelle, honnêtement.
+
+**16:53 - 16:55**  On peut utiliser...
+
+**16:55 - 17:08**  Comment s'appelle ?
+
+**17:08 - 17:14**  On va mettre consultant ya.
+
+**17:14 - 17:17**  Vous pouvez créer une automatisation d'Hair à toute simple.
+
+**17:17 - 17:24**  On va mettre 50.
+
+**17:24 - 17:37**  Oh !
+
+**17:37 - 17:38**  Wow, il en est lui.
+
+**17:38 - 17:40**  Du clé, il est en train de faire des tests à pifile.
+
+**17:40 - 17:47**  On va voir après le résultat.
+
+**17:47 - 17:48**  Mais en gros, vous pouvez très bien sélectionner.
+
+**17:48 - 17:51**  Fin de faire une automatisation avec ce scrapteur-là.
+
+**17:51 - 17:57**  Et ensuite, une fois que vous avez des informations
+
+**17:57 - 18:00**  directement fournées dans un Google Sheet,
+
+**18:00 - 18:01**  eh bien, vous utilisez AppCipe.
+
+**18:01 - 18:05**  Et toute la journée, vous ouvrez une session codex
+
+**18:05 - 18:08**  qui va faire une modification.
+
+**18:08 - 18:14**  À la limite, je sais ce que je vais faire.
+
+**18:14 - 18:18**  Parce que les résultats, ils ne sont pas très bons.
+
+**18:18 - 18:20**  C'est un claquant, on ne reste pas mal.
+
+**18:20 - 18:24**  Et en gros, le USB va permettre d'envoyer la lettre de motivation
+
+**18:24 - 18:29**  plus le CVL, comme ça là, en offre d'emploi.
+
+**18:29 - 18:32**  Je pense que je vais juste mettre ya, c'est plus simple.
+
+**18:32 - 18:36**  Je vais arrêter l'acteur.
+
+**18:36 - 18:40**  Bon, on a arrêté l'acteur.
+
+**18:40 - 18:42**  On a payé combien ?
+
+**18:42 - 18:45**  On a payé 80, enfin.
+
+**18:45 - 18:48**  On a 10 centimes, pratiquement.
+
+**18:48 - 18:49**  Donc vous avez compris.
+
+**18:49 - 18:53**  Par exemple, tous les jours à 9h,
+
+**18:53 - 18:56**  l'automatisation se lance, il utilise la API.
+
+**18:56 - 18:59**  Ensuite, elle retourne les résultats dans Google Sheet.
+
+**18:59 - 19:04**  Une fois le Google Sheet modifié,
+
+**19:04 - 19:07**  donc mis à jour plutôt,
+
+**19:07 - 19:11**  on ouvre notre session en MCP
+
+**19:11 - 19:15**  et ça se croule l'offre d'emploi de manière automatique.
+
+**19:15 - 19:24**  Ça répond avec la modification de la lettre de motivation
+
+**19:24 - 19:26**  plus le CV joie.
+
+**19:26 - 19:28**  Là, on est en full automatique
+
+**19:28 - 19:33**  et on peut trouver des petits contrats en finance directement.
+
+**19:33 - 19:36**  Ça, ce système est assez simple à buller.
+
+**19:36 - 19:37**  Il y a vraiment beaucoup de choses à faire.
+
+**19:37 - 19:39**  Parfois, je vais aller dans Run Actor.
+
+**19:39 - 19:41**  Je vais aller voir où on en est.
+
+**19:41 - 19:42**  On a 12 runs.
+
+**19:42 - 19:44**  Donc là, comme je vous ai dit,
+
+**19:44 - 19:45**  batch par 50.
+
+**19:45 - 19:53**  Donc là, c'est en train de tourner.
+
+**19:53 - 19:54**  C'est en train de me faire automatiquement.
+
+**19:54 - 20:01**  On a encore énormément de sites internet à scroller.
+
+**20:01 - 20:05**  Donc ça prend pas mal de temps.
+
+**20:05 - 20:08**  Je mets bruyons, on va tourner le résultat.
+
+**20:08 - 20:18**  Là, on a des informations récupérées.
+
+**20:18 - 20:20**  Le numéro de téléphone en 06.
+
+**20:20 - 20:22**  On a trouvé l'Instagram.
+
+**20:22 - 20:25**  Par contre, on n'a pas trouvé l'adresse e-mail.
+
+**20:25 - 20:26**  Là, on a trouvé deux adresses e-mail.
+
+**20:26 - 20:28**  User Domain, ça n'a pas nous intéressé.
+
+**20:28 - 20:33**  Par contre, celui-là, oui.
+
+**20:33 - 20:36**  Là, on a deux adresses Bobi, Canon, OK.
+
+**20:36 - 20:40**  Ça peut être intégrissante.
+
+**20:40 - 20:42**  Là, on a trouvé trois adresses e-mail.
+
+**20:42 - 20:45**  Enfin, trois numéros de téléphone.
+
+**20:45 - 20:48**  Papapal, l'adresse e-mail.
+
+**20:48 - 20:50**  Plus d'abation, la table, le marché, OK.
+
+**20:50 - 20:52**  Donc là, on a perdu des infos.
+
+**20:52 - 20:53**  E-mail aussi.
+
+**20:53 - 20:56**  On récupère pas des adresses e-mail à chaque fois.
+
+**20:56 - 20:59**  On récupère toujours peut-être 60, 70%.
+
+**20:59 - 21:02**  Ce n'est pas ça fait combien, ça dépend.
+
+**21:02 - 21:06**  Ça tourne assez vite.
+
+**21:06 - 21:08**  Là, on voit.
+
+**21:08 - 21:09**  Hop.
+
+**21:09 - 21:11**  Non, je sais pas, je vais pas le mettre, David.
+
+**21:11 - 21:14**  Ce maïs.
+
+**21:14 - 21:22**  Pour 1000 pages, on se craptait, on a un peu près un dollar.
+
+**21:22 - 21:25**  Là, si je rechange la page, on va voir combien d'appel est déjà.
+
+**21:25 - 21:32**  De ma 16 centime, ça va se mettre à prendre un pas jour plus tard.
+
+**21:32 - 21:35**  On laisse travailler encore une fois, un peu de lutte.
+
+**21:35 - 21:39**  Ce qu'il fasse, je scroll sur tout.
+
+**21:51 - 21:52**  Là, on voit des logs, on peut très bien les voir.
+
+**21:52 - 21:56**  Ici aussi, Rennes.
+
+**21:56 - 21:57**  Là, on voit tout.
+
+**21:57 - 22:04**  Je quitte dessus.
+
+**22:04 - 22:09**  Vous pouvez aller voir là, logs, toutes les lignes de code
+
+**22:09 - 22:11**  qui sont en train de se générer automatiquement
+
+**22:11 - 22:15**  avec le process en cours.
+
+**22:15 - 22:18**  Donc, c'est ce que vous avez aussi le cours de code, du coup.
+
+**22:18 - 22:23**  C'est comme ça qu'après, il récupère des informations.
+
+**22:23 - 22:24**  Là, on a une tâche en cours.
+
+**22:24 - 22:27**  On va voir si c'est celle-là.
+
+**22:27 - 22:39**  Donc, Rennes, Time, 56 secondes, ça a du beuille.
+
+**22:39 - 22:42**  Ouais, je pense qu'il a beuille, là.
+
+**22:42 - 22:44**  Pas de beuille, j'attends d'un wake-up paniffé pour vérifier.
+
+**22:44 - 22:46**  Non, ok, d'un journal book, tu fais, ah oui, bien.
+
+**22:46 - 22:54**  C'est moi qui l'a lancé, du coup ça, je vais le faire bugger.
+
+**22:54 - 22:58**  Là, il est contraint de reprendre, on m'a outpout de 44.
+
+**22:58 - 23:16**  Pardon, je pense que l'on paye en nombre de centimes.
+
+**23:16 - 23:30**  Donc, ça se met pas le jour, je ne sais pas pourquoi.
+
+**23:30 - 23:34**  Quand on laisse travailler, là, on peut voir qu'il nous a dit que le owner
+
+**23:34 - 23:40**  était relancé en arrière-plan.
+
+**23:40 - 23:42**  Là, on voit tous les batchs qu'il est en train de créer.
+
+**23:42 - 23:50**  Donc, batches 101, batches 67, etc.
+
+**23:50 - 23:53**  Là, le batch 07, il est fait, Fails, Fails.
+
+**23:53 - 23:55**  Donc, on a pas mal de Fails.
+
+**23:55 - 23:58**  Je pense que c'est parce qu'à derrière,
+
+**23:58 - 24:01**  on voit qu'au niveau de notre GD, Néo Max,
+
+**24:01 - 24:05**  on entre même pratiquement sur poste et on a 6 GB.
+
+**24:05 - 24:07**  Vous faites attention, parce que si on dépasse,
+
+**24:07 - 24:13**  ça veut dire qu'on saute de l'abonnement en start-up.
+
+**24:13 - 24:33**  Il faut payer justement par mois.
+
+**24:33 - 24:35**  Alors là, ce qu'on a déjà toutes ses pages,
+
+**24:35 - 25:03**  tous ses sites plutôt, on va demander dans les hauts.
+
+**25:03 - 25:08**  Ouais, 2,57, on a déjà payé, il faut refaire attention.
+
+**25:08 - 25:11**  Je pense qu'on va envoyer, qu'on va me run.
+
+**25:11 - 25:14**  Mais le but, c'est de pas dépasser les 5 dollars.
+
+**25:46 - 25:48**  Et à nous donner le résultat,
+
+**25:48 - 26:14**  de ce qu'il a récupéré pour le moment.
+
+**26:14 - 27:22**  Il est travaillé, on attend le premier résultat,
+
+**27:22 - 27:26**  qu'il est en train de nous régénérer le XLSX.
+
+**27:26 - 27:28**  Après cette phase-là, on va chercher à enrichir,
+
+**27:28 - 27:31**  enfin, pas enrichir, on a structuré de nous donner
+
+**27:31 - 27:32**  pour la partie pour inspection,
+
+**27:32 - 27:35**  parce que ça va être un peu d'une emporte, quoi.
+
+**27:35 - 27:36**  Le but, c'est qu'on ait,
+
+**27:36 - 27:38**  je ne sais pas, j'aimerais bien appeler ça comme ça,
+
+**27:38 - 27:39**  mais un fichier sain,
+
+**27:39 - 28:46**  pour que la prospection se fasse correctement.
+
+**28:46 - 28:47**  On attend qu'il nous réponde.
+
+**29:13 - 29:14**  Je pense qu'il en entre encore en renait,
+
+**29:14 - 29:19**  parce que là, on voit qu'il y a un starting as a crawlers,
+
+**29:19 - 29:22**  qu'on va attendre un petit peu encore,
+
+**29:22 - 29:26**  pour l'anatrôte de l'heure 18.
+
+**29:26 - 29:27**  On laisse travailler,
+
+**29:27 - 29:36**  je vais me faire un petit peu le résultat.
+
+**29:36 - 29:40**  Vous pouvez voir les logs, comme je le disais d'ailleurs.
+
+**29:40 - 29:43**  Non, on récupère beaucoup d'emails,
+
+**29:43 - 29:46**  on récupère aussi des adresses,
+
+**29:46 - 29:56**  qu'on a récupérées.
+
+**29:56 - 29:58**  Je ne sais pas avoir la différence de les matchs,
+
+**29:58 - 30:17**  je crois que ça y a même.
+
+**30:17 - 30:22**  Ok, 78% par scroller.
+
+**30:22 - 30:27**  Ok, top.
+
+**30:27 - 30:31**  On va laisser travailler encore un petit peu jusqu'à nos 5 dollars.
+
+**30:31 - 30:32**  C'est puissé,
+
+**30:32 - 30:36**  et après, on passera sur la prochaine séance à la partie en vachissement.
+
+**30:36 - 30:46**  Ce n'est pas avant qu'on devait se capter nous-mêmes des leads,
+
+**30:46 - 30:49**  tant que ça prenait d'aller combler les données sans s'y avoir.
+
+**30:49 - 30:52**  C'était dingue,
+
+**30:52 - 30:53**  de créer du code,
+
+**30:53 - 30:58**  du putain, il faut faire un matching.
+
+**30:58 - 30:59**  C'est vraiment plus simple,
+
+**30:59 - 31:01**  on gagne énormément de temps,
+
+**31:01 - 31:03**  créer une base de données,
+
+**31:03 - 31:05**  de traquoncrète en à peine deux heures.
+
+**31:05 - 32:19**  On compte en train de scroller les pages.
+
+**32:19 - 32:21**  Ok, top, faire prévu.
+
+**32:21 - 32:28**  On se parle de façon légère sur notre partie.
+
+**32:28 - 32:31**  Oui, on peut vraiment faire ça facilement,
+
+**32:31 - 32:34**  vous n'avez pas besoin d'avoir forcément de compétences.
+
+**32:34 - 32:37**  Vous récupérez juste la paix,
+
+**32:37 - 32:38**  il y a chaque fois, c'est par ailleurs,
+
+**32:38 - 32:39**  pour chaque scrapteur.
+
+**32:39 - 32:40**  La troisième,
+
+**32:40 - 32:42**  le chronacteur,
+
+**32:42 - 32:44**  juste ici,
+
+**32:44 - 32:45**  vous copiez,
+
+**32:45 - 32:47**  vous donnez un code code,
+
+**32:47 - 32:48**  et ensuite, vous le laissez travailler,
+
+**32:48 - 32:49**  vous le laissez comprendre,
+
+**32:49 - 32:51**  on duque parler d'informations,
+
+**32:51 - 32:54**  pour le faire correctement,
+
+**32:54 - 32:57**  pour utiliser correctement cet acteur,
+
+**32:57 - 32:59**  et après, c'est done.
+
+**32:59 - 33:01**  C'est done, vous pouvez strictement
+
+**33:01 - 33:04**  tout utiliser avec l'autre code,
+
+**33:04 - 33:23**  c'est extrêmement puissant.
+
+**33:23 - 33:49**  Par contre, l'ordi, il commence à chauffer un petit peu.
+
+**33:49 - 33:54**  Il commence à chauffer un petit peu.
+
+**33:54 - 33:56**  Ok, donc ta réponse tactique,
+
+**33:56 - 34:02**  si l'on est là,
+
+**34:02 - 34:08**  je pense que je ne vais pas tarder à le couper,
+
+**34:08 - 34:11**  je vais le couper maintenant.
+
+**34:11 - 34:14**  En gros, vous pouvez vraiment le laisser tourner en automatique.
+
+**34:42 - 34:46**  Je vais le couper, je ne vais pas couper.
+
+**34:46 - 34:49**  Là, je vais couper, je vais le tourner,
+
+**34:49 - 35:06**  finir ces deux derniers runs,
+
+**35:06 - 35:09**  et ensuite,
+
+**35:09 - 35:22**  ça sera la partie génération.
+
+**35:22 - 35:23**  On a dépensé 4 dollars,
+
+**35:23 - 35:45**  accroulé 2600, non pas 2600,
+
+**35:45 - 35:49**  il n'a pas touché à 8500.
+
+**35:49 - 35:51**  Stoid,
+
+**35:51 - 35:52**  on n'a pas fait énormément,
+
+**35:52 - 35:54**  on va récupérer que 642,
+
+**35:54 - 35:56**  mais si vous laissez tourner un peu plus,
+
+**35:56 - 35:58**  on va récupérer bien plus.
+
+**35:58 - 35:59**  On se basera par la suite.
+
+**35:59 - 36:02**  Du coup, sur ces îles-là.
+
+**36:02 - 37:05**  Là, je pense qu'il a dominé le XLSX.
+
+**37:05 - 37:08**  On va la réouvrir
+
+**37:08 - 37:10**  dans un nouveau nouvel fric de calcul.
+
+**37:10 - 37:32**  Je vais me mentionner,
+
+**37:32 - 37:33**  il faut déjà attendre un petit peu,
+
+**37:33 - 37:58**  on se parle.
+
+**37:58 - 37:59**  Donc là,
+
+**37:59 - 38:00**  on a toutes les informations,
+
+**38:00 - 38:03**  selon
+
+**38:03 - 38:04**  le crawl, la couverture,
+
+**38:04 - 38:10**  on m'a fait que 8,3%
+
+**38:10 - 38:12**  et mais il se trouvait 638,
+
+**38:12 - 38:13**  téléphone trouvée,
+
+**38:13 - 38:15**  Instagram trouvée,
+
+**38:15 - 38:19**  donc sur 984 lids,
+
+**38:19 - 38:21**  on a trouvé 638,
+
+**38:21 - 38:24**  email.
+
+**38:24 - 38:26**  Donc là, on a tous les lids à pisfail
+
+**38:26 - 38:28**  qu'on avait au départ.
+
+**38:28 - 38:34**  Et maintenant, si on va dans la partie,
+
+**38:34 - 38:35**  je ne sais plus où ça se trouve,
+
+**38:35 - 38:36**  enfin, je ne sais pas,
+
+**38:36 - 38:38**  oui, l'ami.
+
+**38:38 - 38:46**  Peut-être qu'il n'a pas l'art,
+
+**38:46 - 38:48**  mais le radius.
+
+**38:48 - 38:50**  Ok, donc il l'a mis ici.
+
+**38:50 - 38:51**  La pisfail,
+
+**38:51 - 38:54**  va les rire en faux contact.
+
+**38:54 - 39:00**  C'est beaucoup de contacts qui est normal.
+
+**39:00 - 39:04**  Ok, donc là, on a bien tous les emails.
+
+**39:04 - 39:06**  Voilà, on a une bonne base de données.
+
+**39:06 - 39:09**  On peut contacter directement les jouants.
+
+**39:09 - 39:11**  Donc voilà, à quoi sert ApiFail,
+
+**39:11 - 39:15**  comment rechercher avec un scripteur payant.
+
+**39:15 - 39:16**  J'espère que la séance,
+
+**39:16 - 39:19**  elle vous a plu et on passe du coup
+
+**39:19 - 39:20**  à la prochaine séance.
+
+**39:20 - 39:23**  On va tout simplement
+
+**39:23 - 39:24**  organiser nos lids,
+
+**39:24 - 39:25**  on va les nettoyer,
+
+**39:25 - 39:27**  on va les ranger pour
+
+**39:27 - 39:30**  passer à l'étape la plus complexe,
+
+**39:30 - 39:33**  donc de pourspection automatisée.
+
+**39:33 - 39:34**  À tout de suite.

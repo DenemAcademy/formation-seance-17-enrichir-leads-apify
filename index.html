@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Séance 17 - Enrichir ses leads avec Apify | DENEM Academy</title>
+<link rel="icon" href="logo-denem.jpeg">
+<style>
+:root{--ink:#111827;--muted:#586174;--line:#111827;--paper:#fff;--soft:#f4f7fb;--soft2:#effaf3;--green:#38b86b;--blue:#246bfe;--orange:#ff8a2a;--dark:#161b22;--cream:#fffaf2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55;overflow-x:hidden}::selection{background:var(--orange);color:#fff}a{color:inherit}.progress{position:fixed;top:0;left:0;height:5px;width:0;background:linear-gradient(90deg,var(--green),var(--blue),var(--orange));z-index:50}.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);border-bottom:2px solid var(--line)}.topbar-inner{max-width:1220px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:14px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;text-transform:uppercase;letter-spacing:.04em;font-size:13px}.brand img{width:34px;height:34px;border:2px solid var(--line);border-radius:8px;object-fit:cover}.pill{border:2px solid var(--line);border-radius:999px;padding:8px 12px;background:var(--green);box-shadow:4px 4px 0 var(--line);font:900 12px/1 ui-monospace,Menlo,monospace;color:#fff;text-transform:uppercase}.hero{position:relative;overflow:hidden;border-bottom:2px solid var(--line);background:linear-gradient(135deg,#ffffff 0%,#f4fff8 48%,#fff8ef 100%)}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(17,24,39,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(17,24,39,.08) 1px,transparent 1px);background-size:34px 34px}.hero-wrap{position:relative;max-width:1220px;margin:auto;padding:72px 18px 54px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}.eyebrow,.kicker{display:inline-flex;width:max-content;max-width:100%;border:2px solid var(--line);border-radius:6px;background:var(--orange);color:#111;padding:7px 11px;box-shadow:4px 4px 0 var(--line);font:900 12px/1.2 ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.07em}h1{font-size:clamp(42px,7vw,92px);line-height:.92;margin:20px 0 18px;letter-spacing:0}h1 span{color:var(--green);text-shadow:3px 3px 0 var(--line)}.hero p,.copy p{font-size:18px;color:var(--muted);margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.stat{border:2px solid var(--line);background:#fff;border-radius:8px;box-shadow:5px 5px 0 var(--line);padding:14px}.stat b{display:block;font-size:30px;line-height:1}.stat small{font-weight:850;color:var(--muted)}.media{margin:0;border:2px solid var(--line);border-radius:8px;overflow:hidden;background:#fff;box-shadow:7px 7px 0 var(--line)}.media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#e8edf3}.media figcaption{border-top:2px solid var(--line);padding:10px 12px;font-size:13px;font-weight:800;color:var(--muted);background:#fff}.toc{max-width:1220px;margin:auto;padding:22px 18px;display:grid;grid-template-columns:repeat(8,1fr);gap:10px}.toc a{text-decoration:none;border:2px solid var(--line);border-radius:8px;background:#fff;box-shadow:3px 3px 0 var(--line);padding:12px;font-weight:900;min-height:82px}.toc a span{display:block;color:var(--blue);font:900 12px/1 ui-monospace,Menlo,monospace;margin-bottom:10px}.section{border-top:2px solid var(--line);scroll-margin-top:76px}.section:nth-child(odd){background:#fff}.section:nth-child(even){background:var(--soft)}.section.accent{background:var(--soft2)}.section.soft{background:#f8fafc}.dark-section{background:#151922!important;color:#fff}.command-section{background:#fffaf2!important}.wrap{max-width:1220px;margin:auto;padding:56px 18px;display:grid;gap:28px}.layout-split .wrap,.layout-check .wrap,.layout-alert .wrap,.layout-timeline .wrap{grid-template-columns:.88fr 1.12fr;align-items:center}.layout-full .wrap,.layout-quote .wrap,.layout-final .wrap{grid-template-columns:1fr}.copy h2{font-size:clamp(31px,4vw,54px);line-height:1;margin:14px 0 16px;letter-spacing:0}.dark-section .copy p,.dark-section .copy h2{color:#fff}.dark-section .kicker{background:var(--green);color:#06130b}.cards,.final-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.cards article,.final-grid article,.alert-box,.timeline article{border:2px solid var(--line);background:#fff;border-radius:8px;box-shadow:5px 5px 0 var(--line);padding:18px}.cards article strong,.final-grid strong{display:block;font-size:19px;margin-bottom:8px}.cards article p,.final-grid p,.timeline p{margin:0;color:var(--muted)}.checklist{list-style:none;margin:0;padding:0;display:grid;gap:12px}.checklist li{display:grid;grid-template-columns:48px 1fr;gap:12px;align-items:center;border:2px solid var(--line);background:#fff;border-radius:8px;box-shadow:4px 4px 0 var(--line);padding:12px}.checklist span,.timeline span{display:grid;place-items:center;width:42px;height:42px;border-radius:7px;background:var(--green);border:2px solid var(--line);font:900 14px/1 ui-monospace,Menlo,monospace;color:#fff}.checklist p{margin:0;font-weight:800;color:#273244}.table-wrap{overflow-x:auto;border:2px solid var(--line);border-radius:8px;box-shadow:5px 5px 0 var(--line);background:#fff}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:14px;border-bottom:1px solid #d8dee8;text-align:left;vertical-align:top}th{background:var(--dark);color:#fff;font:900 12px/1.25 ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.06em}td{color:var(--muted);font-weight:720}tr:last-child td{border-bottom:0}blockquote{margin:0;border:2px solid var(--line);background:var(--green);border-radius:10px;box-shadow:7px 7px 0 var(--line);padding:34px;font-size:clamp(26px,4vw,48px);font-weight:950;line-height:1.05;color:#fff}.alert-box{background:var(--dark);color:#fff}.alert-box b{display:inline-block;color:var(--orange);text-transform:uppercase;font:900 13px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em}.alert-box p{color:#eef3f8;font-size:21px;margin:10px 0 0}.timeline{display:grid;gap:12px}.timeline article{display:grid;grid-template-columns:54px 1fr;align-items:center;gap:14px}.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.flow span{border:2px solid var(--line);background:#fff;border-radius:999px;box-shadow:3px 3px 0 var(--line);padding:12px 16px;font:900 13px/1 ui-monospace,Menlo,monospace}.flow span:not(:last-child):after{content:"→";margin-left:12px;color:var(--orange)}.prompt-card{border:2px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:7px 7px 0 var(--line);background:#10131a;color:#f5f8fc}.prompt-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 15px;background:#1d2530;border-bottom:2px solid rgba(255,255,255,.16)}.prompt-head span{display:block;color:var(--green);font:900 12px/1 ui-monospace,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.prompt-head strong{font-size:16px}.copy-btn{border:2px solid #fff;background:#fff;color:#111827;border-radius:6px;padding:8px 12px;font-weight:950;cursor:pointer;box-shadow:3px 3px 0 rgba(255,255,255,.25)}.prompt-note{padding:14px 18px 0;margin:0;color:#dce6f3;font-weight:750}.prompt-card pre{margin:0;padding:20px;max-height:760px;overflow:auto;white-space:pre-wrap;word-break:break-word;font:650 13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}.footer{background:var(--dark);color:#fff;text-align:center;padding:38px 18px}.footer a{color:var(--green);font-weight:900}@media(max-width:1040px){.hero-wrap,.layout-split .wrap,.layout-check .wrap,.layout-alert .wrap,.layout-timeline .wrap{grid-template-columns:1fr}.toc{grid-template-columns:repeat(4,1fr)}.stats{grid-template-columns:1fr 1fr 1fr}}@media(max-width:680px){.topbar-inner{padding:10px 12px}.brand span{font-size:11px}.pill{font-size:10px;padding:7px 9px}.hero-wrap{padding:46px 14px 40px}.wrap{padding:42px 14px}.toc{grid-template-columns:1fr 1fr;padding:18px 14px}h1{font-size:clamp(39px,13vw,56px);line-height:1.03}h1 span{display:block;margin-top:4px;text-shadow:2px 2px 0 var(--line)}.hero p,.copy p{font-size:16px}.stats{grid-template-columns:1fr}.media figcaption{font-size:12px}.prompt-card pre{font-size:12px;padding:15px}table,thead,tbody,tr,th,td{display:block;width:100%;min-width:0}table{min-width:0}thead{display:none}tr{border-bottom:2px solid var(--line)}td{border-bottom:0;padding:11px 14px}td:before{content:attr(data-label);display:block;font:900 11px/1 ui-monospace,Menlo,monospace;color:var(--blue);text-transform:uppercase;margin-bottom:5px}.flow{display:grid}.flow span:not(:last-child):after{content:""}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<nav class="topbar"><div class="topbar-inner"><div class="brand"><img src="logo-denem.jpeg" alt="DENEM Academy"><span>DENEM Academy · Séance 17</span></div><span class="pill">Apify · Contacts publics</span></div></nav>
+<header class="hero"><div class="hero-wrap"><div><p class="eyebrow">Séance 17 · Enrichissement Apify</p><h1>Enrichir ses leads avec <span>Apify</span></h1><p>Je pars d’une base data.gouv et je crée une couche contact exploitable : emails, téléphones, réseaux sociaux, pages sources, batchs et fichier final prêt pour la suite.</p><div class="stats"><div class="stat"><b>80</b><small>sections guidées</small></div><div class="stat"><b>18</b><small>captures utilisées</small></div><div class="stat"><b>6</b><small>prompts copiables</small></div></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></header>
+<div class="toc"><a href="#section-01"><span>01</span>Objectif</a><a href="#section-11"><span>11</span>Apify</a><a href="#section-21"><span>21</span>Test</a><a href="#section-31"><span>31</span>Codex</a><a href="#section-41"><span>41</span>Batches</a><a href="#section-56"><span>56</span>Fichier final</a><a href="#section-71"><span>71</span>Prompts</a><a href="#section-80"><span>80</span>Récap</a></div>
+<main>
+<section id="section-01" class="section layout-split accent"><div class="wrap"><div class="copy"><div><p class="kicker">01 · Ouverture</p><h2>Je passe de la preuve légale au contact réel</h2><p>Après data.gouv, je sais mieux qui est derrière chaque restaurant. Maintenant je veux savoir comment joindre ces entreprises proprement : email, téléphone, réseaux, page contact et source exacte.</p></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></section>
+<section id="section-02" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">02 · Logique</p><h2>Le fichier de départ est déjà précieux</h2><p>Je ne recommence pas à zéro. Je complète une base qui contient déjà les sites, les villes, les scores et les informations data.gouv.</p></div></div><div class="cards"><article><strong>Base existante</strong><p>Je garde les leads, scores et sites déjà trouvés.</p></article><article><strong>Couche Apify</strong><p>J’ajoute les contacts publics et leurs sources.</p></article><article><strong>Suite logique</strong><p>Je prépare nettoyage, scoring et prospection.</p></article></div></div></section>
+<section id="section-03" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">03 · Base</p><h2>Je vérifie les volumes avant de crawler</h2><p>La feuille affiche 11 839 leads, 10 143 enrichis SIREN/SIRET et 4 190 prêts pour Apify en priorité haute ou moyenne. Ce diagnostic évite de lancer un crawler au hasard.</p></div></div><figure class="media"><img src="img/session-17/02-base-data-gouv-sheet.jpg" alt="La base data.gouv sert de point de départ." loading="lazy"><figcaption>La base data.gouv sert de point de départ.</figcaption></figure></div></section>
+<section id="section-04" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">04 · Avant / après</p><h2>data.gouv et Apify ne font pas le même travail</h2><p>Je sépare les couches pour garder une base lisible et contrôlable.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>data.gouv</td><td>SIREN, SIRET, raison sociale, activité</td><td>Prouver que l’entreprise existe</td></tr><tr><td>Apify</td><td>Email, téléphone, réseaux, pages sources</td><td>Trouver comment la joindre</td></tr><tr><td>Scoring</td><td>Canal recommandé et prochaine action</td><td>Préparer la prospection</td></tr></tbody></table></div></div></section>
+<section id="section-05" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">05 · Pages</p><h2>Je ne crawle pas tout le site au hasard</h2><p>Je cible les pages qui ont le plus de chances de contenir un contact : accueil, contact, mentions légales, réservation, privatisation, groupes ou événements.</p></div></div><figure class="media"><img src="img/session-17/03-pages-crawler-priorite.jpg" alt="Les pages utiles sont ciblées avant le crawl." loading="lazy"><figcaption>Les pages utiles sont ciblées avant le crawl.</figcaption></figure></div></section>
+<section id="section-06" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">06 · Cible</p><h2>Ce que je veux récupérer</h2><p>Je cherche uniquement des informations visibles publiquement sur les sites officiels.</p></div></div><ul class="checklist"><li><span>01</span><p>emails publics</p></li><li><span>02</span><p>téléphones publics</p></li><li><span>03</span><p>pages contact</p></li><li><span>04</span><p>formulaires</p></li><li><span>05</span><p>pages réservation</p></li><li><span>06</span><p>Instagram, Facebook, LinkedIn, TikTok</p></li></ul></div></section>
+<section id="section-07" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">07 · Principe</p><h2>Une source vaut mieux qu’un contact isolé</h2><p>Un email sans page source est juste une donnée. Un email avec sa page source devient une preuve exploitable.</p></div></div><blockquote>Un email sans page source est juste une donnée. Un email avec sa page source devient une preuve exploitable.</blockquote></div></section>
+<section id="section-08" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">08 · Sécurité</p><h2>Je garde le crawler propre</h2><p>L’objectif est d’apprendre une méthode professionnelle : domaine officiel, coût maîtrisé, token protégé, aucune donnée privée inventée.</p></div></div><div class="cards"><article><strong>Domaine officiel</strong><p>Je reste sur le site de l’entreprise.</p></article><article><strong>Données publiques</strong><p>Je récupère ce qui est visible et utile.</p></article><article><strong>Budget suivi</strong><p>Je surveille coût, RAM et runs.</p></article></div></div></section>
+<section id="section-09" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">09 · Priorité</p><h2>Je ne traite pas toute la base de la même façon</h2><p>Je commence par les leads fiables et utiles commercialement.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>1</td><td>HIGH_CONFIDENCE</td><td>Je commence par les matchs légaux fiables.</td></tr><tr><td>2</td><td>MEDIUM_CONFIDENCE</td><td>Je traite ensuite les matchs probables.</td></tr><tr><td>3</td><td>Website présent</td><td>Apify ne sert que si je peux crawler un domaine.</td></tr><tr><td>4</td><td>Email ou téléphone absent</td><td>J’enrichis d’abord là où le gain est clair.</td></tr></tbody></table></div></div></section>
+<section id="section-10" class="section layout-timeline"><div class="wrap"><div class="copy"><div><p class="kicker">10 · Chaîne</p><h2>La chaîne complète reste simple</h2><p>Chaque étape produit un fichier ou une preuve que je peux contrôler.</p></div></div><div class="timeline"><article><span>1</span><p>Base data.gouv</p></article><article><span>2</span><p>Sites officiels</p></article><article><span>3</span><p>Actor Apify</p></article><article><span>4</span><p>Batch 50</p></article><article><span>5</span><p>Sortie normalisée</p></article><article><span>6</span><p>Merge XLSX</p></article></div></div></section>
+<section id="section-11" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">11 · Apify</p><h2>Je découvre Apify comme bibliothèque d’actors</h2><p>Un actor est un scraper prêt à l’emploi. Je peux l’utiliser seul, avec une API, ou dans une chaîne pilotée par IA.</p></div></div><figure class="media"><img src="img/session-17/05-apify-store-dashboard.jpg" alt="Apify Store regroupe les actors prêts à l’emploi." loading="lazy"><figcaption>Apify Store regroupe les actors prêts à l’emploi.</figcaption></figure></div></section>
+<section id="section-12" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">12 · Accès</p><h2>Je passe par le Store ou la Console</h2><p>Je crée un compte, j’arrive sur le dashboard, puis je cherche l’actor qui correspond au cas : extraire des contacts depuis des sites web.</p></div></div><figure class="media"><img src="img/session-17/04-apify-url-store.jpg" alt="Je vais chercher l’actor Apify adapté." loading="lazy"><figcaption>Je vais chercher l’actor Apify adapté.</figcaption></figure></div></section>
+<section id="section-13" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">13 · Crédits</p><h2>Les crédits gratuits suffisent pour tester</h2><p>L’intérêt est de valider la méthode sans engager un gros budget. Le test manuel sert à comprendre le coût avant les lots.</p></div></div><div class="cards"><article><strong>Compte Apify</strong><p>Créer un compte donne de quoi tester.</p></article><article><strong>Test court</strong><p>Le premier lancement doit être petit.</p></article><article><strong>Décision</strong><p>Je continue seulement si les signaux sont bons.</p></article></div></div></section>
+<section id="section-14" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">14 · Exemples</p><h2>Je regarde aussi d’autres actors pour comprendre la logique</h2><p>TikTok, YouTube, Facebook, jobs, TripAdvisor : Apify peut servir à beaucoup de scénarios clients. Ici je reste concentré sur les contacts B2B.</p></div></div><figure class="media"><img src="img/session-17/06-tiktok-scraper-exemple.jpg" alt="Un actor peut servir à beaucoup d’autres cas." loading="lazy"><figcaption>Un actor peut servir à beaucoup d’autres cas.</figcaption></figure></div></section>
+<section id="section-15" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">15 · Coût</p><h2>Je lis le prix avant de lancer</h2><p>Certains actors facturent par résultat, d’autres par événement ou par exécution. Une mauvaise configuration peut consommer le budget très vite.</p></div></div><figure class="media"><img src="img/session-17/07-apify-pricing-scraper.jpg" alt="La tarification doit être lue avant de lancer." loading="lazy"><figcaption>La tarification doit être lue avant de lancer.</figcaption></figure></div></section>
+<section id="section-16" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">16 · Budget</p><h2>Je ne laisse jamais tourner sans surveiller</h2><p>Le crédit offert aide à tester, mais le bon réflexe est de regarder le coût, la RAM et les runs en cours.</p></div></div><aside class="alert-box"><b>Budget</b><p>Le crédit offert aide à tester, mais le bon réflexe est de regarder le coût, la RAM et les runs en cours.</p></aside></div></section>
+<section id="section-17" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">17 · Recherche</p><h2>Je cherche Website Contact Extractor</h2><p>Je tape le nom dans Apify Store, puis je compare les résultats. Le but est de choisir un actor qui crawle des URLs et extrait les contacts.</p></div></div><figure class="media"><img src="img/session-17/08-store-search-contact-extractor.jpg" alt="Je cherche Website Contact Extractor." loading="lazy"><figcaption>Je cherche Website Contact Extractor.</figcaption></figure></div></section>
+<section id="section-18" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">18 · Choix</p><h2>Je prends l’actor le plus adapté</h2><p>`betterdevsscrape/contact-details-extractor` est choisi car il extrait emails, téléphones, réseaux sociaux et pages sources depuis un domaine.</p></div></div><figure class="media"><img src="img/session-17/09-actor-website-contact-extractor.jpg" alt="L’actor choisi extrait contacts et réseaux depuis les sites." loading="lazy"><figcaption>L’actor choisi extrait contacts et réseaux depuis les sites.</figcaption></figure></div></section>
+<section id="section-19" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">19 · Lecture</p><h2>Je lis la fiche avant de cliquer Start</h2><p>La fiche donne le prix, les onglets utiles, les runs, les builds, les intégrations et la documentation. Je ne lance pas à l’aveugle.</p></div></div><div class="cards"><article><strong>Input</strong><p>Comment l’actor reçoit les URLs.</p></article><article><strong>Information</strong><p>Comment il décrit ses sorties.</p></article><article><strong>Runs</strong><p>Comment lire les exécutions passées.</p></article></div></div></section>
+<section id="section-20" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">20 · Actor</p><h2>Prompt pour choisir un actor Apify</h2><p>Ce prompt sert si tu veux refaire le choix d’actor sur un autre cas client.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt pour choisir un actor Apify</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt sert si tu veux refaire le choix d’actor sur un autre cas client.</p><pre>Tu es mon analyste Apify. Je veux enrichir une base B2B avec des contacts publics depuis les sites officiels.
+Compare les actors disponibles pour :
+- recevoir une liste d&#x27;URLs
+- rester sur le même domaine
+- extraire emails, téléphones, réseaux sociaux
+- retourner les pages sources
+- fonctionner par lots
+
+Donne-moi l&#x27;actor recommandé, ses limites, son coût probable et un test de 5 URLs.</pre>
+</div></div></section>
+<section id="section-21" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">21 · Test</p><h2>Je teste une URL officielle manuellement</h2><p>Je colle une URL de restaurant dans Start URLs pour vérifier si l’actor trouve vraiment des contacts.</p></div></div><figure class="media"><img src="img/session-17/10-config-start-url-contact-extractor.jpg" alt="Je teste une URL officielle avant le batch." loading="lazy"><figcaption>Je teste une URL officielle avant le batch.</figcaption></figure></div></section>
+<section id="section-22" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">22 · Paramètres</p><h2>Je garde une configuration raisonnable</h2><p>Le test doit être petit : quelques pages, même domaine, profondeur limitée, pas de proxy au départ.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>maxPagesPerStartUrl</td><td>8 au départ</td><td>Assez pour contact, mentions, accueil et réservation.</td></tr><tr><td>maxDepth</td><td>2</td><td>Évite de partir trop loin.</td></tr><tr><td>sameDomain</td><td>true</td><td>Reste sur le site officiel.</td></tr><tr><td>proxy</td><td>false au départ</td><td>Réduit coût et complexité.</td></tr></tbody></table></div></div></section>
+<section id="section-23" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">23 · Contrôle</p><h2>Ce que je regarde pendant le test</h2><p>Je regarde les pages visitées, les contacts trouvés, les logs, le coût et la durée.</p></div></div><ul class="checklist"><li><span>01</span><p>Le run démarre correctement</p></li><li><span>02</span><p>Les pages visitées sont pertinentes</p></li><li><span>03</span><p>Le coût reste lisible</p></li><li><span>04</span><p>Les contacts ont une source</p></li><li><span>05</span><p>Les erreurs sont compréhensibles</p></li></ul></div></section>
+<section id="section-24" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">24 · Extraction</p><h2>Le crawler transforme du HTML en champs utiles</h2><p>L’actor lit les pages, repère des motifs comme les emails et téléphones, puis renvoie une sortie structurée.</p></div></div><div class="flow"><span>HTML</span><span>pages utiles</span><span>regex emails</span><span>regex téléphones</span><span>réseaux</span><span>dataset Apify</span></div></div></section>
+<section id="section-25" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">25 · Logs</p><h2>Les logs expliquent ce qui se passe</h2><p>Je vérifie que le crawler visite les bonnes pages : équipe, actualités, politique de confidentialité, contact, mentions légales.</p></div></div><figure class="media"><img src="img/session-17/11-resultat-test-manuel-logs.jpg" alt="Les logs prouvent ce que le crawler trouve." loading="lazy"><figcaption>Les logs prouvent ce que le crawler trouve.</figcaption></figure></div></section>
+<section id="section-26" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">26 · Réalité</p><h2>Un crawler ne trouve pas toujours un email</h2><p>Certains sites affichent seulement un téléphone, un formulaire, Instagram ou une page de réservation. Ce n’est pas un échec si la source est claire.</p></div></div><blockquote>Certains sites affichent seulement un téléphone, un formulaire, Instagram ou une page de réservation. Ce n’est pas un échec si la source est claire.</blockquote></div></section>
+<section id="section-27" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">27 · Qualité</p><h2>Je classe les contacts par valeur</h2><p>Un email nominatif, un email général, un email de réservation et un formulaire n’ont pas le même usage commercial.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>nominatif_pro</td><td>prenom.nom@domaine.fr</td><td>Fort si cohérent.</td></tr><tr><td>contact_general</td><td>contact@, bonjour@</td><td>Bon pour prise de contact.</td></tr><tr><td>reservation</td><td>reservation@, booking@</td><td>Très bon pour restauration.</td></tr><tr><td>technical</td><td>webmaster@, support technique</td><td>À éviter sauf besoin précis.</td></tr></tbody></table></div></div></section>
+<section id="section-28" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">28 · Canaux</p><h2>Je ne limite pas la base à l’email</h2><p>Un restaurant peut être plus joignable par téléphone, Instagram, formulaire ou page privatisation. La base doit garder ces options.</p></div></div><div class="cards"><article><strong>Email</strong><p>Canal direct si source fiable.</p></article><article><strong>Téléphone</strong><p>Souvent meilleur pour local.</p></article><article><strong>Réseaux</strong><p>Signal social et canal alternatif.</p></article></div></div></section>
+<section id="section-29" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">29 · Erreur fréquente</p><h2>Ne confonds pas scraping et prospection</h2><p>À ce stade je collecte les bons champs. Je n’envoie rien. La prospection vient après nettoyage, scoring et message adapté.</p></div></div><aside class="alert-box"><b>Erreur fréquente</b><p>À ce stade je collecte les bons champs. Je n’envoie rien. La prospection vient après nettoyage, scoring et message adapté.</p></aside></div></section>
+<section id="section-30" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">30 · Test</p><h2>Prompt de test sur 50 sites</h2><p>Ce prompt sert à éviter de lancer 10 000 sites sans diagnostic.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt de test sur 50 sites</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt sert à éviter de lancer 10 000 sites sans diagnostic.</p><pre>Avant de traiter toute la base, lance uniquement un échantillon de 50 sites.
+Mesure :
+- pages crawlées
+- emails trouvés
+- téléphones trouvés
+- réseaux trouvés
+- sites bloqués
+- coût estimé
+- temps moyen
+
+Si le taux email + téléphone est inférieur à 10 %, arrête et fais un diagnostic.</pre>
+</div></div></section>
+<section id="section-31" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">31 · Dossier</p><h2>J’ouvre une session IA dans le bon dossier</h2><p>Je travaille dans le dossier du projet pour que Codex voie les fichiers, crée les scripts et écrive les sorties au bon endroit.</p></div></div><figure class="media"><img src="img/session-17/12-codex-session-prompt-apify.jpg" alt="Je lance la session IA dans le dossier du projet." loading="lazy"><figcaption>Je lance la session IA dans le dossier du projet.</figcaption></figure></div></section>
+<section id="section-32" class="section layout-full command-section"><div class="wrap"><div class="copy"><div><p class="kicker">32 · Token</p><h2>Je donne la clé Apify comme variable d’environnement</h2><p>Le token ne doit jamais être dans le HTML, le XLSX, les logs publics ou GitHub. Il sert seulement à autoriser les appels.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Je donne la clé Apify comme variable d’environnement</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Le token ne doit jamais être dans le HTML, le XLSX, les logs publics ou GitHub. Il sert seulement à autoriser les appels.</p><pre>cd ~/Desktop/mon-business/06-leads-gratuits-massif
+export APIFY_TOKEN=&quot;[TON_TOKEN_APIFY]&quot;
+claude --dangerously-skip-permissions
+
+# Variante si tu préfères charger depuis un fichier local non versionné :
+source .env
+claude --dangerously-skip-permissions</pre>
+</div></div></section>
+<section id="section-33" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">33 · API</p><h2>Je récupère le snippet utile depuis Apify</h2><p>Chaque actor fournit son point d’entrée API. Je donne ce contexte à l’IA pour qu’elle sache appeler le bon service.</p></div></div><div class="cards"><article><strong>API</strong><p>Je récupère l’exemple d’appel.</p></article><article><strong>Dataset</strong><p>Je comprends comment lire les résultats.</p></article><article><strong>Sécurité</strong><p>Je ne colle pas la clé dans les fichiers.</p></article></div></div></section>
+<section id="section-34" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">34 · Secret</p><h2>Si un token apparaît, je nettoie avant publication</h2><p>Une clé API dans une capture, un log ou un dépôt public est une fuite. Je masque la zone et je vérifie les fichiers texte.</p></div></div><aside class="alert-box"><b>Secret</b><p>Une clé API dans une capture, un log ou un dépôt public est une fuite. Je masque la zone et je vérifie les fichiers texte.</p></aside></div></section>
+<section id="section-35" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">35 · Entrée</p><h2>Les colonnes importantes sont déjà là</h2><p>Je donne à l’IA les colonnes qui permettent de relier le résultat Apify au bon lead.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>lead_id</td><td>Relier chaque résultat au bon lead</td><td>Indispensable</td></tr><tr><td>website/domain</td><td>Donner l’URL de départ</td><td>Indispensable</td></tr><tr><td>dg_match_status</td><td>Prioriser la confiance</td><td>Important</td></tr><tr><td>priority_score</td><td>Garder la logique commerciale</td><td>Important</td></tr></tbody></table></div></div></section>
+<section id="section-36" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">36 · Phases</p><h2>Je force un plan en phases</h2><p>Codex découpe le travail : audit base, batches, test Apify, runs, normalisation, merge, scoring, génération finale.</p></div></div><figure class="media"><img src="img/session-17/13-phases-codex-enrichissement.jpg" alt="Codex découpe le travail en phases contrôlables." loading="lazy"><figcaption>Codex découpe le travail en phases contrôlables.</figcaption></figure></div></section>
+<section id="section-37" class="section layout-timeline"><div class="wrap"><div class="copy"><div><p class="kicker">37 · Phases</p><h2>La méthode est industrielle</h2><p>Chaque phase a une sortie contrôlable. Si ça casse, je reprends au bon endroit.</p></div></div><div class="timeline"><article><span>1</span><p>Audit</p></article><article><span>2</span><p>Batches</p></article><article><span>3</span><p>Test 50</p></article><article><span>4</span><p>Runs</p></article><article><span>5</span><p>Normalisation</p></article><article><span>6</span><p>Merge</p></article><article><span>7</span><p>Score</p></article><article><span>8</span><p>Rapport</p></article></div></div></section>
+<section id="section-38" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">38 · Fichiers</p><h2>Je veux des dossiers de sortie clairs</h2><p>Les inputs, outputs bruts, résultats normalisés et ledger doivent rester séparés.</p></div></div><div class="cards"><article><strong>apify-input-batches</strong><p>Ce que j’envoie.</p></article><article><strong>apify-raw-runs</strong><p>Ce qu’Apify renvoie.</p></article><article><strong>apify-normalized</strong><p>Ce que je peux merger proprement.</p></article></div></div></section>
+<section id="section-39" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">39 · Ledger</p><h2>Le ledger évite les relances inutiles</h2><p>Je note les batchs réussis, les coûts, les run_id et les statuts pour ne pas payer deux fois.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>timestamp</td><td>Quand le batch tourne</td><td>Suivi</td></tr><tr><td>run_id</td><td>Identifiant Apify</td><td>Reprise</td></tr><tr><td>status</td><td>Succès ou échec</td><td>Décision</td></tr><tr><td>cost_estimate</td><td>Coût estimé</td><td>Budget</td></tr></tbody></table></div></div></section>
+<section id="section-40" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">40 · Maître</p><h2>Prompt maître Apify complet</h2><p>Ce prompt pilote tout l’enrichissement. Il est long parce qu’il sécurise le travail.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt maître Apify complet</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt pilote tout l’enrichissement. Il est long parce qu’il sécurise le travail.</p><pre>Tu es un growth data engineer senior, spécialiste Apify, crawling propre de sites B2B, enrichissement de contacts publics, déduplication et préparation de bases commerciales.
+
+MISSION
+Tu dois reprendre le fichier enrichi avec data.gouv :
+@~/Desktop/mon-business/07-enrichissement-data-gouv/leads-data-gouv-enriched.xlsx
+
+Tu dois créer une nouvelle version enrichie avec les contacts visibles publiquement sur les sites web officiels des entreprises.
+Le but est d&#x27;ajouter :
+- emails publics
+- téléphones publics
+- pages contact
+- formulaires
+- pages réservation
+- pages privatisation
+- Instagram
+- Facebook
+- LinkedIn
+- TikTok
+- WhatsApp
+- sources exactes où les données ont été trouvées
+
+Tu ne dois pas recréer une nouvelle base.
+Tu dois conserver toutes les colonnes existantes et ajouter seulement des colonnes apify_.
+
+SÉCURITÉ TOKEN
+Lis le token Apify depuis :
+process.env.APIFY_TOKEN
+
+Si APIFY_TOKEN est absent, stoppe et dis :
+&quot;APIFY_TOKEN absent. Ajoute le token en variable d&#x27;environnement puis relance.&quot;
+
+Ne stocke jamais le token dans un fichier.
+Ne l&#x27;affiche jamais dans les logs.
+Ne le mets jamais dans le XLSX.
+
+ACTOR APIFY RECOMMANDÉ
+Utilise en priorité :
+betterdevsscrape/contact-details-extractor
+
+Si cet actor n&#x27;est pas accessible, cherche un actor équivalent capable de :
+- recevoir une liste d&#x27;URLs
+- crawler quelques pages du même domaine
+- extraire emails
+- extraire téléphones
+- extraire réseaux sociaux
+- retourner les URLs sources
+
+FICHIER D&#x27;ENTRÉE
+Lis :
+~/Desktop/mon-business/07-enrichissement-data-gouv/leads-data-gouv-enriched.xlsx
+
+Colonnes importantes :
+- lead_id
+- company_name
+- website
+- domain
+- email
+- phone
+- source_urls
+- dg_siren
+- dg_siret
+- dg_raison_sociale
+- dg_nom_commercial
+- dg_match_status
+- dg_match_score
+- priority_score
+- priority_class
+- personalized_angle
+- outreach_message
+
+RÈGLE DE PRIORISATION
+Traite d&#x27;abord :
+1. dg_match_status = HIGH_CONFIDENCE
+2. puis MEDIUM_CONFIDENCE
+3. puis les leads avec website/domain présent
+4. puis les leads sans email
+5. puis les leads sans téléphone
+6. puis les leads A+ / A
+
+Ne traite pas automatiquement :
+- LOW_CONFIDENCE
+- NOT_FOUND
+- ADDRESS_ONLY_CHECK
+sauf si l&#x27;utilisateur demande explicitement un enrichissement exploratoire.
+
+STRUCTURE DE SORTIE
+Crée ou complète :
+~/Desktop/mon-business/08-enrichissement-apify/
+
+Crée :
+- leads-apify-enriched.xlsx
+- leads-apify-enriched.csv
+- rapport-apify.md
+- apify-input-batches/
+- apify-raw-runs/
+- apify-normalized/
+- apify-ledger.csv
+
+COLONNES À AJOUTER
+Ajoute au minimum :
+- apify_run_id
+- apify_actor
+- apify_start_url
+- apify_domain
+- apify_pages_crawled
+- apify_email_found
+- apify_email_all
+- apify_email_type
+- apify_email_confidence
+- apify_email_source_page
+- apify_phone_found
+- apify_phone_all
+- apify_phone_type
+- apify_phone_confidence
+- apify_phone_source_page
+- apify_instagram
+- apify_facebook
+- apify_linkedin
+- apify_tiktok
+- apify_youtube
+- apify_whatsapp
+- apify_contact_page
+- apify_booking_page
+- apify_privatisation_page
+- apify_mentions_legales_page
+- apify_form_detected
+- apify_source_pages
+- apify_contact_score
+- apify_enrichment_status
+- apify_merge_status
+- apify_notes
+- recommended_contact_channel
+- recommended_next_action
+
+PHASE 0 — AUDIT DE LA BASE
+Avant tout appel Apify :
+1. Compte le nombre total de leads.
+2. Compte les leads avec website.
+3. Compte les leads sans email.
+4. Compte les leads sans téléphone.
+5. Compte HIGH_CONFIDENCE / MEDIUM_CONFIDENCE / ADDRESS_ONLY_CHECK / LOW_CONFIDENCE / NOT_FOUND.
+6. Estime le nombre de sites à crawler.
+7. Crée rapport-apify.md avec ce diagnostic initial.
+
+PHASE 1 — CONSTRUIRE LES BATCHES
+Crée des lots de 50 sites maximum pour commencer.
+Chaque entrée Apify doit contenir :
+- lead_id
+- company_name
+- website
+- domain
+- dg_siren
+- dg_siret
+- dg_match_status
+
+Normalise les URLs :
+- ajoute https:// si nécessaire
+- retire les paramètres inutiles
+- garde le domaine officiel du lead
+- ignore les réseaux sociaux comme site principal sauf si aucun autre site n&#x27;existe
+
+Crée :
+apify-input-batches/batch-001.json
+apify-input-batches/batch-002.json
+etc.
+
+PHASE 2 — TEST SUR ÉCHANTILLON
+Lance d&#x27;abord Apify sur 50 sites maximum.
+Configuration recommandée :
+- maxPagesPerStartUrl : 8
+- maxDepth : 2
+- sameDomain : true
+- mergeContacts : true
+- browserMode : auto
+- useProxy : false au départ
+- timeout raisonnable
+
+Pages à prioriser :
+- /
+- /contact
+- /contactez-nous
+- /a-propos
+- /about
+- /team
+- /equipe
+- /mentions-legales
+- /mentions-légales
+- /reservation
+- /réservation
+- /privatisation
+- /groupes
+- /evenements
+- /recrutement
+
+Après l&#x27;échantillon, mesure :
+- emails trouvés
+- téléphones trouvés
+- réseaux trouvés
+- no contact
+- sites bloqués
+- coût estimé
+- temps moyen
+
+Si le taux email + téléphone est inférieur à 10 %, fais un diagnostic avant de continuer.
+Si le taux est acceptable, continue par lots.
+
+PHASE 3 — LANCER LES BATCHES
+Pour chaque batch :
+1. Lance l&#x27;actor.
+2. Sauvegarde l&#x27;input.
+3. Sauvegarde l&#x27;output brut dans apify-raw-runs/.
+4. Normalise les résultats dans apify-normalized/.
+5. Écris apify-ledger.csv :
+   timestamp, batch_id, actor, run_id, input_count, pages_crawled, emails_found, phones_found, socials_found, cost_estimate, status.
+
+Ne relance pas un batch déjà réussi.
+Si un site échoue, note l&#x27;échec dans apify_notes.
+
+PHASE 4 — NORMALISER LES CONTACTS
+Emails :
+- nettoie les espaces
+- retire mailto:
+- convertis contact [at] domaine.fr vers contact@domaine.fr
+- retire les emails techniques inutiles si non pertinents
+- garde plusieurs emails dans apify_email_all
+- choisis le meilleur dans apify_email_found
+
+Classe apify_email_type :
+- nominatif_pro
+- contact_general
+- reservation
+- commercial
+- recrutement
+- free_email
+- technical
+- unknown
+
+Priorité email :
+1. email sur le domaine officiel
+2. email contact général
+3. email réservation si restaurant
+4. email nominatif pro si cohérent
+5. email free provider
+6. email recrutement seulement si l&#x27;offre est RH
+
+Téléphones :
+- nettoie les formats
+- conserve le format international si possible
+- distingue fixe / mobile si possible
+- garde tous les numéros dans apify_phone_all
+- choisis le meilleur dans apify_phone_found
+
+Réseaux sociaux :
+- garde seulement les liens plausibles liés à l&#x27;entreprise
+- évite les icônes génériques ou liens de partage
+- garde la source page.
+
+PHASE 5 — MERGE AVEC LES DONNÉES EXISTANTES
+Ne supprime jamais email ou phone existants.
+Compare :
+- email d&#x27;origine vs apify_email_found
+- phone d&#x27;origine vs apify_phone_found
+
+apify_merge_status :
+- confirmed_existing : Apify confirme une donnée déjà présente
+- new_contact_added : Apify ajoute une donnée absente
+- conflict_to_review : Apify trouve une donnée différente
+- no_contact_found : rien trouvé
+- blocked_or_failed : site inaccessible ou actor échoué
+
+PHASE 6 — SCORE DE CONTACT
+Calcule apify_contact_score sur 100 :
+- +30 email trouvé sur domaine officiel
+- +20 email général ou réservation exploitable
+- +25 téléphone trouvé
+- +15 Instagram/Facebook/LinkedIn trouvé
+- +10 page contact trouvée
+- +10 page réservation ou privatisation trouvée
+- +5 formulaire détecté
+- -20 email free provider seulement
+- -25 source hors domaine officiel
+- -30 conflit avec données existantes sans confirmation
+
+Statuts :
+- CONTACT_COMPLETE : email + téléphone
+- EMAIL_ONLY : email sans téléphone
+- PHONE_ONLY : téléphone sans email
+- SOCIAL_ONLY : seulement réseaux sociaux
+- FORM_ONLY : seulement formulaire
+- NO_CONTACT_FOUND : rien
+- NEED_MANUAL_CHECK : ambigu, bloqué, conflit ou site cassé
+
+PHASE 7 — ACTION RECOMMANDÉE
+Crée recommended_contact_channel :
+- email
+- phone
+- linkedin
+- instagram
+- form
+- manual_review
+- do_not_contact
+
+Crée recommended_next_action :
+- Envoyer email personnalisé
+- Appeler puis envoyer email
+- Contacter Instagram
+- Utiliser formulaire
+- Vérifier manuellement
+- Exclure temporairement
+
+Règles :
+- Si CONTACT_COMPLETE : email personnalisé + appel possible
+- Si EMAIL_ONLY : email personnalisé
+- Si PHONE_ONLY : appel court puis demande du bon email
+- Si SOCIAL_ONLY : contact social léger ou recherche manuelle
+- Si NEED_MANUAL_CHECK : ne pas automatiser
+
+PHASE 8 — CLASSEUR EXCEL
+Crée leads-apify-enriched.xlsx avec :
+
+1. APIFY_DASHBOARD
+KPIs :
+- leads traités
+- sites crawlés
+- emails trouvés
+- téléphones trouvés
+- Instagram trouvés
+- LinkedIn trouvés
+- CONTACT_COMPLETE
+- EMAIL_ONLY
+- PHONE_ONLY
+- NO_CONTACT_FOUND
+- NEED_MANUAL_CHECK
+- taux de joignabilité
+- coût estimé Apify
+
+Graphiques :
+- statut de contact
+- email vs téléphone
+- top domaines avec contact
+- no contact par segment
+
+2. ALL_LEADS_APIFY
+Toutes les colonnes d&#x27;origine + dg_ + apify_.
+
+3. READY_FOR_OUTREACH
+Seulement les leads :
+- dg_match_status HIGH_CONFIDENCE ou MEDIUM_CONFIDENCE
+- apify_enrichment_status CONTACT_COMPLETE ou EMAIL_ONLY ou PHONE_ONLY
+- contact_score suffisant
+
+4. EMAIL_READY
+Leads avec email exploitable.
+
+5. PHONE_READY
+Leads avec téléphone exploitable.
+
+6. SOCIAL_READY
+Leads avec réseaux mais pas email.
+
+7. MANUAL_REVIEW
+Conflits, sites bloqués, contacts ambigus.
+
+8. NO_CONTACT_FOUND
+Sites sans contact.
+
+9. APIFY_LEDGER
+Tous les runs Apify.
+
+10. SOURCE_PAGES
+Une ligne par page source de contact :
+lead_id, company_name, contact_type, contact_value, source_page.
+
+11. SCORING_RULES
+Méthode de scoring contact.
+
+12. NEXT_ACTIONS
+Vue opérationnelle triée par priorité.
+
+MISE EN FORME
+- filtres
+- lignes figées
+- couleurs par apify_enrichment_status
+- largeur lisible
+- dashboard synthétique
+- aucun token Apify
+
+RAPPORT
+Crée rapport-apify.md :
+- actor utilisé
+- configuration
+- nombre de sites traités
+- coût estimé
+- taux email
+- taux téléphone
+- taux contacts complets
+- limites
+- recommandations pour la séance nettoyage/scoring
+
+CONFORMITÉ
+Utilise uniquement des contacts publiés publiquement par l&#x27;entreprise ou ses pages officielles.
+Ne contourne aucun login, captcha, paywall ou restriction technique.
+Ne collecte aucune donnée sensible.
+Conserve la source de chaque contact.
+La prospection devra être B2B, pertinente et inclure une possibilité d&#x27;opposition.
+
+CONTRÔLE FINAL
+Avant de finir :
+- vérifie que le XLSX s&#x27;ouvre
+- vérifie que les colonnes apify_ existent
+- vérifie que READY_FOR_OUTREACH ne contient pas LOW_CONFIDENCE ou NOT_FOUND
+- vérifie qu&#x27;aucun token n&#x27;apparaît dans les fichiers
+- vérifie que chaque contact a une source ou une note
+- vérifie que les statuts sont cohérents
+
+MESSAGE FINAL
+Réponds seulement :
+&quot;Enrichissement Apify terminé.
+Fichiers :
+- leads-apify-enriched.xlsx
+- leads-apify-enriched.csv
+- rapport-apify.md
+
+Sites traités : X
+Emails trouvés : Y
+Téléphones trouvés : Z
+Contacts complets : A
+Email only : B
+Phone only : C
+À vérifier : D
+Prêts pour outreach : E
+Coût estimé Apify : F&quot;</pre>
+</div></div></section>
+<section id="section-41" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">41 · Audit</p><h2>Je commence par mesurer la base</h2><p>Avant un seul appel payant, je compte les leads, les sites disponibles, les emails manquants, les téléphones manquants et les statuts data.gouv.</p></div></div><div class="cards"><article><strong>Leads totaux</strong><p>Combien de lignes à traiter.</p></article><article><strong>Sites disponibles</strong><p>Combien peuvent partir chez Apify.</p></article><article><strong>Contacts manquants</strong><p>Où l’enrichissement est le plus utile.</p></article></div></div></section>
+<section id="section-42" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">42 · Batches</p><h2>Je construis des lots de 50 sites</h2><p>Les lots rendent le coût, les erreurs et la reprise beaucoup plus faciles à contrôler.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>batch-001.json</td><td>50 sites max</td><td>Test maîtrisé</td></tr><tr><td>batch-002.json</td><td>50 sites max</td><td>Suite progressive</td></tr><tr><td>ledger.csv</td><td>Historique</td><td>Pas de relance inutile</td></tr></tbody></table></div></div></section>
+<section id="section-43" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">43 · Échantillon</p><h2>Je valide le premier lot avant la suite</h2><p>Si les résultats sont faibles, je corrige les paramètres au lieu de brûler le budget.</p></div></div><ul class="checklist"><li><span>01</span><p>Je vois le nombre de sites envoyés</p></li><li><span>02</span><p>Je vois le taux de contact trouvé</p></li><li><span>03</span><p>Je vois le coût estimé</p></li><li><span>04</span><p>Je vois les sites bloqués</p></li><li><span>05</span><p>Je décide si je continue</p></li></ul></div></section>
+<section id="section-44" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">44 · Runs</p><h2>Je regarde les runs Apify pendant que ça tourne</h2><p>La console affiche les runs, le statut, les résultats, l’usage, les dates et la mémoire.</p></div></div><figure class="media"><img src="img/session-17/14-runs-apify-en-cours.jpg" alt="Les runs Apify montrent les batches en cours." loading="lazy"><figcaption>Les runs Apify montrent les batches en cours.</figcaption></figure></div></section>
+<section id="section-45" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">45 · Concurrence</p><h2>Je règle la vitesse selon la stabilité</h2><p>Quand le runner est lent ou instable, je baisse la concurrence. Mieux vaut traiter moins vite que perdre des batchs.</p></div></div><figure class="media"><img src="img/session-17/16-terminal-run-batches.jpg" alt="Le runner batch est suivi côté terminal." loading="lazy"><figcaption>Le runner batch est suivi côté terminal.</figcaption></figure></div></section>
+<section id="section-46" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">46 · RAM</p><h2>La RAM peut faire exploser l’abonnement</h2><p>Sur Apify, dépasser certains seuils de ressources peut obliger à changer de plan. Je surveille avant d’aller trop loin.</p></div></div><aside class="alert-box"><b>RAM</b><p>Sur Apify, dépasser certains seuils de ressources peut obliger à changer de plan. Je surveille avant d’aller trop loin.</p></aside></div></section>
+<section id="section-47" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">47 · Fails</p><h2>Les erreurs sont normales</h2><p>Des batchs échouent, des sites bloquent, certains domaines ne répondent pas. L’important est de tracer, diagnostiquer et relancer proprement.</p></div></div><figure class="media"><img src="img/session-17/17-terminal-fails-controle.jpg" alt="Les fails sont tracés et relancés proprement." loading="lazy"><figcaption>Les fails sont tracés et relancés proprement.</figcaption></figure></div></section>
+<section id="section-48" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">48 · Debug</p><h2>Prompt de diagnostic des batchs échoués</h2><p>Ce prompt sert quand je vois des fails et que je veux relancer sans refaire les batchs réussis.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt de diagnostic des batchs échoués</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt sert quand je vois des fails et que je veux relancer sans refaire les batchs réussis.</p><pre>Analyse les batchs Apify échoués.
+Ne relance pas les batchs réussis.
+Pour chaque échec, donne :
+- batch_id
+- raison probable
+- action recommandée
+- relance possible ou non
+- risque coût/RAM
+
+Puis propose une relance avec concurrence réduite.</pre>
+</div></div></section>
+<section id="section-49" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">49 · Relance</p><h2>Je relance avec méthode</h2><p>Je distingue batch réussi, batch partiel, site bloqué et erreur de configuration.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>Succès</td><td>Ne pas relancer</td><td>Garder le run_id</td></tr><tr><td>Partiel</td><td>Analyser sortie</td><td>Compléter si utile</td></tr><tr><td>Fail</td><td>Lire logs</td><td>Relancer avec concurrence basse</td></tr><tr><td>Bloqué</td><td>Marquer notes</td><td>Ne pas forcer</td></tr></tbody></table></div></div></section>
+<section id="section-50" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">50 · Résultats</p><h2>Je contrôle les contacts récupérés</h2><p>Je regarde les emails, téléphones, Instagram et les pages sources. Je ne me contente pas d’un compteur.</p></div></div><figure class="media"><img src="img/session-17/15-resultats-apify-emails-phones.jpg" alt="Je contrôle les résultats récupérés." loading="lazy"><figcaption>Je contrôle les résultats récupérés.</figcaption></figure></div></section>
+<section id="section-51" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">51 · Lecture</p><h2>Les premiers résultats donnent déjà une tendance</h2><p>Sur l’exécution montrée, je récupère beaucoup d’emails, des téléphones, des réseaux et des contacts exploitables, même sans crawler toute la base.</p></div></div><div class="cards"><article><strong>Email</strong><p>Un contact direct exploitable.</p></article><article><strong>Téléphone</strong><p>Un fallback très fort.</p></article><article><strong>Instagram</strong><p>Un signal utile pour restaurants.</p></article></div></div></section>
+<section id="section-52" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">52 · Budget</p><h2>Je préfère m’arrêter avant de dépasser le budget</h2><p>Une bonne méthode sait dire stop. Je peux reprendre plus tard avec le ledger au lieu de tout relancer.</p></div></div><blockquote>Une bonne méthode sait dire stop. Je peux reprendre plus tard avec le ledger au lieu de tout relancer.</blockquote></div></section>
+<section id="section-53" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">53 · Score</p><h2>Je prépare un score de contact</h2><p>Le score sert à décider quel lead est prêt pour la prospection et quel lead doit passer en vérification.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>+30</td><td>Email sur domaine officiel</td><td>Très fort</td></tr><tr><td>+25</td><td>Téléphone confirmé</td><td>Fort</td></tr><tr><td>+15</td><td>Réseau social trouvé</td><td>Utile</td></tr><tr><td>-20</td><td>Source ambiguë</td><td>Revue manuelle</td></tr></tbody></table></div></div></section>
+<section id="section-54" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">54 · Canal</p><h2>Je choisis le meilleur canal automatiquement</h2><p>Email confirmé, téléphone confirmé, formulaire, Instagram ou manuel : le fichier doit recommander une action.</p></div></div><div class="cards"><article><strong>Email confirmé</strong><p>Envoyer un premier message.</p></article><article><strong>Téléphone confirmé</strong><p>Appel ou qualification.</p></article><article><strong>Formulaire</strong><p>Passer en manuel assisté.</p></article></div></div></section>
+<section id="section-55" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">55 · Rapport</p><h2>Prompt de rapport final</h2><p>Ce prompt force une synthèse propre et exploitable avant de passer à la séance suivante.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt de rapport final</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt force une synthèse propre et exploitable avant de passer à la séance suivante.</p><pre>Génère un rapport final clair pour l&#x27;enrichissement Apify.
+Je veux :
+- nombre de leads traités
+- couverture crawl
+- emails trouvés
+- téléphones trouvés
+- réseaux trouvés
+- coût estimé
+- erreurs fréquentes
+- recommandations pour la prochaine séance
+- fichiers créés
+- aucun token affiché.</pre>
+</div></div></section>
+<section id="section-56" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">56 · Sortie</p><h2>Je génère un fichier final lisible</h2><p>Le dashboard final montre la couverture, les emails trouvés, les téléphones, les réseaux et la base prête pour la suite.</p></div></div><figure class="media"><img src="img/session-17/18-dashboard-final-leads-apify.jpg" alt="Le fichier final synthétise la couverture Apify." loading="lazy"><figcaption>Le fichier final synthétise la couverture Apify.</figcaption></figure></div></section>
+<section id="section-57" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">57 · Sorties</p><h2>Les fichiers créés ont chacun un rôle</h2><p>Le XLSX sert au travail, le CSV aux outils, le rapport au contrôle, les JSON au debug.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>XLSX</td><td>Travail et lecture humaine</td><td>Fichier principal</td></tr><tr><td>CSV</td><td>Import outils</td><td>Interopérabilité</td></tr><tr><td>rapport-apify.md</td><td>Bilan et décisions</td><td>Contrôle</td></tr><tr><td>raw-runs</td><td>Debug</td><td>Traçabilité</td></tr></tbody></table></div></div></section>
+<section id="section-58" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">58 · Validation</p><h2>Je vérifie le fichier final</h2><p>Je vérifie les sources, les colonnes, les statuts et l’absence de token.</p></div></div><ul class="checklist"><li><span>01</span><p>Toutes les colonnes existantes sont conservées</p></li><li><span>02</span><p>Les colonnes apify_* sont ajoutées</p></li><li><span>03</span><p>Les contacts ont une source</p></li><li><span>04</span><p>Les conflits sont marqués</p></li><li><span>05</span><p>Aucun token n’apparaît</p></li></ul></div></section>
+<section id="section-59" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">59 · Colonnes</p><h2>Les colonnes apify_* restent séparées</h2><p>Cette séparation permet de comparer Serper, data.gouv et Apify sans confusion.</p></div></div><div class="cards"><article><strong>dg_*</strong><p>Identité légale.</p></article><article><strong>apify_*</strong><p>Contacts publics.</p></article><article><strong>recommended_*</strong><p>Action suivante.</p></article></div></div></section>
+<section id="section-60" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">60 · Email</p><h2>Je nettoie les emails avant usage</h2><p>Le nettoyage évite les `mailto:`, espaces, adresses techniques inutiles et doublons.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>mailto:</td><td>à retirer</td><td>Nettoyage</td></tr><tr><td>contact [at] domaine.fr</td><td>à convertir</td><td>Normalisation</td></tr><tr><td>webmaster@</td><td>à déprioriser</td><td>Pertinence</td></tr><tr><td>doublons</td><td>à fusionner</td><td>Qualité</td></tr></tbody></table></div></div></section>
+<section id="section-61" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">61 · Téléphone</p><h2>Je nettoie aussi les numéros</h2><p>Je garde le meilleur numéro, mais je conserve les autres dans une colonne complète.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>Mobile</td><td>souvent le plus direct</td><td>Fort</td></tr><tr><td>Fixe</td><td>utile pour restaurant</td><td>Fort</td></tr><tr><td>Multiple</td><td>garder liste complète</td><td>Conserver</td></tr><tr><td>Incohérent</td><td>mettre en revue</td><td>Ne pas utiliser</td></tr></tbody></table></div></div></section>
+<section id="section-62" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">62 · Réseaux</p><h2>Les réseaux ajoutent de la profondeur</h2><p>Instagram, Facebook, LinkedIn, TikTok, YouTube et WhatsApp deviennent des signaux utiles pour qualifier le lead.</p></div></div><div class="cards"><article><strong>Instagram</strong><p>Preuve d’activité.</p></article><article><strong>Facebook</strong><p>Canal local fréquent.</p></article><article><strong>LinkedIn</strong><p>Utile pour B2B et dirigeants.</p></article></div></div></section>
+<section id="section-63" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">63 · Conflit</p><h2>Un contact contradictoire part en revue manuelle</h2><p>Si une donnée ne vient pas du bon domaine ou contredit une donnée existante, je ne l’utilise pas automatiquement.</p></div></div><aside class="alert-box"><b>Conflit</b><p>Si une donnée ne vient pas du bon domaine ou contredit une donnée existante, je ne l’utilise pas automatiquement.</p></aside></div></section>
+<section id="section-64" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">64 · Merge</p><h2>La fusion doit rester non destructive</h2><p>Je conserve l’existant, j’ajoute Apify, puis je marque le statut de merge.</p></div></div><div class="flow"><span>colonnes existantes</span><span>colonnes apify_*</span><span>statut merge</span><span>score contact</span><span>action recommandée</span></div></div></section>
+<section id="section-65" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">65 · Preuve</p><h2>La page source protège la qualité</h2><p>Quand l’élève ou le client demande d’où vient un email, je peux répondre précisément.</p></div></div><div class="cards"><article><strong>Audit</strong><p>Je peux expliquer la donnée.</p></article><article><strong>Confiance</strong><p>Je limite les erreurs de prospection.</p></article><article><strong>Client</strong><p>Je rends le système défendable.</p></article></div></div></section>
+<section id="section-66" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">66 · GitHub</p><h2>Je ne publie pas les mauvais fichiers</h2><p>La vidéo, les temporaires, `.DS_Store`, les tokens et les logs sensibles restent hors GitHub.</p></div></div><ul class="checklist"><li><span>01</span><p>Pas de vidéo dans le repo public</p></li><li><span>02</span><p>Pas de .DS_Store</p></li><li><span>03</span><p>Pas de token</p></li><li><span>04</span><p>Pas de logs sensibles</p></li><li><span>05</span><p>Seulement HTML, images, prompt et transcription utile</p></li></ul></div></section>
+<section id="section-67" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">67 · Décision</p><h2>Je décide quoi faire avec chaque lead</h2><p>Le statut final prépare la prospection automatisée.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>READY_FOR_OUTREACH</td><td>Contact fiable et source claire</td><td>Prospection</td></tr><tr><td>MANUAL_REVIEW</td><td>Contradiction ou source faible</td><td>Contrôle</td></tr><tr><td>NO_CONTACT_FOUND</td><td>Rien trouvé</td><td>Autre canal</td></tr><tr><td>SKIP</td><td>Match légal faible</td><td>Ne pas contacter</td></tr></tbody></table></div></div></section>
+<section id="section-68" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">68 · Compétence</p><h2>La compétence n’est pas Apify seul</h2><p>La vraie compétence, c’est de piloter un outil payant avec une méthode, un budget, des preuves et une sortie utile.</p></div></div><blockquote>La vraie compétence, c’est de piloter un outil payant avec une méthode, un budget, des preuves et une sortie utile.</blockquote></div></section>
+<section id="section-69" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">69 · Cas clients</p><h2>Je peux réutiliser Apify ailleurs</h2><p>Jobs, réseaux sociaux, concurrents, annuaires, marketplaces : le même raisonnement s’applique.</p></div></div><div class="cards"><article><strong>Emploi</strong><p>Scraper offres et automatiser candidatures.</p></article><article><strong>Veille</strong><p>Surveiller concurrents et nouveautés.</p></article><article><strong>Social</strong><p>Extraire posts, hashtags, signaux publics.</p></article></div></div></section>
+<section id="section-70" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">70 · Limite</p><h2>Je ne promets pas 100 % de couverture</h2><p>Certains sites n’ont pas d’email, certains bloquent, certains contacts sont cachés. Le système doit dire ce qu’il a vraiment trouvé.</p></div></div><aside class="alert-box"><b>Limite</b><p>Certains sites n’ont pas d’email, certains bloquent, certains contacts sont cachés. Le système doit dire ce qu’il a vraiment trouvé.</p></aside></div></section>
+<section id="section-71" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">71 · Prompt</p><h2>Le prompt maître est volontairement cadré</h2><p>Il protège le token, les coûts, les batchs, la fusion et la sortie finale.</p></div></div><div class="cards"><article><strong>Sécurité</strong><p>Token en variable uniquement.</p></article><article><strong>Coût</strong><p>Test puis batchs.</p></article><article><strong>Qualité</strong><p>Source et statut obligatoires.</p></article></div></div></section>
+<section id="section-72" class="section layout-full command-section"><div class="wrap"><div class="copy"><div><p class="kicker">72 · Commandes</p><h2>Commandes à garder sous la main</h2><p>Ces commandes servent à lancer la session proprement dans ton environnement.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Commandes à garder sous la main</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ces commandes servent à lancer la session proprement dans ton environnement.</p><pre>cd ~/Desktop/mon-business/06-leads-gratuits-massif
+export APIFY_TOKEN=&quot;[TON_TOKEN_APIFY]&quot;
+claude --dangerously-skip-permissions
+
+# Variante si tu préfères charger depuis un fichier local non versionné :
+source .env
+claude --dangerously-skip-permissions</pre>
+</div></div></section>
+<section id="section-73" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">73 · Choisir</p><h2>Prompt pour choisir un actor sur un autre projet</h2><p>Ce prompt est utile quand tu changes de cible ou de plateforme.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt pour choisir un actor sur un autre projet</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt est utile quand tu changes de cible ou de plateforme.</p><pre>Tu es mon analyste Apify. Je veux enrichir une base B2B avec des contacts publics depuis les sites officiels.
+Compare les actors disponibles pour :
+- recevoir une liste d&#x27;URLs
+- rester sur le même domaine
+- extraire emails, téléphones, réseaux sociaux
+- retourner les pages sources
+- fonctionner par lots
+
+Donne-moi l&#x27;actor recommandé, ses limites, son coût probable et un test de 5 URLs.</pre>
+</div></div></section>
+<section id="section-74" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">74 · Échantillon</p><h2>Prompt pour imposer le test avant production</h2><p>Ce prompt réduit le risque de coût inutile.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt pour imposer le test avant production</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt réduit le risque de coût inutile.</p><pre>Avant de traiter toute la base, lance uniquement un échantillon de 50 sites.
+Mesure :
+- pages crawlées
+- emails trouvés
+- téléphones trouvés
+- réseaux trouvés
+- sites bloqués
+- coût estimé
+- temps moyen
+
+Si le taux email + téléphone est inférieur à 10 %, arrête et fais un diagnostic.</pre>
+</div></div></section>
+<section id="section-75" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">75 · Fails</p><h2>Prompt pour corriger les runs échoués</h2><p>Ce prompt évite de repartir de zéro.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt pour corriger les runs échoués</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt évite de repartir de zéro.</p><pre>Analyse les batchs Apify échoués.
+Ne relance pas les batchs réussis.
+Pour chaque échec, donne :
+- batch_id
+- raison probable
+- action recommandée
+- relance possible ou non
+- risque coût/RAM
+
+Puis propose une relance avec concurrence réduite.</pre>
+</div></div></section>
+<section id="section-76" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">76 · Rapport</p><h2>Prompt pour demander le bilan final</h2><p>Ce prompt transforme les résultats techniques en support de décision.</p></div></div><div class="prompt-card">
+  <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt pour demander le bilan final</strong></div><button class="copy-btn" type="button">Copier</button></div>
+  <p class="prompt-note">Ce prompt transforme les résultats techniques en support de décision.</p><pre>Génère un rapport final clair pour l&#x27;enrichissement Apify.
+Je veux :
+- nombre de leads traités
+- couverture crawl
+- emails trouvés
+- téléphones trouvés
+- réseaux trouvés
+- coût estimé
+- erreurs fréquentes
+- recommandations pour la prochaine séance
+- fichiers créés
+- aucun token affiché.</pre>
+</div></div></section>
+<section id="section-77" class="section layout-check"><div class="wrap"><div class="copy"><div><p class="kicker">77 · Checklist</p><h2>Checklist élève avant de passer à la suite</h2><p>Si une case manque, tu reprends la section concernée.</p></div></div><ul class="checklist"><li><span>01</span><p>Le fichier data.gouv existe</p></li><li><span>02</span><p>Le token est en variable d’environnement</p></li><li><span>03</span><p>Le test 50 sites est validé</p></li><li><span>04</span><p>Les batchs réussis sont tracés</p></li><li><span>05</span><p>Le fichier final est généré</p></li><li><span>06</span><p>Le budget est sous contrôle</p></li></ul></div></section>
+<section id="section-78" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">78 · Erreurs</p><h2>Les erreurs fréquentes à éviter</h2><p>Ces pièges coûtent du temps, de l’argent ou de la qualité.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>Lancer trop large</td><td>Coût et RAM explosent</td><td>Commencer par 50 sites</td></tr><tr><td>Token visible</td><td>Fuite de sécurité</td><td>Variable d’environnement</td></tr><tr><td>Écraser les colonnes</td><td>Perte de contexte</td><td>Préfixe apify_*</td></tr><tr><td>Ignorer les fails</td><td>Base trouée</td><td>Ledger + relance ciblée</td></tr></tbody></table></div></div></section>
+<section id="section-79" class="section layout-timeline"><div class="wrap"><div class="copy"><div><p class="kicker">79 · Méthode</p><h2>La méthode en 8 mouvements</h2><p>C’est la structure que tu peux reprendre pour un client.</p></div></div><div class="timeline"><article><span>1</span><p>Choisir la source</p></article><article><span>2</span><p>Tester petit</p></article><article><span>3</span><p>Lire les logs</p></article><article><span>4</span><p>Batcher</p></article><article><span>5</span><p>Tracer</p></article><article><span>6</span><p>Nettoyer</p></article><article><span>7</span><p>Scorer</p></article><article><span>8</span><p>Passer à la prospection</p></article></div></div></section>
+<section id="section-80" class="section layout-final"><div class="wrap"><div class="copy"><div><p class="kicker">80 · Récap</p><h2>Ce que tu dois avoir à la fin</h2><p>Une base enrichie, sourcée, contrôlée et prête pour la séance suivante : nettoyer, scorer et préparer la prospection automatisée.</p></div></div><div class="final-grid"><article><strong>Base enrichie</strong><p>Je dispose d’un XLSX avec contacts publics et sources.</p></article><article><strong>Méthode réutilisable</strong><p>Je sais refaire le système pour un autre secteur.</p></article><article><strong>Suite claire</strong><p>Je peux nettoyer, scorer et préparer la prospection automatisée.</p></article></div></div></section>
+</main>
+<footer class="footer"><p>DENEM Academy · Séance 17 · Enrichir ses leads avec Apify</p><p><a href="prompt-apify.md">Prompt maître</a> · <a href="transcription/seance-17-apify-synthese.md">Synthèse</a> · <a href="transcription/seance-17-apify-transcription.txt">Transcription brute</a></p></footer>
+<script>
+const progress=document.getElementById('progress');
+function updateProgress(){const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;progress.style.width=(max?window.scrollY/max*100:0)+'%'}
+window.addEventListener('scroll',updateProgress);updateProgress();
+document.querySelectorAll('td').forEach(td=>{const tr=td.parentElement;const idx=[...tr.children].indexOf(td);const th=tr.closest('table')?.querySelectorAll('th')[idx];if(th)td.setAttribute('data-label',th.textContent)});
+document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click',async()=>{const pre=btn.closest('.prompt-card').querySelector('pre');try{await navigator.clipboard.writeText(pre.textContent);btn.textContent='Copié';setTimeout(()=>btn.textContent='Copier',1400)}catch(e){btn.textContent='Sélectionne le texte';setTimeout(()=>btn.textContent='Copier',1800)}})});
+</script>
+</body>
+</html>
