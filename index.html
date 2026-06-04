@@ -16,7 +16,15 @@
 <header class="hero"><div class="hero-wrap"><div><p class="eyebrow">Séance 17 · Enrichissement Apify</p><h1>Enrichir ses leads avec <span>Apify</span></h1><p>Je pars d’une base data.gouv et je crée une couche contact exploitable : emails, téléphones, réseaux sociaux, pages sources, batchs et fichier final prêt pour la suite.</p><div class="stats"><div class="stat"><b>80</b><small>sections guidées</small></div><div class="stat"><b>18</b><small>captures utilisées</small></div><div class="stat"><b>6</b><small>prompts copiables</small></div></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></header>
 <div class="toc"><a href="#section-01"><span>01</span>Objectif</a><a href="#section-11"><span>11</span>Apify</a><a href="#section-21"><span>21</span>Test</a><a href="#section-31"><span>31</span>Codex</a><a href="#section-41"><span>41</span>Batches</a><a href="#section-56"><span>56</span>Fichier final</a><a href="#section-71"><span>71</span>Prompts</a><a href="#section-80"><span>80</span>Récap</a></div>
 <main>
-<section id="section-01" class="section layout-split accent"><div class="wrap"><div class="copy"><div><p class="kicker">01 · Ouverture</p><h2>Je passe de la preuve légale au contact réel</h2><p>Après data.gouv, je sais mieux qui est derrière chaque restaurant. Maintenant je veux savoir comment joindre ces entreprises proprement : email, téléphone, réseaux, page contact et source exacte.</p></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></section>
+<section id="section-01" class="section layout-split accent"><div class="wrap"><div class="copy"><div><p class="kicker">01 · Ouverture</p><h2>Je passe de la preuve légale au contact réel</h2><p>Après data.gouv, je sais mieux qui est derrière chaque restaurant. Maintenant je veux savoir comment joindre ces entreprises proprement : email, téléphone, réseaux, page contact et source exacte.</p></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div>
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://docs.apify.com/platform" target="_blank" rel="noopener">
+    <span>Apify Platform</span>
+    <small>Comprendre acteurs, runs et stockage.</small>
+  </a>
+</div>
+</section>
 <section id="section-02" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">02 · Logique</p><h2>Le fichier de départ est déjà précieux</h2><p>Je ne recommence pas à zéro. Je complète une base qui contient déjà les sites, les villes, les scores et les informations data.gouv.</p></div></div><div class="cards"><article><strong>Base existante</strong><p>Je garde les leads, scores et sites déjà trouvés.</p></article><article><strong>Couche Apify</strong><p>J’ajoute les contacts publics et leurs sources.</p></article><article><strong>Suite logique</strong><p>Je prépare nettoyage, scoring et prospection.</p></article></div></div></section>
 <section id="section-03" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">03 · Base</p><h2>Je vérifie les volumes avant de crawler</h2><p>La feuille affiche 11 839 leads, 10 143 enrichis SIREN/SIRET et 4 190 prêts pour Apify en priorité haute ou moyenne. Ce diagnostic évite de lancer un crawler au hasard.</p></div></div><figure class="media"><img src="img/session-17/02-base-data-gouv-sheet.jpg" alt="La base data.gouv sert de point de départ." loading="lazy"><figcaption>La base data.gouv sert de point de départ.</figcaption></figure></div></section>
 <section id="section-04" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">04 · Avant / après</p><h2>data.gouv et Apify ne font pas le même travail</h2><p>Je sépare les couches pour garder une base lisible et contrôlable.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>data.gouv</td><td>SIREN, SIRET, raison sociale, activité</td><td>Prouver que l’entreprise existe</td></tr><tr><td>Apify</td><td>Email, téléphone, réseaux, pages sources</td><td>Trouver comment la joindre</td></tr><tr><td>Scoring</td><td>Canal recommandé et prochaine action</td><td>Préparer la prospection</td></tr></tbody></table></div></div></section>
@@ -53,7 +61,15 @@ Donne-moi l&#x27;actor recommandé, ses limites, son coût probable et un test d
 <section id="section-24" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">24 · Extraction</p><h2>Le crawler transforme du HTML en champs utiles</h2><p>L’actor lit les pages, repère des motifs comme les emails et téléphones, puis renvoie une sortie structurée.</p></div></div><div class="flow"><span>HTML</span><span>pages utiles</span><span>regex emails</span><span>regex téléphones</span><span>réseaux</span><span>dataset Apify</span></div></div></section>
 <section id="section-25" class="section layout-split"><div class="wrap"><div class="copy"><div><p class="kicker">25 · Logs</p><h2>Les logs expliquent ce qui se passe</h2><p>Je vérifie que le crawler visite les bonnes pages : équipe, actualités, politique de confidentialité, contact, mentions légales.</p></div></div><figure class="media"><img src="img/session-17/11-resultat-test-manuel-logs.jpg" alt="Les logs prouvent ce que le crawler trouve." loading="lazy"><figcaption>Les logs prouvent ce que le crawler trouve.</figcaption></figure></div></section>
 <section id="section-26" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">26 · Réalité</p><h2>Un crawler ne trouve pas toujours un email</h2><p>Certains sites affichent seulement un téléphone, un formulaire, Instagram ou une page de réservation. Ce n’est pas un échec si la source est claire.</p></div></div><blockquote>Certains sites affichent seulement un téléphone, un formulaire, Instagram ou une page de réservation. Ce n’est pas un échec si la source est claire.</blockquote></div></section>
-<section id="section-27" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">27 · Qualité</p><h2>Je classe les contacts par valeur</h2><p>Un email nominatif, un email général, un email de réservation et un formulaire n’ont pas le même usage commercial.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>nominatif_pro</td><td>prenom.nom@domaine.fr</td><td>Fort si cohérent.</td></tr><tr><td>contact_general</td><td>contact@, bonjour@</td><td>Bon pour prise de contact.</td></tr><tr><td>reservation</td><td>reservation@, booking@</td><td>Très bon pour restauration.</td></tr><tr><td>technical</td><td>webmaster@, support technique</td><td>À éviter sauf besoin précis.</td></tr></tbody></table></div></div></section>
+<section id="section-27" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">27 · Qualité</p><h2>Je classe les contacts par valeur</h2><p>Un email nominatif, un email général, un email de réservation et un formulaire n’ont pas le même usage commercial.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>nominatif_pro</td><td>prenom.nom@domaine.fr</td><td>Fort si cohérent.</td></tr><tr><td>contact_general</td><td>contact@, bonjour@</td><td>Bon pour prise de contact.</td></tr><tr><td>reservation</td><td>reservation@, booking@</td><td>Très bon pour restauration.</td></tr><tr><td>technical</td><td>webmaster@, support technique</td><td>À éviter sauf besoin précis.</td></tr></tbody></table></div></div>
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://docs.apify.com/api/v2" target="_blank" rel="noopener">
+    <span>Apify API</span>
+    <small>Automatiser les runs et recuperer les resultats.</small>
+  </a>
+</div>
+</section>
 <section id="section-28" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">28 · Canaux</p><h2>Je ne limite pas la base à l’email</h2><p>Un restaurant peut être plus joignable par téléphone, Instagram, formulaire ou page privatisation. La base doit garder ces options.</p></div></div><div class="cards"><article><strong>Email</strong><p>Canal direct si source fiable.</p></article><article><strong>Téléphone</strong><p>Souvent meilleur pour local.</p></article><article><strong>Réseaux</strong><p>Signal social et canal alternatif.</p></article></div></div></section>
 <section id="section-29" class="section layout-alert"><div class="wrap"><div class="copy"><div><p class="kicker">29 · Erreur fréquente</p><h2>Ne confonds pas scraping et prospection</h2><p>À ce stade je collecte les bons champs. Je n’envoie rien. La prospection vient après nettoyage, scoring et message adapté.</p></div></div><aside class="alert-box"><b>Erreur fréquente</b><p>À ce stade je collecte les bons champs. Je n’envoie rien. La prospection vient après nettoyage, scoring et message adapté.</p></aside></div></section>
 <section id="section-30" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">30 · Test</p><h2>Prompt de test sur 50 sites</h2><p>Ce prompt sert à éviter de lancer 10 000 sites sans diagnostic.</p></div></div><div class="prompt-card">
@@ -548,7 +564,15 @@ Puis propose une relance avec concurrence réduite.</pre>
 <section id="section-51" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">51 · Lecture</p><h2>Les premiers résultats donnent déjà une tendance</h2><p>Sur l’exécution montrée, je récupère beaucoup d’emails, des téléphones, des réseaux et des contacts exploitables, même sans crawler toute la base.</p></div></div><div class="cards"><article><strong>Email</strong><p>Un contact direct exploitable.</p></article><article><strong>Téléphone</strong><p>Un fallback très fort.</p></article><article><strong>Instagram</strong><p>Un signal utile pour restaurants.</p></article></div></div></section>
 <section id="section-52" class="section layout-quote"><div class="wrap"><div class="copy"><div><p class="kicker">52 · Budget</p><h2>Je préfère m’arrêter avant de dépasser le budget</h2><p>Une bonne méthode sait dire stop. Je peux reprendre plus tard avec le ledger au lieu de tout relancer.</p></div></div><blockquote>Une bonne méthode sait dire stop. Je peux reprendre plus tard avec le ledger au lieu de tout relancer.</blockquote></div></section>
 <section id="section-53" class="section layout-full soft"><div class="wrap"><div class="copy"><div><p class="kicker">53 · Score</p><h2>Je prépare un score de contact</h2><p>Le score sert à décider quel lead est prêt pour la prospection et quel lead doit passer en vérification.</p></div></div><div class="table-wrap"><table><thead><tr><th>Point</th><th>Usage</th><th>Décision</th></tr></thead><tbody><tr><td>+30</td><td>Email sur domaine officiel</td><td>Très fort</td></tr><tr><td>+25</td><td>Téléphone confirmé</td><td>Fort</td></tr><tr><td>+15</td><td>Réseau social trouvé</td><td>Utile</td></tr><tr><td>-20</td><td>Source ambiguë</td><td>Revue manuelle</td></tr></tbody></table></div></div></section>
-<section id="section-54" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">54 · Canal</p><h2>Je choisis le meilleur canal automatiquement</h2><p>Email confirmé, téléphone confirmé, formulaire, Instagram ou manuel : le fichier doit recommander une action.</p></div></div><div class="cards"><article><strong>Email confirmé</strong><p>Envoyer un premier message.</p></article><article><strong>Téléphone confirmé</strong><p>Appel ou qualification.</p></article><article><strong>Formulaire</strong><p>Passer en manuel assisté.</p></article></div></div></section>
+<section id="section-54" class="section layout-full"><div class="wrap"><div class="copy"><div><p class="kicker">54 · Canal</p><h2>Je choisis le meilleur canal automatiquement</h2><p>Email confirmé, téléphone confirmé, formulaire, Instagram ou manuel : le fichier doit recommander une action.</p></div></div><div class="cards"><article><strong>Email confirmé</strong><p>Envoyer un premier message.</p></article><article><strong>Téléphone confirmé</strong><p>Appel ou qualification.</p></article><article><strong>Formulaire</strong><p>Passer en manuel assisté.</p></article></div></div>
+<div class="denem-inline-docs">
+  <strong>Documentation utile</strong>
+  <a href="https://docs.apify.com/platform/actors" target="_blank" rel="noopener">
+    <span>Apify Actors</span>
+    <small>Utiliser ou configurer un actor.</small>
+  </a>
+</div>
+</section>
 <section id="section-55" class="section layout-full dark-section"><div class="wrap"><div class="copy"><div><p class="kicker">55 · Rapport</p><h2>Prompt de rapport final</h2><p>Ce prompt force une synthèse propre et exploitable avant de passer à la séance suivante.</p></div></div><div class="prompt-card">
   <div class="prompt-head"><div><span>Prompt à copier</span><strong>Prompt de rapport final</strong></div><button class="copy-btn" type="button">Copier</button></div>
   <p class="prompt-note">Ce prompt force une synthèse propre et exploitable avant de passer à la séance suivante.</p><pre>Génère un rapport final clair pour l&#x27;enrichissement Apify.
@@ -649,6 +673,122 @@ Je veux :
 <section id="section-79" class="section layout-timeline"><div class="wrap"><div class="copy"><div><p class="kicker">79 · Méthode</p><h2>La méthode en 8 mouvements</h2><p>C’est la structure que tu peux reprendre pour un client.</p></div></div><div class="timeline"><article><span>1</span><p>Choisir la source</p></article><article><span>2</span><p>Tester petit</p></article><article><span>3</span><p>Lire les logs</p></article><article><span>4</span><p>Batcher</p></article><article><span>5</span><p>Tracer</p></article><article><span>6</span><p>Nettoyer</p></article><article><span>7</span><p>Scorer</p></article><article><span>8</span><p>Passer à la prospection</p></article></div></div></section>
 <section id="section-80" class="section layout-final"><div class="wrap"><div class="copy"><div><p class="kicker">80 · Récap</p><h2>Ce que tu dois avoir à la fin</h2><p>Une base enrichie, sourcée, contrôlée et prête pour la séance suivante : nettoyer, scorer et préparer la prospection automatisée.</p></div></div><div class="final-grid"><article><strong>Base enrichie</strong><p>Je dispose d’un XLSX avec contacts publics et sources.</p></article><article><strong>Méthode réutilisable</strong><p>Je sais refaire le système pour un autre secteur.</p></article><article><strong>Suite claire</strong><p>Je peux nettoyer, scorer et préparer la prospection automatisée.</p></article></div></div></section>
 </main>
+
+<!-- DENEM documentation enrichment -->
+<style id="denem-docs-style">
+.denem-docs-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 72px 18px;
+  background: #fff;
+  color: var(--denem-ink, #111827);
+  border-bottom: 2px solid var(--denem-ink, #111827);
+}
+.denem-docs-wrap {
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow, 5px 5px 0 #111827);
+  padding: 26px;
+  background: #fff;
+}
+.denem-docs-kicker,
+.denem-inline-docs strong {
+  display: inline-flex;
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow-sm, 3px 3px 0 #111827);
+  background: var(--denem-accent, #2563eb);
+  color: #fff;
+  padding: 6px 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.denem-docs-section h2 {
+  margin: 18px 0 10px;
+  font-size: clamp(32px, 4vw, 54px);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+.denem-docs-section p {
+  max-width: 760px;
+  color: #334155;
+  line-height: 1.75;
+  font-size: 18px;
+}
+.denem-docs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+.denem-doc-card,
+.denem-inline-docs a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 2px solid var(--denem-ink, #111827);
+  box-shadow: var(--denem-shadow-sm, 3px 3px 0 #111827);
+  padding: 16px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+}
+.denem-doc-card span,
+.denem-inline-docs a span {
+  font-weight: 900;
+  color: var(--denem-accent, #2563eb);
+}
+.denem-doc-card small,
+.denem-inline-docs a small {
+  color: #475569;
+  line-height: 1.5;
+  font-size: 13px;
+}
+.denem-inline-docs {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+  max-width: 760px;
+}
+@media (max-width: 900px) {
+  .denem-docs-grid { grid-template-columns: 1fr; }
+  .denem-docs-section { padding: 52px 16px; }
+  .denem-docs-wrap { padding: 18px; }
+}
+</style>
+<section id="documentation" class="denem-docs-section" aria-label="Documentation externe">
+  <div class="denem-docs-wrap">
+    <div class="denem-docs-kicker">Documentation</div>
+    <h2>Documentation</h2>
+    <p>Liens externes utiles pour refaire la methode, verifier un outil et aller plus loin sans chercher au hasard.</p>
+    <div class="denem-docs-grid">
+      <a class="denem-doc-card" href="https://docs.apify.com/platform" target="_blank" rel="noopener">
+        <span>Apify Platform</span>
+        <small>Comprendre acteurs, runs et stockage.</small>
+      </a>
+      <a class="denem-doc-card" href="https://docs.apify.com/api/v2" target="_blank" rel="noopener">
+        <span>Apify API</span>
+        <small>Automatiser les runs et recuperer les resultats.</small>
+      </a>
+      <a class="denem-doc-card" href="https://docs.apify.com/platform/actors" target="_blank" rel="noopener">
+        <span>Apify Actors</span>
+        <small>Utiliser ou configurer un actor.</small>
+      </a>
+      <a class="denem-doc-card" href="https://docs.apify.com/platform/storage/dataset" target="_blank" rel="noopener">
+        <span>Datasets Apify</span>
+        <small>Exporter les resultats enrichis.</small>
+      </a>
+      <a class="denem-doc-card" href="https://www.cnil.fr/fr/la-prospection-commerciale-par-courrier-electronique" target="_blank" rel="noopener">
+        <span>CNIL prospection</span>
+        <small>Garder une base exploitable et conforme.</small>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- /DENEM documentation enrichment -->
+
 <footer class="footer"><p>DENEM Academy · Séance 17 · Enrichir ses leads avec Apify</p><p><a href="prompt-apify.md">Prompt maître</a> · <a href="transcription/seance-17-apify-synthese.md">Synthèse</a> · <a href="transcription/seance-17-apify-transcription.txt">Transcription brute</a></p></footer>
 <script>
 const progress=document.getElementById('progress');
