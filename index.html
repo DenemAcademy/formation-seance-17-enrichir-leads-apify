@@ -123,6 +123,488 @@ body {
 }
 </style>
 
+
+<!-- DENEM three-color act theme -->
+<style id="denem-three-color-act-theme">
+:root {
+  color-scheme: light;
+  --denem-white: #FFFFFF;
+  --denem-black: #000000;
+  --denem-act: #EAB308;
+  --denem-act-number: "5";
+  --ink: #000000;
+  --muted: #000000;
+  --line: #000000;
+  --paper: #FFFFFF;
+  --bg: #FFFFFF;
+  --soft: #FFFFFF;
+  --soft2: #FFFFFF;
+  --gray: #FFFFFF;
+  --cream: #FFFFFF;
+  --mint: #EAB308;
+  --amber: #EAB308;
+  --yellow: #EAB308;
+  --yellow-dark: #EAB308;
+  --yellow-soft: #EAB308;
+  --sky: #EAB308;
+  --lav: #EAB308;
+  --rose: #EAB308;
+  --blue: #EAB308;
+  --violet: #EAB308;
+  --cyan: #EAB308;
+  --green: #EAB308;
+  --orange: #EAB308;
+  --red: #EAB308;
+  --red-dark: #EAB308;
+  --red-soft: #EAB308;
+  --teal: #EAB308;
+  --teal-soft: #EAB308;
+  --brass: #EAB308;
+  --brass-soft: #EAB308;
+  --purple: #EAB308;
+  --pink: #EAB308;
+  --dark: #FFFFFF;
+  --shadow: 8px 8px 0 var(--denem-act);
+  --shadow-sm: 4px 4px 0 var(--denem-act);
+}
+
+html,
+body {
+  background: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+*,
+*::before,
+*::after {
+  border-color: #000000 !important;
+  outline-color: var(--denem-act) !important;
+  text-decoration-color: #000000 !important;
+  text-shadow: none !important;
+}
+
+body,
+body * {
+  color: #000000 !important;
+}
+
+::selection {
+  background: var(--denem-act) !important;
+  color: #000000 !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: var(--denem-act);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+body,
+main,
+section,
+article,
+aside,
+header,
+footer,
+nav,
+figure,
+figcaption,
+table,
+thead,
+tbody,
+tfoot,
+tr,
+td,
+pre,
+code,
+blockquote,
+.hero,
+.hero-main,
+.topbar,
+.top,
+.footer,
+.sources,
+.lesson,
+.support-section,
+.section,
+.wrap,
+.copy,
+.text-card,
+.poster-copy,
+.section-head,
+.story-main,
+.check-copy,
+.compare-copy,
+.quote-detail,
+.prompt-copy,
+.prompt-wide-copy,
+.image-copy,
+.opener-copy,
+.opener-side,
+.final-card,
+.final-box,
+.command-box,
+.prompt-card,
+.prompt-panel,
+.code-panel,
+.media,
+.media-card,
+.visual,
+.visual-card,
+.shot,
+.table-wrap,
+.compare,
+.diagnostic,
+.matrix,
+.card,
+.card-grid article,
+.cards article,
+.summary-card,
+.act,
+.stat,
+.note,
+.tone-white,
+.tone-ice,
+.tone-soft,
+.tone-signal,
+.tone-dark,
+.tone-blue,
+.tone-1,
+.tone-2,
+.tone-3,
+.tone-4,
+.tone-5,
+.tone-6 {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+}
+
+[class*="bg-gradient"],
+[class*="from-"],
+[class*="via-"],
+[class*="to-"],
+[class*="bg-["] {
+  background-image: none !important;
+}
+
+[class*="bg-white"],
+[class*="bg-slate"],
+[class*="bg-neutral"],
+[class*="bg-gray"],
+[class*="bg-zinc"],
+[class*="bg-stone"],
+[class*="bg-black"] {
+  background: #FFFFFF !important;
+  background-color: #FFFFFF !important;
+}
+
+[class*="bg-blue"],
+[class*="bg-violet"],
+[class*="bg-purple"],
+[class*="bg-indigo"],
+[class*="bg-cyan"],
+[class*="bg-sky"],
+[class*="bg-emerald"],
+[class*="bg-green"],
+[class*="bg-lime"],
+[class*="bg-yellow"],
+[class*="bg-amber"],
+[class*="bg-orange"],
+[class*="bg-red"],
+[class*="bg-rose"],
+[class*="bg-pink"],
+.progress,
+.progress span,
+#progress,
+.progress-bar,
+.eyebrow,
+.kicker,
+.pill,
+.badge.num,
+.num,
+.meta .num,
+.redfill,
+.hero-actions a:first-child,
+.hero-link.primary,
+.nav a:hover,
+.links a:hover,
+.nav a.active,
+.links a.active,
+.copy-btn,
+.copy,
+button,
+th,
+.data-table th,
+.compare th,
+.checklist span,
+.check-list span,
+.timeline span,
+.stepper span,
+.flow span:nth-child(2n),
+.mini-flow span:nth-child(2n),
+.big-index,
+.section-counter {
+  background: var(--denem-act) !important;
+  background-color: var(--denem-act) !important;
+  background-image: none !important;
+  color: #000000 !important;
+}
+
+[class*="text-white"],
+[class*="text-slate"],
+[class*="text-neutral"],
+[class*="text-gray"],
+[class*="text-zinc"],
+[class*="text-stone"],
+[class*="text-black"],
+[class*="text-blue"],
+[class*="text-violet"],
+[class*="text-purple"],
+[class*="text-indigo"],
+[class*="text-cyan"],
+[class*="text-sky"],
+[class*="text-emerald"],
+[class*="text-green"],
+[class*="text-lime"],
+[class*="text-yellow"],
+[class*="text-amber"],
+[class*="text-orange"],
+[class*="text-red"],
+[class*="text-rose"],
+[class*="text-pink"],
+h1 span,
+h2 span,
+h3 span,
+.accent,
+.gradient-text,
+.brand small,
+.prompt-head span,
+.card-grid b,
+.note b,
+.diagnostic b,
+.summary-card b,
+.act p:first-child {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background-image: none !important;
+}
+
+[class*="border-white"],
+[class*="border-slate"],
+[class*="border-neutral"],
+[class*="border-gray"],
+[class*="border-zinc"],
+[class*="border-stone"],
+[class*="border-black"],
+[class*="border-blue"],
+[class*="border-violet"],
+[class*="border-purple"],
+[class*="border-indigo"],
+[class*="border-cyan"],
+[class*="border-sky"],
+[class*="border-emerald"],
+[class*="border-green"],
+[class*="border-yellow"],
+[class*="border-amber"],
+[class*="border-orange"],
+[class*="border-red"],
+[class*="border-rose"],
+[class*="border-pink"] {
+  border-color: #000000 !important;
+}
+
+[class*="shadow"],
+.shadow-neo,
+.shadow-neo-sm,
+.card,
+.card-grid article,
+.cards article,
+.summary-card,
+.act,
+.badge,
+.eyebrow,
+.kicker,
+.pill,
+.media,
+.media-card,
+.visual,
+.visual-card,
+.shot,
+.table-wrap,
+.compare,
+.prompt-card,
+.prompt-panel,
+.code-panel,
+.command-box,
+.section-head,
+.story-main,
+.copy,
+.text-card,
+.poster-copy,
+.note,
+.final-box,
+.opener-copy,
+.opener-side,
+.stat {
+  box-shadow: 6px 6px 0 var(--denem-act) !important;
+}
+
+header,
+.hero,
+.hero-main {
+  border-top: 8px solid var(--denem-act) !important;
+  border-bottom: 3px solid #000000 !important;
+}
+
+h1 {
+  border-left: 12px solid var(--denem-act) !important;
+  padding-left: clamp(12px, 2vw, 22px) !important;
+}
+
+h2 {
+  border-left: 8px solid var(--denem-act) !important;
+  padding-left: 14px !important;
+}
+
+.topbar,
+.top,
+body > nav:first-of-type {
+  position: sticky !important;
+  top: 8px !important;
+  z-index: 1000 !important;
+  background: #FFFFFF !important;
+  border-top: 4px solid var(--denem-act) !important;
+  border-bottom: 2px solid #000000 !important;
+  backdrop-filter: none !important;
+}
+
+.nav,
+.links,
+.navlinks,
+.hero-actions,
+.hero-actions a,
+.hero-link,
+.summary,
+.summary-grid,
+.cards,
+.card-grid,
+.stats,
+.toc,
+.acts {
+  max-width: 100% !important;
+}
+
+.nav,
+.links,
+.navlinks {
+  overflow-x: auto !important;
+  scrollbar-width: thin;
+}
+
+.nav a,
+.links a,
+.navlinks a,
+.hero-actions a,
+.hero-link,
+.badge,
+.eyebrow,
+.kicker,
+.pill,
+.copy,
+.copy-btn,
+button {
+  border: 2px solid #000000 !important;
+  border-radius: 0 !important;
+  text-decoration: none !important;
+}
+
+.stats .stat:nth-child(1),
+.stats .stat:nth-child(2),
+.stats .stat:nth-child(3),
+.card-grid article:nth-child(2),
+.card-grid article:nth-child(3),
+.cards article:nth-child(2),
+.cards article:nth-child(3),
+.summary-card:nth-child(odd),
+.act:nth-child(odd),
+.act:nth-child(3n),
+.check-list li:nth-child(2n),
+.check-list li:nth-child(3n),
+.checklist li:nth-child(2n),
+.checklist li:nth-child(3n),
+.timeline li:nth-child(2n),
+.timeline article:nth-child(2n),
+.matrix div:nth-child(2),
+.matrix div:nth-child(3),
+.matrix div:nth-child(4),
+.before-after div:nth-child(1),
+.before-after div:nth-child(2) {
+  background: var(--denem-act) !important;
+  background-color: var(--denem-act) !important;
+}
+
+img,
+video {
+  filter: grayscale(1) contrast(12) !important;
+}
+
+svg,
+svg * {
+  fill: #000000 !important;
+  stroke: #000000 !important;
+}
+
+a,
+button,
+input,
+textarea,
+select {
+  color: #000000 !important;
+  caret-color: #000000 !important;
+}
+
+input,
+textarea,
+select {
+  background: #FFFFFF !important;
+  border: 2px solid #000000 !important;
+}
+
+hr {
+  border-color: var(--denem-act) !important;
+  background: var(--denem-act) !important;
+}
+
+.reveal,
+.reveal.visible,
+.reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.section-counter,
+#counter {
+  display: none !important;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    padding-left: 12px !important;
+  }
+
+  .nav a,
+  .links a,
+  .navlinks a {
+    white-space: nowrap !important;
+  }
+}
+</style>
+
 </head>
 <body>
 
@@ -130,7 +612,7 @@ body {
   <div class="denem-act-ribbon__inner">
     <span class="denem-act-ribbon__kicker">Acte 5 · Séances 15-19</span>
     <h2>Leads, data, scraping, prospection</h2>
-    <p>Séance 17. Cette page appartient à l’acte 5 de la formation : fond blanc, couleur dominante Jaune data, progression lisible et fin standardisée par sources externes.</p>
+    
     <div class="denem-act-ribbon__chips">
       <span>Fond blanc</span>
       <span>Jaune data</span>
@@ -928,517 +1410,7 @@ function updateProgress(){const h=document.documentElement;const max=h.scrollHei
 window.addEventListener('scroll',updateProgress);updateProgress();
 document.querySelectorAll('td').forEach(td=>{const tr=td.parentElement;const idx=[...tr.children].indexOf(td);const th=tr.closest('table')?.querySelectorAll('th')[idx];if(th)td.setAttribute('data-label',th.textContent)});
 document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click',async()=>{const pre=btn.closest('.prompt-card').querySelector('pre');try{await navigator.clipboard.writeText(pre.textContent);btn.textContent='Copié';setTimeout(()=>btn.textContent='Copier',1400)}catch(e){btn.textContent='Sélectionne le texte';setTimeout(()=>btn.textContent='Copier',1800)}})});
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- DENEM visual system normalization -->
-<style id="denem-visual-system">
-:root {
-  --denem-accent: #EAB308;
-  --denem-ink: #111827;
-  --denem-paper: #ffffff;
-  --denem-shadow: 5px 5px 0 #111827;
-  --denem-shadow-sm: 3px 3px 0 #111827;
-  --blue: var(--denem-accent);
-  --violet: var(--denem-accent);
-  --cyan: var(--denem-accent);
-  --green: var(--denem-accent);
-  --amber: var(--denem-accent);
-  --orange: var(--denem-accent);
-  --red: var(--denem-accent);
-  --red-dark: var(--denem-accent);
-  --teal: var(--denem-accent);
-  --brass: var(--denem-accent);
-  --purple: var(--denem-accent);
-  --pink: var(--denem-accent);
-  --red-soft: #fff;
-  --teal-soft: #fff;
-  --brass-soft: #fff;
-  --mint: #fff;
-  --lav: #fff;
-  --sky: #fff;
-  --rose: #fff;
-  --cream: #fff;
-  --soft: #fff;
-  --gray: #fff;
-}
-html { background: var(--denem-paper) !important; }
-body {
-  background: var(--denem-paper) !important;
-  color: var(--denem-ink) !important;
-  letter-spacing: 0 !important;
-}
-body::before,
-body::after,
-.hero::before,
-.hero-main::before,
-header::before {
-  background-image: none !important;
-}
-.hero,
-.hero-main,
-.summary,
-.lesson,
-.support-section,
-.section,
-.tone-white,
-.tone-ice,
-.tone-soft,
-.tone-signal,
-.tone-dark,
-.tone-blue,
-.tone-dark,
-.tone-1,
-.tone-2,
-.tone-3,
-.tone-4,
-.tone-5,
-main > section {
-  background: var(--denem-paper) !important;
-  background-image: none !important;
-}
-.reveal,
-.reveal.visible {
-  opacity: 1 !important;
-  transform: none !important;
-}
-.split,
-.hero-grid,
-.grid,
-.cards,
-.card-grid,
-.summary-grid,
-.visual-grid,
-.before-after,
-.note-row {
-  min-width: 0 !important;
-}
-.split > *,
-.hero-grid > *,
-.grid > *,
-.cards > *,
-.card-grid > *,
-.summary-grid > *,
-.visual-grid > *,
-.before-after > *,
-.note-row > * {
-  min-width: 0 !important;
-}
-img,
-video,
-canvas,
-svg {
-  max-width: 100% !important;
-  height: auto;
-}
-.table-wrap,
-.table-responsive,
-.data-table {
-  max-width: 100% !important;
-  width: 100% !important;
-  overflow-x: auto !important;
-}
-.prompt-card,
-pre,
-code {
-  max-width: 100% !important;
-}
-span,
-p,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.flow span,
-.mini-flow span,
-.checklist li,
-.check-list li,
-.timeline li,
-.timeline div,
-.cards article,
-.card-grid article,
-.summary-card,
-.act,
-.badge,
-.eyebrow,
-.stat,
-.note,
-.final-box {
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
-  text-overflow: clip !important;
-  white-space: normal !important;
-  overflow-wrap: anywhere !important;
-}
-pre,
-.prompt-card pre {
-  white-space: pre-wrap !important;
-  overflow-wrap: anywhere !important;
-}
-.topbar,
-.top,
-nav.top,
-header.topbar,
-body > nav:first-of-type {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 100 !important;
-  background: rgba(255,255,255,.96) !important;
-  border-bottom: 2px solid var(--denem-ink) !important;
-  backdrop-filter: blur(12px) !important;
-}
-.top-inner,
-.nav,
-.nav-inner,
-.top .nav,
-.topbar .top-inner {
-  background: transparent !important;
-}
-.brand small,
-.brand-subtitle,
-.brand .subtitle,
-.brand span small {
-  color: var(--denem-accent) !important;
-}
-.nav,
-.links {
-  display: flex !important;
-  gap: 8px !important;
-  overflow-x: auto !important;
-  max-width: 100% !important;
-  width: 100% !important;
-  min-width: 0 !important;
-  scrollbar-width: thin;
-}
-.denem-auto-nav {
-  flex: 1 1 auto !important;
-  justify-content: flex-end !important;
-}
-.nav a,
-.links a,
-.hero-actions a,
-.summary-card,
-.act,
-.badge,
-.eyebrow,
-.meta span,
-.num,
-.copy-btn,
-.copy,
-button.copy,
-.btn {
-  border: 2px solid var(--denem-ink) !important;
-  box-shadow: var(--denem-shadow-sm) !important;
-  border-radius: 0 !important;
-}
-.nav a,
-.links a {
-  background: #fff !important;
-  color: var(--denem-ink) !important;
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace !important;
-  font-weight: 900 !important;
-  text-transform: uppercase !important;
-  letter-spacing: .08em !important;
-  padding: 8px 10px !important;
-  white-space: nowrap !important;
-  text-decoration: none !important;
-}
-.nav a.active,
-.nav a:hover,
-.links a.active,
-.links a:hover,
-.hero-actions a:first-child,
-.num,
-.eyebrow,
-.badge.num,
-.meta .num {
-  background: var(--denem-accent) !important;
-  color: #fff !important;
-}
-.progress,
-.progress span,
-#progress,
-.progress-bar {
-  background: var(--denem-accent) !important;
-}
-h1 span,
-h2 span,
-.accent,
-.gradient-text {
-  color: var(--denem-accent) !important;
-  -webkit-text-fill-color: currentColor !important;
-  background: none !important;
-}
-.copy,
-.text-card,
-.poster-copy,
-.note,
-.final-box,
-.story-main,
-.section-head,
-.check-copy,
-.compare-copy,
-.quote-detail,
-.prompt-copy,
-.prompt-wide-copy,
-.image-copy,
-.opener-copy,
-.card,
-.card-grid article,
-.summary-card,
-.act,
-.media-card,
-.shot,
-.table-wrap,
-.compare,
-.diagnostic,
-.prompt-card,
-.prompt-panel,
-.code-panel {
-  border-color: var(--denem-ink) !important;
-  box-shadow: var(--denem-shadow) !important;
-  border-radius: 0 !important;
-}
-.card-grid article,
-.summary-card,
-.act,
-.copy,
-.text-card,
-.poster-copy,
-.note,
-.final-box,
-.story-main,
-.section-head,
-.check-copy,
-.compare-copy,
-.quote-detail,
-.prompt-copy,
-.prompt-wide-copy,
-.image-copy,
-.opener-copy,
-.media-card,
-.shot,
-.table-wrap,
-.compare {
-  background: #fff !important;
-}
-.prompt-card,
-.prompt-panel,
-.code-panel,
-blockquote {
-  background: var(--denem-ink) !important;
-  color: #fff !important;
-}
-.prompt-head,
-.prompt-panel .prompt-head {
-  background: #0b1220 !important;
-  border-bottom: 2px solid rgba(255,255,255,.18) !important;
-}
-.prompt-head span,
-.prompt-panel .prompt-head span,
-.card-grid b,
-.note b,
-.diagnostic b,
-.summary-card b,
-.act p:first-child {
-  color: var(--denem-accent) !important;
-}
-.progress {
-  background: var(--denem-accent) !important;
-  background-image: none !important;
-}
-.section-counter,
-#counter {
-  display: none !important;
-}
-[class*="bg-gradient"] {
-  background: #fff !important;
-  background-image: none !important;
-}
-[class*="bg-blue-50"],
-[class*="bg-violet-50"],
-[class*="bg-cyan-50"],
-[class*="bg-emerald-50"],
-[class*="bg-green-50"],
-[class*="bg-orange-50"],
-[class*="bg-yellow-50"],
-[class*="bg-indigo-50"],
-[class*="bg-purple-50"],
-[class*="bg-pink-50"] {
-  background: #fff !important;
-}
-[class*="bg-blue-"],
-[class*="bg-violet-"],
-[class*="bg-cyan-"],
-[class*="bg-emerald-"],
-[class*="bg-green-"],
-[class*="bg-orange-"],
-[class*="bg-yellow-"],
-[class*="bg-indigo-"],
-[class*="bg-purple-"],
-[class*="bg-pink-"] {
-  background-color: var(--denem-accent) !important;
-  color: #fff !important;
-}
-[class*="bg-blue-50"],
-[class*="bg-violet-50"],
-[class*="bg-cyan-50"],
-[class*="bg-emerald-50"],
-[class*="bg-green-50"],
-[class*="bg-orange-50"],
-[class*="bg-yellow-50"],
-[class*="bg-indigo-50"],
-[class*="bg-purple-50"],
-[class*="bg-pink-50"],
-[class*="bg-white"] {
-  background-color: #fff !important;
-  background: #fff !important;
-  color: var(--denem-ink) !important;
-}
-[class*="text-blue-"],
-[class*="text-violet-"],
-[class*="text-cyan-"],
-[class*="text-emerald-"],
-[class*="text-green-"],
-[class*="text-orange-"],
-[class*="text-yellow-"],
-[class*="text-indigo-"],
-[class*="text-purple-"],
-[class*="text-pink-"] {
-  color: var(--denem-accent) !important;
-}
-th,
-.data-table th,
-.compare th {
-  background: var(--denem-accent) !important;
-  color: #fff !important;
-}
-tbody tr:nth-child(even) td,
-.card-grid article:nth-child(2),
-.card-grid article:nth-child(3),
-.check-list li:nth-child(2n),
-.check-list li:nth-child(3n),
-.timeline div:nth-child(2),
-.timeline div:nth-child(3),
-.summary-card:nth-child(odd),
-.act:nth-child(odd),
-.act:nth-child(3n) {
-  background: #fff !important;
-}
-.stat,
-.hero-stats,
-.stats {
-  background: #fff !important;
-}
-.flow,
-.mini-flow {
-  height: auto !important;
-  max-height: none !important;
-  overflow: visible !important;
-}
-.flow span,
-.mini-flow span {
-  display: inline-flex !important;
-  align-items: center !important;
-  min-height: 0 !important;
-  line-height: 1.35 !important;
-}
-@media (max-width: 700px) {
-  .nav a,
-  .links a {
-    font-size: 10px !important;
-    padding: 7px 9px !important;
-  }
-}
-</style>
-<script id="denem-visual-system-script">
-(function () {
-  const sections = Array.from(document.querySelectorAll('[id^="section-"]'))
-    .map(section => {
-      const match = section.id.match(/section-(\d+)/);
-      return match ? Number(match[1]) : null;
-    })
-    .filter(Number.isFinite)
-    .sort((a, b) => a - b);
-
-  const unique = Array.from(new Set(sections));
-  let nav = document.querySelector('.topbar .nav, .top .links, .top .nav, nav.nav, .links, .nav');
-  if (!nav && unique.length) {
-    const shell = document.querySelector('body > nav:first-of-type .topbar-inner, body > nav:first-of-type .top-inner, body > nav:first-of-type .nav-inner, body > nav:first-of-type .mx-auto, body > nav:first-of-type');
-    if (shell) {
-      shell.querySelectorAll('a[href^="#section-"], a[href="#sources"], a[href="#assets"]').forEach(a => {
-        const parent = a.parentElement;
-        if (parent && parent !== shell && parent.querySelectorAll('a').length <= 4) parent.remove();
-        else a.remove();
-      });
-      nav = document.createElement('div');
-      nav.className = 'nav denem-auto-nav';
-      shell.appendChild(nav);
-    }
-  }
-  if (nav && unique.length) {
-    nav.setAttribute('aria-label', 'Navigation sections');
-    nav.innerHTML = unique.map(n => {
-      const label = String(n).padStart(2, '0');
-      return `<a href="#section-${label}">${label}</a>`;
-    }).join('');
-  }
-
-  document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-
-  document.querySelectorAll('.stat, .hero-stats .stat, .stats .stat, .summary-card, .act, p, span, small, strong, li, div').forEach(el => {
-    const text = (el.textContent || '').trim();
-    const isSupportCounter =
-      /sections?\s+(guidées|guides)/i.test(text) ||
-      /^\d+\s+sections?\b/i.test(text) ||
-      /\b\d+\s+sections?\s*[·•|]/i.test(text);
-    if (isSupportCounter) {
-      if (text.length < 180 && !el.matches('body, main, section, article, nav, header')) el.remove();
-    }
-  });
-
-  const setActive = () => {
-    let current = unique[0] ? `section-${String(unique[0]).padStart(2, '0')}` : '';
-    for (const section of document.querySelectorAll('[id^="section-"]')) {
-      if (section.getBoundingClientRect().top < 150) current = section.id;
-    }
-    document.querySelectorAll('.nav a, .links a').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === `#${current}`);
-    });
-  };
-  addEventListener('scroll', setActive, { passive: true });
-  setActive();
-})();
-</script>
-
-
-
-
-<section class="denem-sources-final" id="sources" aria-labelledby="sources-title">
+</script><section class="denem-sources-final" id="sources" aria-labelledby="sources-title">
   <div class="denem-sources-final__inner">
     <span class="denem-sources-final__kicker">Sources</span>
     <h2 id="sources-title">Sources</h2>
@@ -1451,6 +1423,26 @@ tbody tr:nth-child(even) td,
     </ul>
   </div>
 </section>
+
+
+<script id="denem-three-color-act-theme-script">
+(function () {
+  const header = document.querySelector('header');
+  if (header) {
+    const colorPattern = /(Cette page appartient|couleur dominante|Fond blanc|Vert Supabase|Bleu LinkedIn|#[0-9A-Fa-f]{6})/;
+    header.querySelectorAll('p, span, div, li').forEach((el) => {
+      const text = (el.textContent || '').replace(/\s+/g, ' ').trim();
+      if (text.length > 0 && text.length < 240 && colorPattern.test(text)) {
+        el.remove();
+      }
+    });
+  }
+
+  document.querySelectorAll('.reveal').forEach((el) => {
+    el.classList.add('visible', 'is-visible');
+  });
+})();
+</script>
 
 </body>
 </html>
