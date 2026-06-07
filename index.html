@@ -122,8 +122,6 @@ body {
   }
 }
 </style>
-
-
 <!-- DENEM three-color act theme -->
 <style id="denem-three-color-act-theme">
 :root {
@@ -549,14 +547,9 @@ button {
 }
 
 img,
-video {
-  filter: grayscale(1) contrast(12) !important;
-}
-
-svg,
-svg * {
-  fill: #000000 !important;
-  stroke: #000000 !important;
+video,
+picture {
+  filter: none !important;
 }
 
 a,
@@ -1423,8 +1416,6 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click
     </ul>
   </div>
 </section>
-
-
 <script id="denem-three-color-act-theme-script">
 (function () {
   const header = document.querySelector('header');
