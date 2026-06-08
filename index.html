@@ -106,6 +106,7 @@ body {
   border-color: var(--denem-act-color) !important;
   color: #ffffff !important;
 }
+
 @media (max-width: 700px) {
   .denem-act-ribbon h2,
   .denem-sources-final h2 {
@@ -862,6 +863,264 @@ th *,
 .denem-sources-final,
 .denem-sources-final * {
   -webkit-text-fill-color: currentColor !important;
+}
+</style>
+<style id="denem-readability-pass">
+/* Final readability pass: prompts must show real text, not white highlight bars. */
+.prompt-card,
+.prompt-panel,
+.prompt-block,
+.code-panel,
+.code-card,
+.command-box,
+.mini-prompt {
+  background: #111827 !important;
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+.prompt-card .prompt-head,
+.prompt-panel .prompt-head,
+.prompt-block .prompt-head,
+.code-card .prompt-head,
+.code-panel .prompt-head,
+.command-box .prompt-head,
+.prompt-head {
+  background: #0f172a !important;
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.prompt-card .prompt-head span,
+.prompt-panel .prompt-head span,
+.prompt-block .prompt-head span,
+.code-card .prompt-head span,
+.code-panel .prompt-head span,
+.command-box .prompt-head span,
+.prompt-head span,
+.prompt-head strong,
+.prompt-head b {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+.prompt-card .copy-btn,
+.prompt-panel .copy-btn,
+.prompt-block .copy-btn,
+.code-card .copy-btn,
+.code-panel .copy-btn,
+.command-box .copy-btn,
+.mini-prompt .copy-btn,
+.prompt-head .copy-btn,
+.prompt-card button,
+.prompt-panel button,
+.prompt-block button,
+.code-card button,
+.code-panel button,
+.command-box button,
+.mini-prompt button,
+.prompt-head button,
+.copy-btn {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  border-color: #111827 !important;
+}
+.prompt-card .prompt-note,
+.prompt-panel .prompt-note,
+.prompt-block .prompt-note,
+.code-card .prompt-note,
+.prompt-note {
+  background: transparent !important;
+  background-color: transparent !important;
+  color: #e5e7eb !important;
+  -webkit-text-fill-color: #e5e7eb !important;
+}
+.prompt-card pre,
+.prompt-panel pre,
+.prompt-block pre,
+.code-panel pre,
+.code-card pre,
+.command-box pre,
+.mini-prompt pre,
+pre code.block {
+  display: block !important;
+  background: #111827 !important;
+  background-color: #111827 !important;
+  background-image: none !important;
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  white-space: pre-wrap !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+.prompt-card pre code,
+.prompt-panel pre code,
+.prompt-block pre code,
+.code-panel pre code,
+.code-card pre code,
+.command-box pre code,
+.mini-prompt pre code,
+pre code.block,
+.prompt-card pre span,
+.prompt-panel pre span,
+.prompt-block pre span,
+.code-panel pre span,
+.code-card pre span,
+.command-box pre span,
+.mini-prompt pre span,
+.prompt-card pre b,
+.prompt-panel pre b,
+.prompt-block pre b,
+.code-panel pre b,
+.code-card pre b,
+.command-box pre b,
+.prompt-card pre strong,
+.prompt-panel pre strong,
+.prompt-block pre strong,
+.code-panel pre strong,
+.code-card pre strong,
+.command-box pre strong,
+.mini-prompt code,
+.mini-prompt span:not(.copy-btn) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  border-color: transparent !important;
+}
+.prompt-card code:not(pre code),
+.prompt-panel code:not(pre code),
+.prompt-block code:not(pre code),
+.code-panel code:not(pre code),
+.code-card code:not(pre code),
+.command-box code:not(pre code) {
+  background: rgba(255,255,255,.12) !important;
+  background-color: rgba(255,255,255,.12) !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.mini-prompt {
+  padding-right: 118px !important;
+}
+blockquote,
+.quote,
+.citation {
+  min-height: 0 !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  font-size: clamp(18px, 1.7vw, 28px) !important;
+  line-height: 1.3 !important;
+  padding: 20px 22px !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+blockquote p,
+.quote p,
+.citation p {
+  margin: 8px 0 0 !important;
+  font-size: clamp(17px, 1.45vw, 24px) !important;
+  line-height: 1.36 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+blockquote cite,
+.quote cite,
+.citation cite {
+  font-size: clamp(13px, 1vw, 17px) !important;
+  line-height: 1.45 !important;
+  color: #e5e7eb !important;
+  -webkit-text-fill-color: #e5e7eb !important;
+}
+blockquote span,
+.quote span,
+.citation span {
+  font-size: clamp(22px, 2.4vw, 36px) !important;
+  line-height: .95 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+blockquote span:not(.num):not(.badge),
+.quote span:not(.num):not(.badge),
+.citation span:not(.num):not(.badge) {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+.layout-quote .wrap,
+.quote-layout,
+.wrap.quote-layout {
+  align-items: start !important;
+}
+.layout-quote blockquote,
+.quote-layout blockquote,
+.wrap.quote-layout blockquote {
+  align-self: start !important;
+  height: auto !important;
+}
+.checklist label,
+.check-list label {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+.checklist label span,
+.check-list label span,
+.checklist label strong,
+.check-list label strong,
+.checklist label b,
+.check-list label b {
+  color: inherit !important;
+  -webkit-text-fill-color: currentColor !important;
+}
+[class*="bg-purple"] .prompt-card,
+[class*="bg-violet"] .prompt-card,
+[class*="bg-indigo"] .prompt-card,
+[class*="bg-blue"] .prompt-card,
+[class*="bg-green"] .prompt-card,
+[class*="bg-emerald"] .prompt-card {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+@media (max-width: 700px) {
+  .prompt-card pre,
+  .prompt-panel pre,
+  .prompt-block pre,
+  .code-panel pre,
+  .code-card pre,
+  .command-box pre,
+  .mini-prompt pre {
+    font-size: 12px !important;
+    line-height: 1.6 !important;
+  }
+
+  .mini-prompt {
+    padding: 58px 16px 18px !important;
+  }
+  blockquote,
+  .quote,
+  .citation {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+    padding: 16px !important;
+  }
+  blockquote p,
+  .quote p,
+  .citation p {
+    font-size: 17px !important;
+    line-height: 1.35 !important;
+  }
+  blockquote span,
+  .quote span,
+  .citation span {
+    font-size: 24px !important;
+  }
 }
 </style>
 
