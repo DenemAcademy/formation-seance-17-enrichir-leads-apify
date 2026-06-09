@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Séance 17 - Enrichir ses leads avec Apify | DENEM Academy</title>
+<title>DENEM Academy · Séance 17 · Enrichir ses leads avec Apify</title>
 <link rel="icon" href="logo-denem.jpeg">
 <style>
 :root{--ink:#111827;--muted:#586174;--line:#111827;--paper:#fff;--soft:#f4f7fb;--soft2:#effaf3;--green:#38b86b;--blue:#246bfe;--orange:#ff8a2a;--dark:#161b22;--cream:#fffaf2}
@@ -14,7 +14,7 @@
 
 <style id="denem-act-system">
 :root {
-  --denem-act-color: #D97706;
+  --denem-act-color: #FB923C;
   --denem-act-bg: #ffffff;
 }
 body {
@@ -28,70 +28,101 @@ body {
 .denem-act-ribbon,
 .denem-sources-final {
   background: #ffffff;
-  color: #0f172a;
-  border-top: 4px solid var(--denem-act-color);
-  border-bottom: 4px solid var(--denem-act-color);
+  color: #000000;
+  border-top: 6px solid var(--denem-act-color);
+  border-bottom: 4px solid #000000;
 }
 .denem-act-ribbon {
-  padding: 18px;
+  padding: clamp(18px, 3vw, 34px) 18px;
 }
 .denem-act-ribbon__inner,
 .denem-sources-final__inner {
   max-width: 1320px;
   margin: 0 auto;
 }
-.denem-act-ribbon__kicker,
-.denem-sources-final__kicker {
-  display: inline-flex;
+.denem-act-ribbon__topline,
+.denem-act-ribbon__meta,
+.denem-act-ribbon__chips,
+.denem-act-ribbon__phase-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
-  border: 2px solid var(--denem-act-color);
-  background: var(--denem-act-color);
-  color: #ffffff;
+}
+.denem-act-ribbon__topline {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.denem-act-ribbon__kicker,
+.denem-sources-final__kicker,
+.denem-act-ribbon__session,
+.denem-act-ribbon__meta span,
+.denem-act-ribbon__phase-nav strong,
+.denem-act-ribbon__phase-nav a {
+  border: 2px solid #000000;
+  background: #ffffff;
+  color: #000000;
   padding: 8px 12px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 12px;
   font-weight: 900;
+  line-height: 1;
   text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 var(--denem-act-color);
+}
+.denem-act-ribbon__kicker,
+.denem-act-ribbon__phase-nav a.is-current,
+.denem-act-ribbon__phase-nav strong {
+  background: var(--denem-act-color);
+}
+.denem-act-ribbon__session {
+  background: #000000;
+  color: #ffffff;
+  box-shadow: 4px 4px 0 var(--denem-act-color);
 }
 .denem-act-ribbon h2,
 .denem-sources-final h2 {
-  margin: 14px 0 8px;
-  color: var(--denem-act-color);
-  font-size: 48px;
-  line-height: 1.03;
+  max-width: 1120px;
+  margin: 10px 0 10px;
+  color: #000000;
+  font-size: clamp(38px, 6vw, 86px);
+  line-height: .94;
   font-weight: 950;
   letter-spacing: 0;
+  border-left: 14px solid var(--denem-act-color);
+  padding-left: clamp(14px, 2vw, 24px);
 }
 .denem-act-ribbon p {
-  max-width: 920px;
+  max-width: 960px;
   margin: 0;
-  color: #334155;
-  font-size: 18px;
-  line-height: 1.7;
+  color: #000000;
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.65;
 }
 .denem-act-ribbon__chips,
-.denem-sources-final ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 16px 0 0;
+.denem-act-ribbon__phase-nav {
+  margin: 18px 0 0;
   padding: 0;
   list-style: none;
 }
-.denem-act-ribbon__chips span,
-.denem-sources-final a {
+.denem-act-ribbon__chips span {
   display: inline-flex;
   align-items: center;
-  border: 2px solid var(--denem-act-color);
+  border: 2px solid #000000;
   background: #ffffff;
-  color: #0f172a;
+  color: #000000;
   padding: 10px 12px;
   text-decoration: none;
   font-weight: 900;
+  box-shadow: 3px 3px 0 var(--denem-act-color);
 }
-.denem-sources-final a:hover {
+.denem-act-ribbon__phase-nav {
+  padding-top: 14px;
+  border-top: 2px solid #000000;
+}
+.denem-act-ribbon__phase-nav a:hover {
   background: var(--denem-act-color);
-  color: #ffffff;
 }
 .denem-sources-final {
   padding: 56px 18px;
@@ -103,23 +134,20 @@ body {
 .nav-chip.is-active,
 .summary-card b {
   background-color: var(--denem-act-color) !important;
-  border-color: var(--denem-act-color) !important;
-  color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
 }
-
 @media (max-width: 700px) {
-  .denem-act-ribbon h2,
-  .denem-sources-final h2 {
-    font-size: 32px;
+  .denem-act-ribbon__topline {
+    justify-content: flex-start;
   }
-  .denem-act-ribbon,
-  .denem-sources-final {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-  .denem-sources-final ul {
+  .denem-act-ribbon__phase-nav {
     display: grid;
     grid-template-columns: 1fr;
+  }
+  .denem-act-ribbon h2,
+  .denem-sources-final h2 {
+    font-size: 34px;
   }
 }
 </style>
@@ -129,8 +157,8 @@ body {
   color-scheme: light;
   --denem-white: #FFFFFF;
   --denem-black: #000000;
-  --denem-act: #EAB308;
-  --denem-act-number: "5";
+  --denem-act: #FB923C;
+  --denem-act-number: "4";
   --ink: #000000;
   --muted: #000000;
   --line: #000000;
@@ -1124,28 +1152,216 @@ blockquote span:not(.num):not(.badge),
 }
 </style>
 
+<style id="denem-session-media-system">
+.denem-session-switcher {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(280px, 720px);
+  gap: 10px;
+  align-items: center;
+  margin: 18px auto 0;
+  padding: 14px 0;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  max-width: 980px;
+}
+.denem-session-switcher label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 2px solid #000000;
+  background: var(--denem-act-color, var(--denem-act, #60A5FA));
+  color: #000000;
+  box-shadow: 4px 4px 0 var(--denem-act-color, var(--denem-act, #60A5FA));
+  padding: 10px 12px;
+  font: 950 12px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.denem-session-switcher select {
+  width: 100%;
+  min-height: 44px;
+  border: 2px solid #000000;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 4px 4px 0 var(--denem-act-color, var(--denem-act, #60A5FA));
+  padding: 0 44px 0 14px;
+  font: 900 14px/1.1 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+  appearance: auto;
+}
+.media-card,
+.shot,
+.visual,
+.hero-card,
+.poster,
+.image-card,
+.screen,
+.capture,
+figure[class*="media"],
+figure[class*="visual"],
+figure[class*="shot"] {
+  position: relative !important;
+  overflow: hidden !important;
+  background-color: #ffffff !important;
+  background-image:
+    linear-gradient(45deg, rgba(0,0,0,.035) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0,0,0,.035) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(0,0,0,.035) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.035) 75%) !important;
+  background-size: 18px 18px !important;
+  background-position: 0 0, 0 9px, 9px -9px, -9px 0 !important;
+}
+.media-card > img,
+.shot > img,
+.visual > img,
+.hero-card > img,
+figure[class*="media"] > img,
+figure[class*="visual"] > img,
+figure[class*="shot"] > img {
+  position: relative !important;
+  z-index: 1 !important;
+  background: #ffffff !important;
+}
+.media-card::after,
+.shot::after,
+.visual::after,
+.hero-card::after,
+figure[class*="media"]::after,
+figure[class*="visual"]::after,
+figure[class*="shot"]::after {
+  content: "Capture";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  border: 2px solid #000000;
+  background: var(--denem-act-color, var(--denem-act, #60A5FA));
+  color: #000000;
+  padding: 6px 8px;
+  font: 950 10px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  pointer-events: none;
+}
+.media-card:has(figcaption)::after,
+.shot:has(figcaption)::after,
+.visual:has(figcaption)::after,
+figure[class*="media"]:has(figcaption)::after,
+figure[class*="visual"]:has(figcaption)::after,
+figure[class*="shot"]:has(figcaption)::after {
+  content: none;
+}
+.media-card:empty,
+.shot:empty,
+.visual:empty,
+.hero-card:empty,
+figure[class*="media"]:empty,
+figure[class*="visual"]:empty,
+figure[class*="shot"]:empty {
+  min-height: 220px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+.media-card:empty::before,
+.shot:empty::before,
+.visual:empty::before,
+.hero-card:empty::before,
+figure[class*="media"]:empty::before,
+figure[class*="visual"]:empty::before,
+figure[class*="shot"]:empty::before,
+.is-media-missing::before {
+  content: "Bloc media a completer";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000000;
+  background: var(--denem-act-color, var(--denem-act, #60A5FA));
+  color: #000000;
+  padding: 12px 14px;
+  font: 950 12px/1.15 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.is-media-missing {
+  min-height: 220px !important;
+  display: grid !important;
+  place-items: center !important;
+}
+.is-media-missing > img {
+  display: none !important;
+}
+@media (max-width: 700px) {
+  .denem-session-switcher {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+  .denem-session-switcher select {
+    font-size: 13px;
+  }
+}
+</style>
 </head>
-<body>
+<body data-phase="4" data-session="17" data-old-session="17">
 
 <section class="denem-act-ribbon" aria-label="En-tête du support de cours">
   <div class="denem-act-ribbon__inner">
     <div class="denem-act-ribbon__topline">
-      <span class="denem-act-ribbon__kicker">Acte 5 · Séances 15-19</span>
-      <span class="denem-act-ribbon__session">Séance 17</span>
+      <span class="denem-act-ribbon__kicker">Phase 4 · Machine à leads &amp; prospection</span>
+      <span class="denem-act-ribbon__session">Séance 17 · ex-17</span>
     </div>
     <h2>Enrichir ses leads avec Apify</h2>
-    <p>Un repère simple pour savoir où tu es, quoi faire et comment retrouver les étapes importantes.</p>
+    <p>On obtient, enrichit, nettoie, score et active une base de prospects sous contrôle.</p>
     <div class="denem-act-ribbon__chips" aria-label="Repères utiles du support">
-      <span>Parcours · Leads, data, scraping et prospection</span>
-      <span>À faire · Suivre la séance puis refaire seul</span>
-      <span>Navigation · Boutons 01, 02, 03... pour retrouver une étape</span>
+      <span>Business</span>
+      <span>Séances 15 à 19</span>
+      <span>Parcours DENEM Academy</span>
+      <span>Support technique séances 1 à 24</span>
     </div>
+    <div class="denem-session-switcher" aria-label="Changer de séance">
+      <label for="denem-session-switch">Changer de séance</label>
+      <select id="denem-session-switch">
+        <option value="../DENEMACADEMY-SEANCE-1-CLAUDE-CODE/index.html">01 — Claude Code : agents IA &amp; automatisations · Phase 0</option>
+        <option value="../seance-02-codex/index.html">02 — Codex : agents IA &amp; automatisations · Phase 0</option>
+        <option value="../seance-03-n8n/index.html">03 — Découverte et prise en main de n8n · Phase 0</option>
+        <option value="../seance-04-cowork/index.html">04 — Maîtriser Claude Cowork · Phase 0</option>
+        <option value="../formation-seance-06-qg-cowork/index.html">05 — Créer son QG de travail Cowork · Phase 0</option>
+        <option value="../seance-05-etude-marche/index.html">06 — Étude de marché complète · Phase 1</option>
+        <option value="../seance-07-identite-marque/index.html">07 — Créer son identité de marque · Phase 1</option>
+        <option value="../seance-09-site-web-wordpress/index.html">08 — Créer et déployer son site WordPress · Phase 2</option>
+        <option value="../formation-seance-08-audit-seo-geo/index.html">09 — Audit &amp; stratégie SEO/GEO automatisé · Phase 2</option>
+        <option value="../denemacademy-seance-10-blog-automatique/index.html">10 — Créer son blog pour attirer des leads · Phase 2</option>
+        <option value="../seance-11-automatiser-publication-article/index.html">11 — Automatiser la publication d'articles · Phase 2</option>
+        <option value="../formation-seance-12-profil-linkedin/index.html">12 — Profil LinkedIn optimisé · Phase 3</option>
+        <option value="../seance-13-creer-son-lead-magnet/index.html">13 — Créer son lead magnet · Phase 3</option>
+        <option value="../seance-14-automatiser-posts-linkedin/index.html">14 — Automatiser ses posts LinkedIn · Phase 3</option>
+        <option value="../denemacademy-seance-15-leads-gratuits/index.html">15 — Obtenir des leads gratuits · Phase 4</option>
+        <option value="../seance-16-enrichir-leads-data-gouv/index.html">16 — Enrichir ses leads avec data.gouv · Phase 4</option>
+        <option value="#top" selected>17 — Enrichir ses leads avec Apify · Phase 4</option>
+        <option value="../seance-18-nettoyer-scorer-bdd/index.html">18 — Nettoyer / scorer sa BDD · Phase 4</option>
+        <option value="../seance-19-prospection-automatisee/index.html">19 — Stratégie de prospection automatisée · Phase 4</option>
+        <option value="../seance-20-audit-technique-client/index.html">20 — Premier RDV commercial &amp; audit client · Phase 5</option>
+        <option value="../seance-21-organisation-projet-client/index.html">21 — Organiser son projet client · Phase 5</option>
+        <option value="../seance-22-rag-supabase/index.html">22 — Créer un RAG sur mesure · Phase 5</option>
+        <option value="../seance-23-chatbot-ia-vocal-texte/index.html">23 — Créer un chatbot IA vocal/texte pour ses clients · Phase 5</option>
+        <option value="../seance-24-evaluation-finale/index.html">24 — Évaluation finale · Phase 6</option>
+      </select>
+    </div>
+    <nav class="denem-act-ribbon__phase-nav" aria-label="Navigation dans la phase">
+      <strong>Dans cette phase</strong>
+      <a href="../denemacademy-seance-15-leads-gratuits/index.html">15 · Leads gratuits</a>
+      <a href="../seance-16-enrichir-leads-data-gouv/index.html">16 · data.gouv</a>
+      <a class="is-current" aria-current="page" href="#top">17 · Apify</a>
+      <a href="../seance-18-nettoyer-scorer-bdd/index.html">18 · Nettoyer BDD</a>
+      <a href="../seance-19-prospection-automatisee/index.html">19 · Prospection</a>
+    </nav>
   </div>
 </section>
 
 <div class="progress" id="progress"></div>
 <nav class="topbar"><div class="topbar-inner"><div class="brand"><img src="logo-denem.jpeg" alt="DENEM Academy"><span>DENEM Academy · Séance 17</span></div><span class="pill">Apify · Contacts publics</span></div></nav>
-<header class="hero"><div class="hero-wrap"><div><p class="eyebrow">Séance 17 · Enrichissement Apify</p><h1>Enrichir ses leads avec <span>Apify</span></h1><p>Je pars d’une base data.gouv et je crée une couche contact exploitable : emails, téléphones, réseaux sociaux, pages sources, batchs et fichier final prêt pour la suite.</p><div class="stats"><div class="stat"><b>80</b><small>sections guidées</small></div><div class="stat"><b>18</b><small>captures utilisées</small></div><div class="stat"><b>6</b><small>prompts copiables</small></div></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></header>
+<header class="hero"><div class="hero-wrap"><div><p class="eyebrow">Séance 17 · Enrichissement Apify</p><h1>Enrichir ses leads avec <span>Apify</span></h1><p>Je pars d’une base data.gouv et je crée une couche contact exploitable : emails, téléphones, réseaux sociaux, pages sources, batchs et fichier final prêt pour la suite.</p><div class="stats"><div class="stat"><b>80</b><small>Phase 4 · Machine à leads &amp; prospection</small></div><div class="stat"><b>18</b><small>captures utilisées</small></div><div class="stat"><b>6</b><small>prompts copiables</small></div></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div></header>
 <div class="toc"><a href="#section-01"><span>01</span>Objectif</a><a href="#section-11"><span>11</span>Apify</a><a href="#section-21"><span>21</span>Test</a><a href="#section-31"><span>31</span>Codex</a><a href="#section-41"><span>41</span>Batches</a><a href="#section-56"><span>56</span>Fichier final</a><a href="#section-71"><span>71</span>Prompts</a><a href="#section-80"><span>80</span>Récap</a></div>
 <main>
 <section id="section-01" class="section layout-split accent"><div class="wrap"><div class="copy"><div><p class="kicker">01 · Ouverture</p><h2>Je passe de la preuve légale au contact réel</h2><p>Après data.gouv, je sais mieux qui est derrière chaque restaurant. Maintenant je veux savoir comment joindre ces entreprises proprement : email, téléphone, réseaux, page contact et source exacte.</p></div></div><figure class="media"><img src="img/session-17/01-intro-enrichir-apify.jpg" alt="Je pose l&#x27;objectif : enrichir la base avec Apify." loading="lazy"><figcaption>Je pose l&#x27;objectif : enrichir la base avec Apify.</figcaption></figure></div>
@@ -1951,5 +2167,27 @@ document.querySelectorAll('.copy-btn').forEach(btn=>{btn.addEventListener('click
 })();
 </script>
 
+<script id="denem-session-media-script">
+(() => {
+  const select = document.getElementById('denem-session-switch');
+  if (select) {
+    select.addEventListener('change', () => {
+      const value = select.value;
+      if (value && value !== '#top') window.location.href = value;
+    });
+  }
+  const markMissing = (img) => {
+    const frame = img.closest('figure, .media-card, .shot, .visual, .hero-card, .poster, .image-card, .screen, .capture');
+    if (!frame) return;
+    frame.classList.add('is-media-missing');
+    frame.setAttribute('aria-label', 'Bloc media a completer');
+  };
+  document.querySelectorAll('img').forEach((img) => {
+    if (!img.getAttribute('src')) markMissing(img);
+    if (img.complete && img.naturalWidth === 0) markMissing(img);
+    img.addEventListener('error', () => markMissing(img), { once: true });
+  });
+})();
+</script>
 </body>
 </html>
